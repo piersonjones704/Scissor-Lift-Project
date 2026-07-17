@@ -42,6 +42,7 @@ This integrated system combines:
 - Jumper wires and breadboard
 
 **Servo Note**: You must use a servo capable of 270° rotation (0°-270°) such as:
+- Miuzei DC 270° Digital Servo (**servo used in this prototype**)
 - Feetech FS5103R/FS5106R
 - TowerPro MG996R (some models support 270°)
 - Hitec HS-785HB
