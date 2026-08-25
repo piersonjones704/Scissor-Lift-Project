@@ -6,7 +6,7 @@ const int TRIG1 = 11;
 const int ECHO1 = 12;
 const int TRIG2 = 9;
 const int ECHO2 = 10;
-const int SERVO_PIN = 8;
+const int SERVO_PIN = 5;
 const int SPEAKER = 7;
 
 // servo pulse limits (set conservatively; based on servo datasheet)
@@ -15,7 +15,7 @@ const int SERVO_MAX_US = 2500;
 const float US_PER_DEG = float(SERVO_MAX_US - SERVO_MIN_US) / 270.0f;
 
 // servo rotation constants
-const int POS_MIN = 105;
+const int POS_MIN = 0;
 const int POS_MAX = 270;
 int pos = (POS_MIN + POS_MAX) / 2;  // starts at 135°
 int dir = 1;

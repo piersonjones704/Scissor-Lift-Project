@@ -1,4 +1,4 @@
-# Scissor Lift Collision Prevention Module 
+# Scissor Lift Collision Prevention Module
 ## Generation 1 - Sweeping Ultrasonic Sensors
 
 ### Overview  
