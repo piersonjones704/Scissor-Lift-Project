@@ -7,7 +7,9 @@ This project, developed in collaboration with **Skanska**, aims to reduce jobsit
 ---
 
 ### Team  
-- **Project Leads:** Pierson Jones, Parker Jones, Jack Oakman, Aaryan Nanekar 
+- **Team Members:** Pierson Jones, Parker Jones, Jack Oakman, Aaryan Nanekar 
+- **Project Lead:** Pierson Jones
+- **Mechatronics Team Lead:** Parker Jones 
 - **Client Partner:** Skanska USA
 
 ---
