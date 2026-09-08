@@ -17,22 +17,22 @@ This semester, single-sensor operation was validated end-to-end, including adapt
 - **Smoothed Buzzer Alerts:** Proximity-based beep profiles that step one level at a time rather than jumping directly to a target profile.
 - **Structured Power Optimization:** Configuration changes (ranging frequency, resolution, integration time, ranging mode, sensor power/sleep state, duty cycling, VHV recalibration interval) were tested one variable at a time (Tests 1–11) against a shared baseline, with current draw logged at each step to guide the final single-sensor configuration. This reduced average current draw from an estimated ~500 mA baseline to 86 mA — an ~83% reduction — on the single-sensor module.
 
-**In progress (full 6-sensor array):**
-- **Multi-Sensor I2C Addressing:** Two approaches have been attempted so far — a hardware I2C multiplexer (TCA9548A/PCA9548A-style channel switching) and software-assigned individual addresses via sequenced LPn/shutdown pin control. Neither has been reliable with more than one sensor active.
+**Validated (multi-sensor, in progress toward full 6-sensor array):**
+- **Multi-Sensor I2C Addressing:** A hardware I2C multiplexer (TCA9548A/PCA9548A) has been used to successfully address 2 VL53L8CX sensors simultaneously on independent channels, confirmed stable across 5+ consecutive resets. An earlier, unreliable version of this test was root-caused to an intermittent physical short between adjacent pull-up resistor leads on the breadboard — not an addressing or firmware logic issue. A separate software-assigned addressing approach (sequenced LPn/shutdown pin control, no physical mux) was also attempted and has not yet been made reliable.
 
 **Client Collaboration:** Developed through Duke's EGR102 course; presented deliverables to Skanska and collaborated to meet client specifications - as part of **client focused development**. Also coordinated with a power consultant on different strategies to optimize the system's power consumption, aiming to reach industry grade efficiency and reliability.
 
 ---
 
 ### System Architecture
-**Currently validated:** VL53L8CX x1, ESP32-S3, Piezo Buzzer
+**Currently validated:** VL53L8CX x2 (via I2C mux), ESP32-S3, Piezo Buzzer
 
-**Target:** VL53L8CX x6, I2C Addressing (mux or software assigned), ESP32-S3, Piezo Buzzer
+**Target:** VL53L8CX x6, I2C Addressing (mux), ESP32-S3, Piezo Buzzer
 
 ---
 
 ### Technical Stack  
-- **Hardware:** VL53L8CX (1 validated, 6 targeted), ESP32-S3-DevKitC-1 (WROOM-2), TCA9548A/PCA9548A I2C multiplexer (in-progress, not yet reliable), piezo buzzer, transistor driver  
+- **Hardware:** VL53L8CX (2 validated simultaneously, 6 targeted), ESP32-S3-DevKitC-1 (WROOM-2), TCA9548A/PCA9548A I2C multiplexer (2-sensor operation validated; scaling to 6 in progress), piezo buzzer, transistor driver  
 - **Software:** Arduino IDE (C/C++), with ST's VL53L8CX ULD API, VSCode, Python + PyGame (single-sensor visualizer used during bring-up).
 - **Documentation:** Structured power-characterization test tables (Tests 1–11).
 
@@ -41,7 +41,7 @@ This semester, single-sensor operation was validated end-to-end, including adapt
 ### Code
 - **1TOFSensorModule_PerformanceCode.ino -** Most up-to-date firmware for this generation. Single VL53L8CX sensor running adaptive 1/6 Hz ranging at fixed 4×4 resolution with hysteresis-based mode switching and smoothed buzzer transitions. Written as a validated single-sensor building block, with the architecture intended to scale to 6 sensors once addressing is resolved.
 - **Test1_Default_Baseline.ino, Test2_FrequencySweep.ino, plus Test files 3-11, power_test_common_h.ino -** Isolated power-characterization test sketches, each varying a single parameter (ranging frequency, resolution, integration time, ranging mode, sensor power/sleep state, duty cycling, VHV repeat count) against a shared baseline defined in **power_test_common.h**. Used to build the current-draw comparison tables that informed the configuration in **1TOFSensorModule_PerformanceCode.ino**.
-- **MUX_TestCode.ino -** In-progress work testing TCA9548A/PCA9548A-style I2C channel multiplexing to support multiple sensors on one bus.
+- **MUX_TestCode.ino -** TCA9548A/PCA9548A-style I2C channel multiplexing test code. Validated for reliable 2-sensor addressing across repeated resets; next step is incremental scaling to additional channels.
 - **SoftwareassigningI2CSensors.ino -** In-progress alternate approach assigning individual I2C addresses to each VL53L8CX sensor via sequenced LPn pin control, instead of a physical multiplexer.
 
 ---
@@ -54,11 +54,12 @@ Before settling on the static 6-sensor array, a mechanically-swept single-sensor
 ### Results  
 - Single-sensor adaptive ranging and power-optimized configuration validated.
 - Structured, single-variable power characterization (Tests 1–11) completed — reduced single-sensor average current draw ~83% (from an estimated ~500 mA baseline to 86 mA).
+- 2-sensor I2C multiplexer addressing validated as stable across 5+ consecutive resets, after root-causing an earlier intermittent failure to a breadboard pull-up resistor short (not an addressing/firmware issue).
 
 ---
 
 ### Next Steps
-1. Resolve I2C addressing for 6 sensors (multiplexer or software address assignment).
+1. Incrementally scale I2C mux addressing from 2 to 6 sensors, validating stability (5+ resets) at each added sensor before proceeding.
 2. Mount sensors at final angles and validate combined coverage.
 3. Re-run power characterization on the full array with staggered polling.
 4. Obtain system-level results (Coverage, blind-spot reduction, per-unit cost, ROI, etc.)
