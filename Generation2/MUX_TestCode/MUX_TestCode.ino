@@ -41,11 +41,11 @@ void scanBus(const char* label) {
 
 void setup() {
   Serial.begin(115200);
-  delay(2000);
+  delay(5000);
 
   Wire.setPins(SDA_PIN, SCL_PIN);
   Wire.begin();
-  Wire.setClock(10000);
+  Wire.setClock(100000);
 
   scanBus("Main bus");
 
