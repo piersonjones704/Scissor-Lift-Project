@@ -49,7 +49,7 @@ void setup() {
 
   scanBus("Main bus");
 
-  for (uint8_t ch = 0; ch < 6; ch++) {
+  for (uint8_t ch = 0; ch < 7; ch++) {
     tcaSelect(ch);
     char label[20];
     sprintf(label, "Channel %d", ch);
