@@ -1,7 +1,7 @@
 /**
- * T06_power_modes.ino
+ * Supplementary_SensorSoftwareSleepCharacterization.ino
  * ===========================================================================
- * TEST 06 — SENSOR POWER MODES: WAKEUP vs SLEEP vs DEEP_SLEEP
+ * SENSOR POWER MODES: WAKEUP vs SLEEP vs DEEP_SLEEP
  * ===========================================================================
  * Variable changed : vl53l8cx_set_power_mode()
  * All other params : N/A (ranging is stopped during sleep phases)
