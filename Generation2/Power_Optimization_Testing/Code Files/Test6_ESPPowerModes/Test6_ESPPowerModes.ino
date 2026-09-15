@@ -1,6 +1,4 @@
 /**
- * Test13_ESP32LightSleep.ino
- * ===========================================================================
  * TEST 13 — ESP32 LIGHT SLEEP WITH INT PIN WAKE
  * ===========================================================================
  * Variable changed : ESP32 light sleep enabled between measurements

@@ -1,6 +1,4 @@
 /**
- * T05_ranging_mode.ino
- * ===========================================================================
  * TEST 05 — RANGING MODE: CONTINUOUS vs AUTONOMOUS
  * ===========================================================================
  * Variable changed : vl53l8cx_set_ranging_mode()

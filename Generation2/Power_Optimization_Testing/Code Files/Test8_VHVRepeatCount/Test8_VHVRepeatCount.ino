@@ -1,6 +1,4 @@
 /**
- * Test8_VHVRepeatCount.ino
- * ===========================================================================
  * TEST 08 — VHV (VCSEL HIGH VOLTAGE) REPEAT COUNT REDUCTION
  * ===========================================================================
  * Variable changed : vl53l8cx_set_VHV_repeat_count()

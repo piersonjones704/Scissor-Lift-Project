@@ -1,6 +1,4 @@
 /**
- * T02_frequency_sweep.ino
- * ===========================================================================
  * TEST 02 — RANGING FREQUENCY SWEEP
  * ===========================================================================
  * Variable changed : vl53l8cx_set_ranging_frequency_hz()

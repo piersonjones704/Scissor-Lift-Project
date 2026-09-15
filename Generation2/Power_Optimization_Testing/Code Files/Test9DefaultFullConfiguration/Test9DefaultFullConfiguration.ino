@@ -1,6 +1,4 @@
 /**
- * Table9_Baseline_EnergyConsumption.ino
- * ===========================================================================
  * TABLE 9 — BASELINE ENERGY CONSUMPTION TEST
  * ===========================================================================
  * Configuration: Default parameters (Test ID 1) + proximity buzzer logic

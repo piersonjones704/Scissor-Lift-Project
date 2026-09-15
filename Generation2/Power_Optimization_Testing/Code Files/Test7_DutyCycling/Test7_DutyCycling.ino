@@ -1,6 +1,4 @@
 /**
- * T07_duty_cycling.ino
- * ===========================================================================
  * TEST 07 — MANUAL SOFTWARE DUTY CYCLING (sleep between measurements)
  * ===========================================================================
  * Variable changed : on/off ratio of start_ranging / SLEEP power mode
