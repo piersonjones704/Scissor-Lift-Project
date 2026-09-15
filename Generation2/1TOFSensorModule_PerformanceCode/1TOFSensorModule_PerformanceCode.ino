@@ -1,5 +1,5 @@
 /**
- * AdaptiveProximity_1Sensor.ino
+ * 1TOFSensorModule_PerformanceCode.ino
  * ===========================================================================
  * ADAPTIVE PROXIMITY DETECTION — SINGLE VL53L8CX
  * ===========================================================================
