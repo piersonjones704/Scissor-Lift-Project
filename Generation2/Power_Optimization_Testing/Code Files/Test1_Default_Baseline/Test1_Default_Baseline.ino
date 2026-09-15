@@ -1,6 +1,7 @@
 /**
  * ===========================================================================
  * TEST 01 — BASELINE (default ULD configuration)
+ * Test ID 1 & 7
  * ===========================================================================
  * Purpose
  *   Establish the reference current draw with zero modifications.

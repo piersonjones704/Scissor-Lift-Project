@@ -1,5 +1,6 @@
 /**
  * TEST 07 — MANUAL SOFTWARE DUTY CYCLING (sleep between measurements)
+ * Test ID None Currently
  * ===========================================================================
  * Variable changed : on/off ratio of start_ranging / SLEEP power mode
  * All other params : resolution = 4×4, frequency = 10 Hz during active window,

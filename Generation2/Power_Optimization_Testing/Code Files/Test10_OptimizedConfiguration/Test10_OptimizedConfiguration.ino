@@ -1,5 +1,7 @@
 /**
  * TEST 010 — OPTIMISED COMBINED CONFIGURATION
+ * Corresponds with Table 7 - Optimized Configuration Energy Consumption 
+ * Results on the power optimization testing doc
  * ===========================================================================
  * Purpose
  *   Apply the best settings discovered in T01–T08 simultaneously and

@@ -1,5 +1,6 @@
 /**
  * TEST 03 — RESOLUTION COMPARISON  (4×4 vs 8×8)
+ * Test ID 8-9b
  * ===========================================================================
  * Variable changed : vl53l8cx_set_resolution()
  * All other params : frequency = 1 Hz (same as T01 baseline)

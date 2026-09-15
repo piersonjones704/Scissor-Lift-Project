@@ -1,5 +1,6 @@
 /**
  * TEST 05 — RANGING MODE: CONTINUOUS vs AUTONOMOUS
+ * Test ID 11
  * ===========================================================================
  * Variable changed : vl53l8cx_set_ranging_mode()
  * All other params : resolution = 8×8, frequency = 1 Hz,

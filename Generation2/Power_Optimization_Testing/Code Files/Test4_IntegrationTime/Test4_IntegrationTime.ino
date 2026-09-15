@@ -1,5 +1,6 @@
 /**
  * TEST 04 — INTEGRATION TIME
+ * Test ID 10a-10d
  * ===========================================================================
  * Variable changed : vl53l8cx_set_integration_time_ms()
  * All other params : resolution = 8×8, frequency = 1 Hz, AUTONOMOUS mode

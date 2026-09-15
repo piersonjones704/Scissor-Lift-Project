@@ -1,5 +1,7 @@
 /**
  * TABLE 9 — BASELINE ENERGY CONSUMPTION TEST
+ * Corresponds with Table 6 - Baseline Energy Consumption Results 
+ * on the power optimization testing doc
  * ===========================================================================
  * Configuration: Default parameters (Test ID 1) + proximity buzzer logic
  *

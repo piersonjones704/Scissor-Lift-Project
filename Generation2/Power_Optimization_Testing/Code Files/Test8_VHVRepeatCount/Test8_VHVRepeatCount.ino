@@ -1,5 +1,6 @@
 /**
  * TEST 08 — VHV (VCSEL HIGH VOLTAGE) REPEAT COUNT REDUCTION
+ * Test ID 14-17
  * ===========================================================================
  * Variable changed : vl53l8cx_set_VHV_repeat_count()
  * All other params : resolution = 8×8, frequency = 10 Hz, AUTONOMOUS 10 ms

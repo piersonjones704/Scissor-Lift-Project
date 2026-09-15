@@ -1,5 +1,6 @@
 /**
  * TEST 02 — RANGING FREQUENCY SWEEP
+ * Test ID 2-6
  * ===========================================================================
  * Variable changed : vl53l8cx_set_ranging_frequency_hz()
  * All other params : identical to T01 baseline
