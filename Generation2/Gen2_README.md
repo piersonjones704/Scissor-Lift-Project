@@ -60,7 +60,7 @@ Before settling on the static 6-sensor array, a mechanically-swept single-sensor
 - 6-sensor I2C multiplexer addressing validated as stable across 5+ consecutive resets, after root-causing an earlier intermittent failure to a breadboard pull-up resistor short (not an addressing/firmware issue). IMPORTANT: channel 4 on mux causes consistent failing. For sensor 5 use channel 5 instead of channel 4 and for sensor 6 use channel 6.
 - Full 6-sensor channel-to-angle mapping validated: running MultiSensorAngleCalibration.ino, placing an object close to one sensor at a time confirmed each channel's serial output matches its physical position — e.g. an object 100mm from the top-left sensor showed the Top-Left channel reporting ~100mm while all other channels reported no nearby object. This confirms the coordinate transform's angle table is correct, not just assumed.- I2C/Serial Re-Init Crash: Initializing all 6 sensors in a loop originally caused a Guru Meditation Error (null-pointer panic, PC: 0x00000000) partway through setup. Root cause: sensor_init() called Wire.begin() and Serial.begin() on every invocation (once per sensor), and repeatedly re-initializing the ESP32's I2C driver mid-program corrupted its internal state. Fixed by guarding both calls with a static bool flag in power_test_common.h so the I2C and Serial peripherals are only truly initialized once, on the first sensor, regardless of how many times sensor_init() is called.
 - Zone-level angle correction validated via three independent physical tests on the Top-Middle sensor (corner sweep, column sweep, dead-center object), all consistent with each other. This confirmed that the sensor's true zone-to-direction mapping differs from the datasheet-derived assumption due to this board's physical mounting rotation.
-- c
+
 
 ---
 
@@ -69,7 +69,6 @@ Before settling on the static 6-sensor array, a mechanically-swept single-sensor
 2. Start planning and developing the PCB design to consolidate the product's footprint
 3. Re-run power characterization on the full array with staggered polling.
 4. Obtain system-level results (Coverage, blind-spot reduction, per-unit cost, ROI, etc.)
-5. Explore possibly treating all 6 sensors as sharing one physical origin point (not accounting for their few-cm spread on the mount plate), and combining yaw/pitch rotations additively rather than with full rotation matrices. Both are considered acceptable for the current collision-warning use case and are deferred pending how later testing this semester goes.
 
 ---
 
