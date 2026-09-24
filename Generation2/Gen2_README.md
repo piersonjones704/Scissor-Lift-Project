@@ -24,6 +24,8 @@ This semester, single-sensor operation was validated end-to-end, including adapt
     1. All 6 sensors are assumed to be sharing one physical origin point. This does not account for their 1-2cm spread on the mounting plates.
     2. Yaw/pitch rotations are additively combined rather than using full rotation matrices. 
     - The current use-case of this product allows for these to be made. They will be reconsidered after real situational testing on the construction site.
+- **Zone Selection Hysteresis:** Zone slection hysteresis was added for improved stability between x, y, and z readings from each sensor. If a stationary object is near the boundary of two zones within one sensor's grid, then there may be flickering between readings causing the angle/z axis to change even though the object is stationary. This addition requires two consecutive readings before it replaces the zone that is detecting the closest object.
+
 
 **Client Collaboration:** Developed through Duke's EGR102 course; presented deliverables to Skanska and collaborated to meet client specifications - as part of **client focused development**. Also coordinated with a power consultant on different strategies to optimize the system's power consumption, aiming to reach industry grade efficiency and reliability.
 
