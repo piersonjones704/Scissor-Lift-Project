@@ -27,16 +27,18 @@
 
 #define FREQ_FAR 5 // matches AdaptiveProximity_1Sensor.ino
 
-// Defined both of these (near the top) rather than near where they are used, because
+// Defined here (near the top) rather than near where it's used, because
 // Arduino's IDE auto-generates function prototypes and inserts them very
 // early in the file -- before any struct defined further down would be
 // visible. correctToLiftFrame() returns Point3D, so Point3D must be
 // declared before that auto-inserted prototype, or you'll get an error
-// like "'Point3D' does not name a type". zoneAngularOffsetDeg() gets 
-// inserted near the top of the file, before struct AngleOffset is 
-// defined further down. Moving it up next to Point3D fixes this.
+// like "'Point3D' does not name a type".
+// Declared here (near the top), same reason as Point3D above: Arduino's
+// auto-generated prototype for zoneAngularOffsetDeg() needs this struct
+// to already be visible, or you'll get "'AngleOffset' does not name a type".
 struct Point3D { float x; float y; float z; };
 struct AngleOffset { float dYawDeg; float dPitchDeg; };
+
 // ---- SENSOR CONFIG TABLE -------------------------------------------------
 // Confirmed 2x3 mount geometry (channel 4 intentionally unused -- 6 sensors
 // on 6 channels: 0,1,2,3,5,6). Reference is channel 2 (Top Middle): mounted
@@ -69,6 +71,20 @@ const int NUM_SENSORS = sizeof(sensors) / sizeof(sensors[0]);
 VL53L8CX_Configuration Dev[NUM_SENSORS];
 VL53L8CX_ResultsData    Results[NUM_SENSORS];
 
+// ── Zone selection hysteresis state (per sensor) ───────────────────────────
+// Without this, a stationary object near the boundary of two zones can
+// cause the "closest zone" to flicker between reads (from ordinary noise),
+// which flickers the reported angle/z even though nothing moved. This
+// mirrors the modeStabilityCount pattern already used in the single-sensor
+// firmware's FAR/NEAR mode switching: require a challenger zone to win
+// ZONE_STABILITY_COUNT consecutive cycles before it replaces the current
+// "stable" zone.
+#define ZONE_STABILITY_COUNT 2
+
+int8_t  stableZone[NUM_SENSORS];    // last confirmed stable zone, -1 = none yet
+int8_t  pendingZone[NUM_SENSORS];   // challenger zone currently being confirmed, -1 = none
+uint8_t pendingCount[NUM_SENSORS];  // consecutive cycles the challenger has won
+
 // ---- MODE SELECT ----------------------------------------------------------
 // true  = calibration mode: slow, verbose, one sensor's reading highlighted
 // false = normal mode: fast round-robin polling of all sensors
@@ -82,32 +98,38 @@ void tcaSelect(uint8_t ch) {
 
 // ── Per-zone angular offset within a single sensor's FOV ──────────────────
 // VL53L8CX has roughly a 45deg x 45deg field of view. At 4x4 resolution,
-// each zone subtends FOV/4 = 11.25deg per axis, so zone centers sit at
-// offsets of {-1.5, -0.5, +0.5, +1.5} * 11.25deg = {-16.875, -5.625,
-// +5.625, +16.875} degrees from the sensor's own boresight (the true edge
-// of the FOV is +-22.5deg, matching a 45deg total field).
+// each zone subtends FOV/4 = 11.25deg per axis.
 //
-// IMPORTANT: zone index -> (row, col) mapping below is an ASSUMPTION based
-// on the ULD API's typical raster order (index 0 = top-left, increasing
-// left-to-right then top-to-bottom). This depends on how each physical
-// sensor is rotated on its mount. VERIFY THIS the same way channel-to-
-// position mapping was verified: aim a single sensor at a flat surface,
-// place a small object first at the FAR-LEFT edge of that sensor's FOV,
-// then FAR-RIGHT, then TOP, then BOTTOM, and confirm which zone index
-// reports the closest reading each time. If a sensor is physically
-// rotated 90/180 deg relative to this assumption, adjust ZONES_PER_ROW
-// indexing (swap row/col, or reverse an axis) for that specific sensor.
+// CONFIRMED EMPIRICALLY on the Top-Middle sensor (channel 2) using
+// TopMiddleZoneOrientation.ino:
+//   zone 12 (row=3, col=0) -> scene Top-Left
+//   zone 0  (row=0, col=0) -> scene Top-Right
+//   zone 3  (row=0, col=3) -> scene Bottom-Right
+//   zone 15 (row=3, col=3) -> scene Bottom-Left
+// This means COL determines top/bottom (col=0 -> top, col=3 -> bottom),
+// and ROW determines left/right (row=0 -> right, row=3 -> left) -- the
+// OPPOSITE pairing from the datasheet-derived guess (which had col->yaw,
+// row->pitch). This matches the ~90 deg physical rotation of this
+// breakout vs. the reference photo. The (1.5 - index) magnitude/sign
+// formula itself, derived from ST's documented lens flip, is still
+// correct -- only which axis (row vs col) it's applied to has changed.
+//
+// This applies to ALL 6 sensors: the zone-orientation flip is intrinsic
+// to the sensor chip + how each board is physically mounted, and per the
+// mount description, all 6 boards are mounted with identical orientation
+// (only their overall yaw/pitch angle differs, not this internal
+// rotation) -- so one confirmed test covers the whole array.
 #define SENSOR_FOV_DEG      45.0f
 #define ZONES_PER_ROW       4
 #define ZONE_STEP_DEG       (SENSOR_FOV_DEG / ZONES_PER_ROW)
 
 AngleOffset zoneAngularOffsetDeg(uint8_t zoneIndex) {
-  uint8_t row = zoneIndex / ZONES_PER_ROW; // 0..3, assumed top to bottom
-  uint8_t col = zoneIndex % ZONES_PER_ROW; // 0..3, assumed left to right
+  uint8_t row = zoneIndex / ZONES_PER_ROW; // confirmed: row -> left/right
+  uint8_t col = zoneIndex % ZONES_PER_ROW; // confirmed: col -> top/bottom
 
   AngleOffset off;
-  off.dYawDeg   = ((float)col - 1.5f) * ZONE_STEP_DEG;        // left(-) to right(+)
-  off.dPitchDeg = (1.5f - (float)row) * ZONE_STEP_DEG;        // top(+) to bottom(-)
+  off.dYawDeg   = (1.5f - (float)row) * ZONE_STEP_DEG; // row=0 -> right(+), row=3 -> left(-)
+  off.dPitchDeg = (1.5f - (float)col) * ZONE_STEP_DEG; // col=0 -> up(+),    col=3 -> down(-)
   return off;
 }
 
@@ -183,6 +205,10 @@ void setup() {
 
   Serial.println("Initializing sensors...");
   for (int i = 0; i < NUM_SENSORS; i++) {
+    stableZone[i]   = -1;
+    pendingZone[i]  = -1;
+    pendingCount[i] = 0;
+
     tcaSelect(sensors[i].channel);
     delay(10);
 
@@ -222,24 +248,82 @@ void loop() {
     vl53l8cx_check_data_ready(&Dev[i], &ready);
 
     int16_t dist = -1; // -1 = no fresh data this pass
+    int8_t  winningZone = -1; // -1 = no valid zone this pass, for debugging which zone fired
     float effectiveYawDeg   = sensors[i].mountYawDeg;
     float effectivePitchDeg = sensors[i].mountPitchDeg;
 
     if (ready) {
       vl53l8cx_get_ranging_data(&Dev[i], &Results[i]);
-      uint8_t zoneIndex = 0;
-      int16_t closest = getClosestDistance(Results[i], zoneIndex);
-      dist = (closest > 0) ? closest : -1; // 0 from getClosestDistance means "nothing valid," not "0mm"
+      uint8_t rawZone = 0;
+      int16_t rawClosest = getClosestDistance(Results[i], rawZone);
 
-      if (dist > 0) {
+      if (rawClosest > 0) {
+        // --- Zone hysteresis ---
+        // Only let the "stable" zone change after a challenger wins
+        // ZONE_STABILITY_COUNT consecutive cycles. The very first
+        // detection is accepted immediately (no delay) since a slow
+        // FIRST detection is worse for a safety system than a stable
+        // one arriving a cycle or two later.
+        if (stableZone[i] == -1) {
+          stableZone[i]   = rawZone;
+          pendingZone[i]  = -1;
+          pendingCount[i] = 0;
+        } else if (rawZone != stableZone[i]) {
+          if (rawZone == pendingZone[i]) {
+            pendingCount[i]++;
+          } else {
+            pendingZone[i]  = rawZone;
+            pendingCount[i] = 1;
+          }
+          if (pendingCount[i] >= ZONE_STABILITY_COUNT) {
+            stableZone[i]   = rawZone;
+            pendingZone[i]  = -1;
+            pendingCount[i] = 0;
+          }
+        } else {
+          // Raw winner agrees with the current stable zone -- any
+          // challenger that was building up loses its progress.
+          pendingZone[i]  = -1;
+          pendingCount[i] = 0;
+        }
+
+        // Report distance/angle from the STABLE zone, not necessarily
+        // this instant's raw winner, so distance and angle stay
+        // self-consistent. If the stable zone itself has gone invalid
+        // this cycle (object actually moved away from it), fall back to
+        // the raw closest zone immediately rather than reporting stale
+        // or wrong data, and resync tracking to that new zone.
+        uint8_t sz       = stableZone[i];
+        uint8_t szStatus = Results[i].target_status[sz];
+        int16_t szDist   = Results[i].distance_mm[sz];
+        bool stableZoneValid = (szStatus == 5 || szStatus == 6) && szDist > 0;
+
+        if (stableZoneValid) {
+          dist        = szDist;
+          winningZone = sz;
+        } else {
+          dist        = rawClosest;
+          winningZone = rawZone;
+          stableZone[i]   = rawZone;
+          pendingZone[i]  = -1;
+          pendingCount[i] = 0;
+        }
+
         // Combine the sensor's overall mounting angle with the specific
         // zone's offset within that sensor's own FOV. Simple addition is
         // an approximation (true compound rotation would use rotation
         // matrices), but it's accurate enough at these angle magnitudes
         // and is a major improvement over ignoring zone position entirely.
-        AngleOffset zoneOff = zoneAngularOffsetDeg(zoneIndex);
+        AngleOffset zoneOff = zoneAngularOffsetDeg(winningZone);
         effectiveYawDeg   += zoneOff.dYawDeg;
         effectivePitchDeg += zoneOff.dPitchDeg;
+      } else {
+        // No valid target anywhere this cycle -- reset tracking so the
+        // next detection is treated as fresh rather than compared
+        // against a stale stable zone from a previous, unrelated object.
+        stableZone[i]   = -1;
+        pendingZone[i]  = -1;
+        pendingCount[i] = 0;
       }
     }
 
@@ -272,7 +356,9 @@ void loop() {
       if (dist > 0) {
         Point3D p = correctToLiftFrame((float)dist, effectiveYawDeg, effectivePitchDeg);
         Serial.print(sensors[i].label);
-        Serial.print(": raw=");
+        Serial.print(": zone=");
+        Serial.print(winningZone);
+        Serial.print("  raw=");
         Serial.print(dist);
         Serial.print("mm  lift_x=");
         Serial.print(p.x, 1);
@@ -286,8 +372,8 @@ void loop() {
 
   if (CALIBRATION_MODE) {
     Serial.println("---");
-    delay(4000); // slow cadence so you have time to move the object and read output
+    delay(3500); // slow cadence so you have time to move the object and read output
   } else {
-    delay(4000); // faster cadence for normal operation
+    delay(3500); // faster cadence for normal operation
   }
 }
