@@ -15,7 +15,8 @@ This semester, single-sensor operation was validated end-to-end, including adapt
 - **2 Axes of Detection:** 6 VL53L8CX time of flight sensor readings for reliable distance measurement under varying noise and lighting conditions for 90° vertical and 135° horizontal per module.
 - **Adaptive Ranging:** Frequency scales between **1 Hz (idle/far range)** and **6 Hz (near-range detection)** based on the closest detected object, with hysteresis (2 consecutive near readings to speed up; object gone 4+ seconds and 2 consecutive far readings to slow back down). Resolution held fixed at 4×4 to avoid the heavier reconfiguration cost of a resolution switch.
 - **Smoothed Buzzer Alerts:** Proximity-based beep profiles that step one level at a time rather than jumping directly to a target profile.
-- **Structured Power Optimization:** Configuration changes (ranging frequency, resolution, integration time, ranging mode, sensor power/sleep state, duty cycling, VHV recalibration interval) were tested one variable at a time (Tests 1–11) against a shared baseline, with current draw logged at each step to guide the final single-sensor configuration. This reduced average current draw from an estimated ~500 mA baseline to 86 mA — an ~83% reduction — on the single-sensor module.
+- **Structured Power Optimization:** Configuration changes (ranging frequency, resolution, integration time, ranging mode, ESP32 light sleep with INT-pin wake, VHV recalibration interval) were tested one variable at a time (Tests 1–17) against a shared baseline, with current logged at each step to guide the final single-sensor configuration. Key findings: autonomous mode draws short bursts (~42–45 mA at 8×8, ~16 mA at 4×4) versus a sustained ~66 mA in continuous mode, and ESP32 light sleep reduced system draw from ~50 mA to ~11 mA (USB attached, like-for-like). In a 30-minute bench-supply comparison (no USB, 20% object-detected weighting), the estimated 10-hour energy use of the single-sensor module fell from ~480 mAh (baseline) to ~19 mAh (optimized), a ~96% reduction. Limitations: sub-milliamp averages were calculated from duty cycle rather than measured directly because multimeter sampling cannot resolve short bursts; the baseline was measured on USB power and the optimized run on a bench supply; and Wi-Fi and hardware-shutdown (LPn) power effects were not tested. Full 6-sensor array power has not yet been characterized.
+
 
 **Validated (multi-sensor, in progress toward full 6-sensor array):**
 - **Multi-Sensor I2C Addressing:** Multi-Sensor I2C Addressing: A hardware I2C multiplexer (TCA9548A/PCA9548A) successfully addresses all 6 VL53L8CX sensors simultaneously, each mounted at its intended final angle. Channel-to-angle mapping (each sensor's mountYawDeg/mountPitchDeg in firmware) has been verified against physical sensor position, not just assumed. An earlier unreliable version of multi-sensor addressing was root-caused to an intermittent short between adjacent breadboard pull-up resistor leads. This was not an addressing or firmware issue. Additionally, it is important to note that channel 4 on the MUX is not working and consistently causes channel 3 and onwards to fail. Thus, sensor 5 is being put on channel 5. A separate software-assigned addressing approach (sequenced LPn/shutdown pin control, no physical mux) was also attempted and has not yet been made reliable.
@@ -67,10 +68,11 @@ Before settling on the static 6-sensor array, a mechanically-swept single-sensor
 ---
 
 ### Next Steps
-1. Integrate the piezo buzzer and hysteresis logic with the multiplexed 6 sensors. 
-2. Start planning and developing the PCB design to consolidate the product's footprint
-3. Re-run power characterization on the full array with staggered polling.
-4. Obtain system-level results (Coverage, blind-spot reduction, per-unit cost, ROI, etc.)
+1. Characterize power consumption with 6 sensors.
+2. Integrate the piezo buzzer and hysteresis logic with the multiplexed 6 sensors. 
+3. Start planning and developing the PCB design to consolidate the product's footprint
+4. Re-run power characterization on the full array with staggered polling.
+5. Obtain system-level results (Coverage, blind-spot reduction, per-unit cost, ROI, etc.)
 
 ---
 
