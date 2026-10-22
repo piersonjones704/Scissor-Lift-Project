@@ -2645,7 +2645,7 @@
 			)
 		)
 	)
-	(footprint "VL53L8CX:IC17_LGA16_STM"
+	(footprint "VL53L8CX:VL53L8CX"
 		(layer "F.Cu")
 		(uuid "7e8f0bd6-3cc0-4c21-ba01-6486af662584")
 		(at 148.5 73.557501)
@@ -4339,7 +4339,7 @@
 			)
 		)
 	)
-	(footprint "NXS0108:TSSOP20_SOT360-1_NEX"
+	(footprint "NXS0108:NXS0108"
 		(layer "F.Cu")
 		(uuid "f4e9cad5-5be9-4ae2-bf23-47052dc03233")
 		(at 140.5 89)

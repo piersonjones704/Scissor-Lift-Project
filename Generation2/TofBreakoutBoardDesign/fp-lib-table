@@ -1,5 +1,5 @@
 (fp_lib_table
 	(version 7)
-	(lib (name "NXS0108") (type "KiCad") (uri "${KIPRJMOD}/ul_NXS0108PWJ/KiCADv6/footprints(1).pretty") (options "") (descr ""))
-	(lib (name "VL53L8CX") (type "KiCad") (uri "${KIPRJMOD}/VL53L8CXFootprint/KiCADv6/footprints.pretty") (options "") (descr ""))
+	(lib (name "NXS0108") (type "KiCad") (uri "${KIPRJMOD}/Libraries/Footprints/NXS0108.pretty") (options "") (descr ""))
+	(lib (name "VL53L8CX") (type "KiCad") (uri "${KIPRJMOD}/Libraries/Footprints/VL53L8CX.pretty") (options "") (descr ""))
 )
