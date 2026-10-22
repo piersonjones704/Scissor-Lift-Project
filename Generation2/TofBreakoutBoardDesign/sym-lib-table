@@ -1,0 +1,5 @@
+(sym_lib_table
+	(version 7)
+	(lib (name "VL53L8CX") (type "KiCad") (uri "${KIPRJMOD}/VL53L8CXFootprint/KiCADv6/2026-10-15_00-20-10.kicad_sym") (options "") (descr ""))
+	(lib (name "NXS0108") (type "KiCad") (uri "${KIPRJMOD}/ul_NXS0108PWJ/KiCADv6/2026-10-19_22-56-07.kicad_sym") (options "") (descr ""))
+)

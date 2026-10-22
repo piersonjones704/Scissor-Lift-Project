@@ -1,0 +1,51 @@
+
+# ==========================================
+# KiCad temporary files and automatic backups
+# ==========================================
+
+*-backups/
+*.bak
+*.bck
+*.kicad_pcb-bak
+*.kicad_sch-bak
+*-bak
+*-bak*
+*~
+~*
+_autosave-*
+*.tmp
+*.000
+
+# Lock files
+~*.lck
+*.lck
+
+# Local KiCad editor settings and cache
+*.kicad_prl
+fp-info-cache
+*-cache*
+
+# KiCad local history
+.history/
+
+# Unused design block library tables
+design-block-lib-table
+
+# Temporary or intermediate exports
+*.net
+*.dsn
+*.ses
+
+# Imported component installation guides
+Generation2/TofBreakoutBoardDesign/**/ImportGuide.html
+Generation2/TofBreakoutBoardDesign/**/ImportGuides.html
+
+# Keep native KiCad design files tracked:
+# *.kicad_pro
+# *.kicad_sch
+# *.kicad_pcb
+# *.kicad_sym
+# *.kicad_mod
+
+# Do not globally ignore SVG, PNG, or PDF.
+# These may be needed for GitHub previews.

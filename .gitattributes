@@ -1,0 +1,18 @@
+
+# KiCad design files
+*.kicad_pro text eol=lf
+*.kicad_sch text eol=lf
+*.kicad_pcb text eol=lf
+*.kicad_sym text eol=lf
+*.kicad_mod text eol=lf
+
+# Documentation
+*.md text eol=lf
+*.html text eol=lf
+*.txt text eol=lf
+
+# Binary files
+*.png binary
+*.jpg binary
+*.pdf binary
+*.step binary
