@@ -9,6 +9,7 @@
 		(date "2026-10-19")
 		(rev "1")
 		(company "SafeLifts")
+		(comment 1 "Created by Pierson Jones")
 	)
 	(lib_symbols
 		(symbol "Connector_Generic:Conn_02x03_Top_Bottom"
