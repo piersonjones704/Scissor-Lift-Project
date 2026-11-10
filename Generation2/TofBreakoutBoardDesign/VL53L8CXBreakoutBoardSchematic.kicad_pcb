@@ -1223,7 +1223,7 @@
 				)
 			)
 		)
-		(property "Value" "AP2112K-1.8"
+		(property "Value" "AP2112K-1.8_LDO"
 			(at 0 2.4 0)
 			(layer "F.Fab")
 			(uuid "81399842-8d22-4c7c-84f6-eec6863d78dc")
@@ -2717,7 +2717,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Low-power high-performance 8x8 multizone Time-of-Flight sensor (ToF)"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -3264,6 +3264,17 @@
 			(uuid "4fd015b4-43fe-4973-b18b-6d8544803093")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Libraries/3D Models/VL53L8CX/VL53L8CXV0GC_1.stp"
+			(offset
+				(xyz -0.9 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -90 -0 -0)
+			)
+		)
 	)
 	(footprint "Capacitor_SMD:C_0603_1608Metric"
 		(layer "F.Cu")
@@ -4400,7 +4411,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "NXS0108PWJ"
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/NXS0108_Q100.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -4411,7 +4422,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Voltage Level Translator Bidirectional 1 Circuit 8 Channel 110Mbps 20-DHVQFN (4.5x2.5)"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -5690,6 +5701,17 @@
 			(uuid "86f81af2-d8cc-4318-9084-078d329bbb10")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Libraries/3D Models/NXS0108/TSSOP20_SOT360-1_NEX.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
 	)
 	(footprint "Resistor_SMD:R_0603_1608Metric"
 		(layer "F.Cu")

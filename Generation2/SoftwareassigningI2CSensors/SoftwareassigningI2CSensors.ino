@@ -1,8 +1,8 @@
 #include <Wire.h>
 #include <vl53l8cx.h>
 
-#define SDA_PIN  8
-#define SCL_PIN  9
+#define SDA_PIN  9
+#define SCL_PIN  8
 #define LP_PIN   1
 
 VL53L8CX* sensor;

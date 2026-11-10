@@ -1,7 +1,7 @@
 #include <Wire.h>
 
-#define SDA_PIN  8
-#define SCL_PIN  9
+#define SDA_PIN  9
+#define SCL_PIN  8
 #define TCAADDR  0x70
 
 void tcaDisableAll() {
