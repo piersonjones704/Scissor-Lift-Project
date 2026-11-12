@@ -193,6 +193,12 @@
 		(path "/fea01a9b-da48-4e05-aba8-b9f037478d57")
 		(sheetname "/")
 		(sheetfile "VL53L8CXBreakoutBoardSchematicDupontVersion.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "3" "2" "4" "5")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -589,6 +595,12 @@
 		(path "/7334e326-7987-4f5d-afb5-e7de1093ef5b")
 		(sheetname "/")
 		(sheetfile "VL53L8CXBreakoutBoardSchematicDupontVersion.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -741,6 +753,12 @@
 		(path "/8bd2a10a-6a50-44a9-a460-425aa06b2687")
 		(sheetname "/")
 		(sheetfile "VL53L8CXBreakoutBoardSchematicDupontVersion.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -893,6 +911,12 @@
 		(path "/3a7a919c-fccf-4dce-8405-aa9d4f775a04")
 		(sheetname "/")
 		(sheetfile "VL53L8CXBreakoutBoardSchematicDupontVersion.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -1046,6 +1070,12 @@
 		(path "/cdd4f4c7-0e32-488f-91c2-7291bb6aadeb")
 		(sheetname "/")
 		(sheetfile "VL53L8CXBreakoutBoardSchematicDupontVersion.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -1199,6 +1229,12 @@
 		(path "/cc35000c-6d67-4535-ad6f-0eac0cb74c62")
 		(sheetname "/")
 		(sheetfile "VL53L8CXBreakoutBoardSchematicDupontVersion.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -1351,6 +1387,12 @@
 		(path "/dca17be3-a2ca-4d0f-8d77-ce560e7b7d2b")
 		(sheetname "/")
 		(sheetfile "VL53L8CXBreakoutBoardSchematicDupontVersion.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -1503,6 +1545,12 @@
 		(path "/908b610a-69a4-482a-83f8-45694a9f7287")
 		(sheetname "/")
 		(sheetfile "VL53L8CXBreakoutBoardSchematicDupontVersion.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -1655,6 +1703,12 @@
 		(path "/bd2b04bd-4bdf-47c7-9362-1da964ed7e26")
 		(sheetname "/")
 		(sheetfile "VL53L8CXBreakoutBoardSchematicDupontVersion.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -1807,6 +1861,12 @@
 		(path "/dfd345de-38ac-4025-b70e-eaa1a8967f0b")
 		(sheetname "/")
 		(sheetfile "VL53L8CXBreakoutBoardSchematicDupontVersion.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -1959,6 +2019,12 @@
 		(path "/4922756d-f7ab-4efc-a752-a8295cbca749")
 		(sheetname "/")
 		(sheetfile "VL53L8CXBreakoutBoardSchematicDupontVersion.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -2111,6 +2177,12 @@
 		(path "/6e4947d6-ffe7-4903-8d88-78a19b160c8f")
 		(sheetname "/")
 		(sheetfile "VL53L8CXBreakoutBoardSchematicDupontVersion.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -2252,6 +2324,14 @@
 		(path "/a5c3c9f0-406c-458a-9cf1-369b96ba059c")
 		(sheetname "/")
 		(sheetfile "VL53L8CXBreakoutBoardSchematicDupontVersion.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2" "3" "4" "5" "6" "7" "8" "9" "10" "20" "19" "18" "17" "16"
+					"15" "14" "13" "12" "11"
+				)
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -3538,7 +3618,7 @@
 				)
 			)
 		)
-		(property "Value" "JST Connector"
+		(property "Value" "Dupont Connector"
 			(at 1 2 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -3588,6 +3668,12 @@
 		(path "/fbc065f4-3910-4a97-856d-fe97b7eaca35")
 		(sheetname "/")
 		(sheetfile "VL53L8CXBreakoutBoardSchematicDupontVersion.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2" "3" "4" "5" "6")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -3877,6 +3963,14 @@
 		(path "/a0748ce4-cde5-41ca-945a-e9fc0f8ce121")
 		(sheetname "/")
 		(sheetfile "VL53L8CXBreakoutBoardSchematicDupontVersion.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "A1" "A2" "A3" "A4" "A5" "A6" "A7" "B1" "C7" "C6" "C5" "C4" "C3"
+					"C2" "C1" "B7" "B4"
+				)
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -4292,6 +4386,12 @@
 		(path "/d4ea80d7-d4c8-4bd9-81bb-f250e2a2e9f8")
 		(sheetname "/")
 		(sheetfile "VL53L8CXBreakoutBoardSchematicDupontVersion.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins)
+			)
+		)
 		(attr exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
@@ -4418,6 +4518,12 @@
 		(path "/5f5ceee3-2d32-4463-b54c-82bbae1fb97b")
 		(sheetname "/")
 		(sheetfile "VL53L8CXBreakoutBoardSchematicDupontVersion.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -4571,6 +4677,12 @@
 		(path "/50b4d6c6-f3ae-4312-9455-24888446203d")
 		(sheetname "/")
 		(sheetfile "VL53L8CXBreakoutBoardSchematicDupontVersion.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -4723,6 +4835,12 @@
 		(path "/80557d46-b964-4825-b263-3bff9df40d59")
 		(sheetname "/")
 		(sheetfile "VL53L8CXBreakoutBoardSchematicDupontVersion.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -4875,6 +4993,12 @@
 		(path "/2db047cf-b7cf-42e9-b120-db00781a0ea2")
 		(sheetname "/")
 		(sheetfile "VL53L8CXBreakoutBoardSchematicDupontVersion.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -5027,6 +5151,12 @@
 		(path "/828099f1-7c7a-4f7e-9a45-346894b27585")
 		(sheetname "/")
 		(sheetfile "VL53L8CXBreakoutBoardSchematicDupontVersion.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -5179,6 +5309,12 @@
 		(path "/474ddc18-2e15-4e90-995f-e60299bc502e")
 		(sheetname "/")
 		(sheetfile "VL53L8CXBreakoutBoardSchematicDupontVersion.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -5331,6 +5467,12 @@
 		(path "/def2b31b-f81e-4da9-8aad-94e8dd161df3")
 		(sheetname "/")
 		(sheetfile "VL53L8CXBreakoutBoardSchematicDupontVersion.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -5485,6 +5627,12 @@
 		(path "/25b7a1fa-ee17-4870-b1f5-90ab806c466c")
 		(sheetname "/")
 		(sheetfile "VL53L8CXBreakoutBoardSchematicDupontVersion.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins)
+			)
+		)
 		(attr exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle

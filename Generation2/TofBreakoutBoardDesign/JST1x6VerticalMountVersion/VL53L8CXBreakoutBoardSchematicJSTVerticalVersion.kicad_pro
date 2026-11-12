@@ -477,7 +477,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "VL53L8CXBreakoutBoardSchematicJSTVersion.kicad_pro",
+    "filename": "VL53L8CXBreakoutBoardSchematicJSTVerticalVersion.kicad_pro",
     "version": 3
   },
   "net_settings": {
@@ -632,8 +632,8 @@
     "subpart_id_separator": 0,
     "top_level_sheets": [
       {
-        "filename": "VL53L8CXBreakoutBoardSchematicJSTVersion.kicad_sch",
-        "name": "VL53L8CXBreakoutBoardSchematicJSTVersion",
+        "filename": "VL53L8CXBreakoutBoardSchematicJSTVerticalVersion.kicad_sch",
+        "name": "VL53L8CXBreakoutBoardSchematicJSTVerticalVersion",
         "uuid": "282357c6-caf8-4566-adbb-241b76a97139"
       }
     ],
