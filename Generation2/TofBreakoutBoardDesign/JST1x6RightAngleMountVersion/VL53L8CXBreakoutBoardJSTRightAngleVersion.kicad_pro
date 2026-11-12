@@ -39,9 +39,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.8,
-          "height": 1.27,
-          "width": 2.54
+          "drill": 0.0,
+          "height": 4.4,
+          "width": 4.4
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -477,7 +477,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion.kicad_pro",
+    "filename": "VL53L8CXBreakoutBoardJSTRightAngleVersion.kicad_pro",
     "version": 3
   },
   "net_settings": {
@@ -632,8 +632,8 @@
     "subpart_id_separator": 0,
     "top_level_sheets": [
       {
-        "filename": "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion.kicad_sch",
-        "name": "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion",
+        "filename": "VL53L8CXBreakoutBoardJSTRightAngleVersion.kicad_sch",
+        "name": "VL53L8CXBreakoutBoardJSTRightAngleVersion",
         "uuid": "282357c6-caf8-4566-adbb-241b76a97139"
       }
     ],
@@ -643,7 +643,7 @@
   "sheets": [
     [
       "282357c6-caf8-4566-adbb-241b76a97139",
-      "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion"
+      "VL53L8CXBreakoutBoardJSTRightAngleVersion"
     ]
   ],
   "text_variables": {},

@@ -4489,7 +4489,7 @@
 			(uuid "0cdc8580-68b8-41b5-969a-b6a197160726")
 		)
 		(instances
-			(project "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion"
+			(project "VL53L8CXBreakoutBoardJSTRightAngleVersion"
 				(path "/282357c6-caf8-4566-adbb-241b76a97139"
 					(reference "#PWR020")
 					(unit 1)
@@ -4570,7 +4570,7 @@
 			(uuid "0bddd7a1-22d9-4125-8fc0-492f49c75d68")
 		)
 		(instances
-			(project "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion"
+			(project "VL53L8CXBreakoutBoardJSTRightAngleVersion"
 				(path "/282357c6-caf8-4566-adbb-241b76a97139"
 					(reference "C10")
 					(unit 1)
@@ -4646,7 +4646,7 @@
 			)
 		)
 		(instances
-			(project "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion"
+			(project "VL53L8CXBreakoutBoardJSTRightAngleVersion"
 				(path "/282357c6-caf8-4566-adbb-241b76a97139"
 					(reference "H2")
 					(unit 1)
@@ -4727,7 +4727,7 @@
 			(uuid "e6e762bb-f24f-40a1-89a8-ba6789b7eb1f")
 		)
 		(instances
-			(project "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion"
+			(project "VL53L8CXBreakoutBoardJSTRightAngleVersion"
 				(path "/282357c6-caf8-4566-adbb-241b76a97139"
 					(reference "R6")
 					(unit 1)
@@ -4804,7 +4804,7 @@
 			(uuid "1483458e-47c1-4b01-af99-c9039900e4ed")
 		)
 		(instances
-			(project "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion"
+			(project "VL53L8CXBreakoutBoardJSTRightAngleVersion"
 				(path "/282357c6-caf8-4566-adbb-241b76a97139"
 					(reference "#PWR017")
 					(unit 1)
@@ -4885,7 +4885,7 @@
 			(uuid "cffb839b-2134-42e4-90f8-74c868ffb944")
 		)
 		(instances
-			(project "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion"
+			(project "VL53L8CXBreakoutBoardJSTRightAngleVersion"
 				(path "/282357c6-caf8-4566-adbb-241b76a97139"
 					(reference "R1")
 					(unit 1)
@@ -4966,7 +4966,7 @@
 			(uuid "8fa52ffd-b011-4d74-b1a2-79a8705c60d2")
 		)
 		(instances
-			(project "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion"
+			(project "VL53L8CXBreakoutBoardJSTRightAngleVersion"
 				(path "/282357c6-caf8-4566-adbb-241b76a97139"
 					(reference "C9")
 					(unit 1)
@@ -5047,7 +5047,7 @@
 			(uuid "9f89b17d-24a3-4bc1-a462-271502b39601")
 		)
 		(instances
-			(project "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion"
+			(project "VL53L8CXBreakoutBoardJSTRightAngleVersion"
 				(path "/282357c6-caf8-4566-adbb-241b76a97139"
 					(reference "C4")
 					(unit 1)
@@ -5124,7 +5124,7 @@
 			(uuid "70b8158d-6fa2-4cdd-b9a6-cb7fa6c41531")
 		)
 		(instances
-			(project "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion"
+			(project "VL53L8CXBreakoutBoardJSTRightAngleVersion"
 				(path "/282357c6-caf8-4566-adbb-241b76a97139"
 					(reference "#PWR019")
 					(unit 1)
@@ -5201,7 +5201,7 @@
 			(uuid "034036d6-0e88-4ddc-9010-b97818e10d6d")
 		)
 		(instances
-			(project "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion"
+			(project "VL53L8CXBreakoutBoardJSTRightAngleVersion"
 				(path "/282357c6-caf8-4566-adbb-241b76a97139"
 					(reference "#PWR015")
 					(unit 1)
@@ -5278,7 +5278,7 @@
 			(uuid "4f349a43-fd54-4daa-a7a9-2783656d0176")
 		)
 		(instances
-			(project "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion"
+			(project "VL53L8CXBreakoutBoardJSTRightAngleVersion"
 				(path "/282357c6-caf8-4566-adbb-241b76a97139"
 					(reference "#PWR010")
 					(unit 1)
@@ -5355,7 +5355,7 @@
 			(uuid "a63d2647-d4e0-4085-850f-3d747a73a637")
 		)
 		(instances
-			(project "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion"
+			(project "VL53L8CXBreakoutBoardJSTRightAngleVersion"
 				(path "/282357c6-caf8-4566-adbb-241b76a97139"
 					(reference "#PWR018")
 					(unit 1)
@@ -5436,7 +5436,7 @@
 			(uuid "7e8665da-3da8-4529-9db7-3cd17be6bdd8")
 		)
 		(instances
-			(project "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion"
+			(project "VL53L8CXBreakoutBoardJSTRightAngleVersion"
 				(path "/282357c6-caf8-4566-adbb-241b76a97139"
 					(reference "C8")
 					(unit 1)
@@ -5514,7 +5514,7 @@
 			(uuid "323a17ab-ea07-4195-b1ec-70e25b8e9932")
 		)
 		(instances
-			(project "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion"
+			(project "VL53L8CXBreakoutBoardJSTRightAngleVersion"
 				(path "/282357c6-caf8-4566-adbb-241b76a97139"
 					(reference "#FLG02")
 					(unit 1)
@@ -5591,7 +5591,7 @@
 			(uuid "b553571a-ceee-49c9-bd70-ffd0dcd8b013")
 		)
 		(instances
-			(project "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion"
+			(project "VL53L8CXBreakoutBoardJSTRightAngleVersion"
 				(path "/282357c6-caf8-4566-adbb-241b76a97139"
 					(reference "#PWR03")
 					(unit 1)
@@ -5669,7 +5669,7 @@
 			(uuid "f0af1632-4291-417e-b2d9-a8b133ef80ef")
 		)
 		(instances
-			(project "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion"
+			(project "VL53L8CXBreakoutBoardJSTRightAngleVersion"
 				(path "/282357c6-caf8-4566-adbb-241b76a97139"
 					(reference "#PWR01")
 					(unit 1)
@@ -5750,7 +5750,7 @@
 			(uuid "d7d76255-30e6-4c14-ac4e-b0df8a1d9ddf")
 		)
 		(instances
-			(project "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion"
+			(project "VL53L8CXBreakoutBoardJSTRightAngleVersion"
 				(path "/282357c6-caf8-4566-adbb-241b76a97139"
 					(reference "R2")
 					(unit 1)
@@ -5827,7 +5827,7 @@
 			(uuid "c569c6ba-864a-45b1-8d46-e0c0bb5a55e9")
 		)
 		(instances
-			(project "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion"
+			(project "VL53L8CXBreakoutBoardJSTRightAngleVersion"
 				(path "/282357c6-caf8-4566-adbb-241b76a97139"
 					(reference "#PWR05")
 					(unit 1)
@@ -5908,7 +5908,7 @@
 			(uuid "c22ae1af-1878-4d75-8bfa-ea2ef8dd75dd")
 		)
 		(instances
-			(project "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion"
+			(project "VL53L8CXBreakoutBoardJSTRightAngleVersion"
 				(path "/282357c6-caf8-4566-adbb-241b76a97139"
 					(reference "R3")
 					(unit 1)
@@ -5989,7 +5989,7 @@
 			(uuid "32910861-aafa-4625-995e-dcf23cd4b026")
 		)
 		(instances
-			(project "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion"
+			(project "VL53L8CXBreakoutBoardJSTRightAngleVersion"
 				(path "/282357c6-caf8-4566-adbb-241b76a97139"
 					(reference "R4")
 					(unit 1)
@@ -6066,7 +6066,7 @@
 			(uuid "92dd9c8d-4b06-4714-b49a-cb6683ab33ac")
 		)
 		(instances
-			(project "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion"
+			(project "VL53L8CXBreakoutBoardJSTRightAngleVersion"
 				(path "/282357c6-caf8-4566-adbb-241b76a97139"
 					(reference "#PWR02")
 					(unit 1)
@@ -6147,7 +6147,7 @@
 			(uuid "0f36da7a-ccb1-449b-abae-b06b03138347")
 		)
 		(instances
-			(project "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion"
+			(project "VL53L8CXBreakoutBoardJSTRightAngleVersion"
 				(path "/282357c6-caf8-4566-adbb-241b76a97139"
 					(reference "C2")
 					(unit 1)
@@ -6228,7 +6228,7 @@
 			(uuid "475fa77e-99f1-46e9-ba32-081174144ffb")
 		)
 		(instances
-			(project "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion"
+			(project "VL53L8CXBreakoutBoardJSTRightAngleVersion"
 				(path "/282357c6-caf8-4566-adbb-241b76a97139"
 					(reference "C6")
 					(unit 1)
@@ -6306,7 +6306,7 @@
 			(uuid "7bff6ed3-a288-4821-9258-76653a3e41f4")
 		)
 		(instances
-			(project "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion"
+			(project "VL53L8CXBreakoutBoardJSTRightAngleVersion"
 				(path "/282357c6-caf8-4566-adbb-241b76a97139"
 					(reference "#PWR06")
 					(unit 1)
@@ -6383,7 +6383,7 @@
 			(uuid "67ea349f-a13a-46f2-aa64-2a52479733ad")
 		)
 		(instances
-			(project "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion"
+			(project "VL53L8CXBreakoutBoardJSTRightAngleVersion"
 				(path "/282357c6-caf8-4566-adbb-241b76a97139"
 					(reference "#PWR07")
 					(unit 1)
@@ -6464,7 +6464,7 @@
 			(uuid "6a39b656-0c99-452f-9b5a-083ef6c4c137")
 		)
 		(instances
-			(project "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion"
+			(project "VL53L8CXBreakoutBoardJSTRightAngleVersion"
 				(path "/282357c6-caf8-4566-adbb-241b76a97139"
 					(reference "R7")
 					(unit 1)
@@ -6592,7 +6592,7 @@
 			(uuid "65adfcd8-b3b0-44c7-8763-bff9fec8bbfc")
 		)
 		(instances
-			(project "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion"
+			(project "VL53L8CXBreakoutBoardJSTRightAngleVersion"
 				(path "/282357c6-caf8-4566-adbb-241b76a97139"
 					(reference "U1")
 					(unit 1)
@@ -6669,7 +6669,7 @@
 			(uuid "8d91e6ba-932b-4852-a959-fb0bdf177512")
 		)
 		(instances
-			(project "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion"
+			(project "VL53L8CXBreakoutBoardJSTRightAngleVersion"
 				(path "/282357c6-caf8-4566-adbb-241b76a97139"
 					(reference "#PWR011")
 					(unit 1)
@@ -6806,7 +6806,7 @@
 			(uuid "a56af016-fb91-47f6-beca-2cd05abece14")
 		)
 		(instances
-			(project "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion"
+			(project "VL53L8CXBreakoutBoardJSTRightAngleVersion"
 				(path "/282357c6-caf8-4566-adbb-241b76a97139"
 					(reference "U2")
 					(unit 1)
@@ -6883,7 +6883,7 @@
 			(uuid "f4f64727-dbed-425f-8a63-edef215e1b75")
 		)
 		(instances
-			(project "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion"
+			(project "VL53L8CXBreakoutBoardJSTRightAngleVersion"
 				(path "/282357c6-caf8-4566-adbb-241b76a97139"
 					(reference "#PWR013")
 					(unit 1)
@@ -6960,7 +6960,7 @@
 			(uuid "f1fc409d-d375-4d68-95d3-f5826ef77ccf")
 		)
 		(instances
-			(project "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion"
+			(project "VL53L8CXBreakoutBoardJSTRightAngleVersion"
 				(path "/282357c6-caf8-4566-adbb-241b76a97139"
 					(reference "#PWR04")
 					(unit 1)
@@ -7039,7 +7039,7 @@
 			(uuid "11c71bd6-0cbc-42da-9db0-0110f6cd06a7")
 		)
 		(instances
-			(project "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion"
+			(project "VL53L8CXBreakoutBoardJSTRightAngleVersion"
 				(path "/282357c6-caf8-4566-adbb-241b76a97139"
 					(reference "C7")
 					(unit 1)
@@ -7116,7 +7116,7 @@
 			(uuid "34806106-a4de-41e1-91e3-15f72a9abdb9")
 		)
 		(instances
-			(project "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion"
+			(project "VL53L8CXBreakoutBoardJSTRightAngleVersion"
 				(path "/282357c6-caf8-4566-adbb-241b76a97139"
 					(reference "#PWR09")
 					(unit 1)
@@ -7197,7 +7197,7 @@
 			(uuid "f45c98d4-84fe-4790-b92e-4e4d172d7dc0")
 		)
 		(instances
-			(project "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion"
+			(project "VL53L8CXBreakoutBoardJSTRightAngleVersion"
 				(path "/282357c6-caf8-4566-adbb-241b76a97139"
 					(reference "C5")
 					(unit 1)
@@ -7274,7 +7274,7 @@
 			(uuid "5700d189-a12f-4569-852e-35203211a124")
 		)
 		(instances
-			(project "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion"
+			(project "VL53L8CXBreakoutBoardJSTRightAngleVersion"
 				(path "/282357c6-caf8-4566-adbb-241b76a97139"
 					(reference "#PWR014")
 					(unit 1)
@@ -7355,7 +7355,7 @@
 			(uuid "19b446df-10ad-4177-bc16-66d40e7df0ff")
 		)
 		(instances
-			(project "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion"
+			(project "VL53L8CXBreakoutBoardJSTRightAngleVersion"
 				(path "/282357c6-caf8-4566-adbb-241b76a97139"
 					(reference "R8")
 					(unit 1)
@@ -7433,7 +7433,7 @@
 			(uuid "950ec803-1b39-4d58-a80f-5a5ef8704259")
 		)
 		(instances
-			(project "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion"
+			(project "VL53L8CXBreakoutBoardJSTRightAngleVersion"
 				(path "/282357c6-caf8-4566-adbb-241b76a97139"
 					(reference "#FLG01")
 					(unit 1)
@@ -7511,7 +7511,7 @@
 			(uuid "73b99d4f-380a-4af7-bc1d-56c445be171d")
 		)
 		(instances
-			(project "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion"
+			(project "VL53L8CXBreakoutBoardJSTRightAngleVersion"
 				(path "/282357c6-caf8-4566-adbb-241b76a97139"
 					(reference "#PWR021")
 					(unit 1)
@@ -7587,7 +7587,7 @@
 			)
 		)
 		(instances
-			(project "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion"
+			(project "VL53L8CXBreakoutBoardJSTRightAngleVersion"
 				(path "/282357c6-caf8-4566-adbb-241b76a97139"
 					(reference "H1")
 					(unit 1)
@@ -7668,7 +7668,7 @@
 			(uuid "2053e2c1-fae6-4afd-bfe6-056c5d8d95f8")
 		)
 		(instances
-			(project "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion"
+			(project "VL53L8CXBreakoutBoardJSTRightAngleVersion"
 				(path "/282357c6-caf8-4566-adbb-241b76a97139"
 					(reference "C1")
 					(unit 1)
@@ -7749,7 +7749,7 @@
 			(uuid "916b4a6a-ac3f-4ad9-8c38-306ed817a70c")
 		)
 		(instances
-			(project "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion"
+			(project "VL53L8CXBreakoutBoardJSTRightAngleVersion"
 				(path "/282357c6-caf8-4566-adbb-241b76a97139"
 					(reference "R5")
 					(unit 1)
@@ -7830,7 +7830,7 @@
 			(uuid "e211760f-edda-48bf-ad66-2865464dc761")
 		)
 		(instances
-			(project "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion"
+			(project "VL53L8CXBreakoutBoardJSTRightAngleVersion"
 				(path "/282357c6-caf8-4566-adbb-241b76a97139"
 					(reference "C3")
 					(unit 1)
@@ -7961,7 +7961,7 @@
 			(uuid "352fcfae-31d1-45a7-888c-135aacd52473")
 		)
 		(instances
-			(project "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion"
+			(project "VL53L8CXBreakoutBoardJSTRightAngleVersion"
 				(path "/282357c6-caf8-4566-adbb-241b76a97139"
 					(reference "CN2")
 					(unit 1)
@@ -8039,7 +8039,7 @@
 			(uuid "33b7f4a8-6603-49ec-acce-a8cbe676dca1")
 		)
 		(instances
-			(project "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion"
+			(project "VL53L8CXBreakoutBoardJSTRightAngleVersion"
 				(path "/282357c6-caf8-4566-adbb-241b76a97139"
 					(reference "#PWR016")
 					(unit 1)
@@ -8117,7 +8117,7 @@
 			(uuid "1b3e0c4c-7bb3-4c56-ac6e-f5b4c717bf37")
 		)
 		(instances
-			(project "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion"
+			(project "VL53L8CXBreakoutBoardJSTRightAngleVersion"
 				(path "/282357c6-caf8-4566-adbb-241b76a97139"
 					(reference "#PWR08")
 					(unit 1)
@@ -8207,7 +8207,7 @@
 			(uuid "26328dcc-45c7-4c3b-aa31-9aac30117e69")
 		)
 		(instances
-			(project "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion"
+			(project "VL53L8CXBreakoutBoardJSTRightAngleVersion"
 				(path "/282357c6-caf8-4566-adbb-241b76a97139"
 					(reference "U3")
 					(unit 1)
@@ -8284,7 +8284,7 @@
 			(uuid "9f6e6124-cb28-4339-805c-9516bb74c52a")
 		)
 		(instances
-			(project "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion"
+			(project "VL53L8CXBreakoutBoardJSTRightAngleVersion"
 				(path "/282357c6-caf8-4566-adbb-241b76a97139"
 					(reference "#PWR012")
 					(unit 1)
