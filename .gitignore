@@ -25,8 +25,11 @@ _autosave-*
 fp-info-cache
 *-cache*
 
-# KiCad local history
+# KiCad local history and automatic backups
 .history/
+*-backups/
+*.kicad_prl
+*.lck
 
 # Unused design block library tables
 design-block-lib-table
