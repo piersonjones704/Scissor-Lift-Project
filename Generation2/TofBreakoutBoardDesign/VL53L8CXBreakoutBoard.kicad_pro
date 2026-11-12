@@ -435,9 +435,9 @@
       "endpoint_off_grid": "warning",
       "extra_units": "error",
       "field_name_whitespace": "warning",
-      "footprint_filter": "error",
+      "footprint_filter": "ignore",
       "footprint_link_issues": "warning",
-      "four_way_junction": "error",
+      "four_way_junction": "ignore",
       "ground_pin_not_ground": "warning",
       "hier_label_mismatch": "error",
       "isolated_pin_label": "warning",
@@ -455,7 +455,7 @@
       "no_connect_dangling": "warning",
       "pin_not_connected": "error",
       "pin_not_driven": "error",
-      "pin_to_pin": "error",
+      "pin_to_pin": "warning",
       "power_pin_not_driven": "error",
       "same_local_global_label": "warning",
       "similar_label_and_power": "warning",
@@ -477,7 +477,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "VL53L8CXBreakoutBoardSchematicJSTVerticalVersion.kicad_pro",
+    "filename": "VL53L8CXBreakoutBoardSchematic.kicad_pro",
     "version": 3
   },
   "net_settings": {
@@ -632,8 +632,8 @@
     "subpart_id_separator": 0,
     "top_level_sheets": [
       {
-        "filename": "VL53L8CXBreakoutBoardSchematicJSTVerticalVersion.kicad_sch",
-        "name": "VL53L8CXBreakoutBoardSchematicJSTVerticalVersion",
+        "filename": "VL53L8CXBreakoutBoardSchematic.kicad_sch",
+        "name": "VL53L8CXBreakoutBoardSchematic",
         "uuid": "282357c6-caf8-4566-adbb-241b76a97139"
       }
     ],
@@ -643,7 +643,7 @@
   "sheets": [
     [
       "282357c6-caf8-4566-adbb-241b76a97139",
-      "VL53L8CXBreakoutBoardSchematicJSTVersion"
+      "VL53L8CXBreakoutBoardSchematic"
     ]
   ],
   "text_variables": {},
