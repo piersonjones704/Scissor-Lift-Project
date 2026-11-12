@@ -4612,7 +4612,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2_Pad_TopBottom"
+		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2"
 			(at 105.41 173.99 0)
 			(hide yes)
 			(show_name no)
@@ -7553,7 +7553,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2_Pad_TopBottom"
+		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2"
 			(at 86.36 173.99 0)
 			(hide yes)
 			(show_name no)
