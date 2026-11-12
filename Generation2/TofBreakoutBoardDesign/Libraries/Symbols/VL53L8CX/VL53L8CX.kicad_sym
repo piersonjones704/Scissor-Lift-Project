@@ -21,7 +21,7 @@
 				)
 			)
 		)
-		(property "Value" "VL53L8CXV0GC/1"
+		(property "Value" "VL53L8CX"
 			(at 30.48 7.62 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -31,7 +31,7 @@
 				)
 			)
 		)
-		(property "Footprint" "IC17_LGA16_STM"
+		(property "Footprint" "VL53L8CX:VL53L8CX"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -66,16 +66,6 @@
 				)
 			)
 		)
-		(property "ki_locked" ""
-			(at 0 0 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "ki_keywords" "VL53L8CXV0GC/1"
 			(at 0 0 0)
 			(show_name no)
@@ -87,7 +77,7 @@
 				)
 			)
 		)
-		(property "ki_fp_filters" "IC17_LGA16_STM"
+		(property "ki_fp_filters" "VL53L8CX"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
