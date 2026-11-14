@@ -4541,7 +4541,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://jlc-prod-smt.oss-eu-central-1.aliyuncs.com/smtDataManualFile/8579706853607202816-C15850.pdf?response-content-disposition=attachment%3B%20filename%3DC15850.pdf%3B%20filename%2A%3DUTF-8%27%27C15850.pdf&x-oss-date=20261114T004425Z&x-oss-expires=1800&x-oss-security-token=CAISgAN1q6Ft5B2yfSjIr5vQcs%2F8mox44KqvNhXktHNgR9x6lbfKiDz2IHhMdHJsAOodtv0%2FmmhT6PkclqRLcbhpcmfjV%2BZHzLB8qcxFg1w0557b16cNrbH4M4H6aXeirtuwDsz9SNTCALjPD3nPii50x5bjaDymRCbLGJaViJlhHLN1Ow6jdmhpCctxLAlvo9NgFxm3D%2Fu2NQPwiWf9FVdhvhEG6Vly8qOi2MaRmFy8yFTx0b0SvJ%2BjYMrmPctoN9JnSdC5mfdzau3a1TJ84gRD0a5wkaVA1zbDs5bfISEIuUzebreLqY03dV4mOvdqIcMe8qigz88fk%2FfIioH6xyxKOexoSCnFTOiiupCcQLPyao9jLu6iayqViY7QaIOTqQohZmkAMwVOasAsI3Ngh4zF97Qt0cVNkXO9gWfLI8DtuMleWqpjTv8uLJSgc5lCkRRYwGs1287ugXlSQzo890KPDAEovaKCnZ2ZSfh7Y4sNknI6i%2Bfc2Se2MIkILVQHdKKWD5sagAGefKHqKplcbHo6TW3CZEWPTVaPqmbrYQUF0Tr%2FUSQ3oAMMafrX3N4qn0kt57OHJ%2B4CQqpGT0ZYZ5AxNBBWsvBWg%2BNEK2C%2Br%2B00IlUu89da7D2oGuwiRjqP5%2FRJvkg1rmuM%2FfZEJtZ1vaauH2zkk8xAL5CZUptmXvmsX0z8P2V01SAA&x-oss-signature-version=OSS4-HMAC-SHA256&x-oss-credential=STS.NXe9uHwSYWhD43UPs5KSVzraj%2F20261114%2Feu-central-1%2Foss%2Faliyun_v4_request&x-oss-signature=1a59b0992a108a1fccea03f2351b92fd87e79986056a200f46da459207853bd9"
 			(at 252.73 111.76 0)
 			(hide yes)
 			(show_name no)
@@ -4564,6 +4564,28 @@
 			)
 		)
 		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 252.73 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C15850"
+			(at 252.73 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
 			(at 252.73 111.76 0)
 			(hide yes)
 			(show_name no)
@@ -4720,7 +4742,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://jlc-prod-smt.oss-eu-central-1.aliyuncs.com/smtDataManualFile/8588882090821214208-C25600.pdf?response-content-disposition=attachment%3B%20filename%3DC25600.pdf%3B%20filename%2A%3DUTF-8%27%27C25600.pdf&x-oss-date=20261114T010406Z&x-oss-expires=1800&x-oss-security-token=CAISgAN1q6Ft5B2yfSjIr5nCG%2Bj2rLx7wKWdQ2vavkQZfNZFmo3siTz2IHhMdHJsAOodtv0%2FmmhT6PkclqRLcbhpcmfjV%2BZHzLB8qZEF2l00557b16cNrbH4M4H6aXeirtuwDsz9SNTCALjPD3nPii50x5bjaDymRCbLGJaViJlhHLN1Ow6jdmhpCctxLAlvo9NgFxm3D%2Fu2NQPwiWf9FVdhvhEG6Vly8qOi2MaRmFy8yFTx0b0SvJ%2BjYMrmPctoN9JnSdC5mfdzau3a1TJ84gRD0a5wkaVA1zbDs5bfISEIuUzebreLqY03dV4mOvdqIcMe8qigz88fk%2FfIioH6xyxKOexoSCnFTOiiupCcQLPyao9jLu6iayqViY7QaIOTqQohZmkAMwVOasAsI3Ngh4zF97Qt0cVNkXO9gWfLI8DtuMleWgoozuseLJSgc5lCkRRYwGs1287ugXlSQzo890KPDAEovaKCnZ2ZSfh7Y4sNknI6i%2Bfc2Se2MIkIjddkMqKWD5sagAGNBHtmGfUnamga%2FgCpTlMNz6c6M%2Bb1rxu%2FM1ABv345hnAmuy%2F5J%2FCwQSbqjrO7ZJPkwLw6pd21ERVJTeBY743UDw27gSUEO196HbWosV60lXGkD4U81mgFv7TZ%2FtLWMVKhHDnqeRvFsDpGzZTfvYYQy5GF2DpdJuR96qFCXSUTCCAA&x-oss-signature-version=OSS4-HMAC-SHA256&x-oss-credential=STS.NZwPRBAcZwgvAMkZDLpYiuHGk%2F20261114%2Feu-central-1%2Foss%2Faliyun_v4_request&x-oss-signature=c0fc15fed24616278f7cc83a8f66cf36724a3007b44c9e553446e1569094ad7c"
 			(at 78.74 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -4743,6 +4765,28 @@
 			)
 		)
 		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 78.74 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C25600"
+			(at 78.74 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "UNI-ROYAL(Uniroyal Elec)"
 			(at 78.74 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -4889,7 +4933,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://jlc-prod-smt.oss-eu-central-1.aliyuncs.com/smtDataManualFile/8588882000246165504-C15401.pdf?response-content-disposition=attachment%3B%20filename%3DC15401.pdf%3B%20filename%2A%3DUTF-8%27%27C15401.pdf&x-oss-date=20261114T010213Z&x-oss-expires=1800&x-oss-security-token=CAISgAN1q6Ft5B2yfSjIr5nCG%2Bj2rLx7wKWdQ2vavkQZfNZFmo3siTz2IHhMdHJsAOodtv0%2FmmhT6PkclqRLcbhpcmfjV%2BZHzLB8qZEF2l00557b16cNrbH4M4H6aXeirtuwDsz9SNTCALjPD3nPii50x5bjaDymRCbLGJaViJlhHLN1Ow6jdmhpCctxLAlvo9NgFxm3D%2Fu2NQPwiWf9FVdhvhEG6Vly8qOi2MaRmFy8yFTx0b0SvJ%2BjYMrmPctoN9JnSdC5mfdzau3a1TJ84gRD0a5wkaVA1zbDs5bfISEIuUzebreLqY03dV4mOvdqIcMe8qigz88fk%2FfIioH6xyxKOexoSCnFTOiiupCcQLPyao9jLu6iayqViY7QaIOTqQohZmkAMwVOasAsI3Ngh4zF97Qt0cVNkXO9gWfLI8DtuMleWgoozuseLJSgc5lCkRRYwGs1287ugXlSQzo890KPDAEovaKCnZ2ZSfh7Y4sNknI6i%2Bfc2Se2MIkIjddkMqKWD5sagAGNBHtmGfUnamga%2FgCpTlMNz6c6M%2Bb1rxu%2FM1ABv345hnAmuy%2F5J%2FCwQSbqjrO7ZJPkwLw6pd21ERVJTeBY743UDw27gSUEO196HbWosV60lXGkD4U81mgFv7TZ%2FtLWMVKhHDnqeRvFsDpGzZTfvYYQy5GF2DpdJuR96qFCXSUTCCAA&x-oss-signature-version=OSS4-HMAC-SHA256&x-oss-credential=STS.NZwPRBAcZwgvAMkZDLpYiuHGk%2F20261114%2Feu-central-1%2Foss%2Faliyun_v4_request&x-oss-signature=1551fe478276b53b5b6eb20bec3f35de2ae8c09ab5d9ec6ed62339e5e790ed04"
 			(at 162.56 44.45 0)
 			(hide yes)
 			(show_name no)
@@ -4912,6 +4956,28 @@
 			)
 		)
 		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 162.56 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C15401"
+			(at 162.56 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "UNI-ROYAL(Uniroyal Elec)"
 			(at 162.56 44.45 0)
 			(hide yes)
 			(show_name no)
@@ -4981,7 +5047,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://jlc-prod-smt.oss-eu-central-1.aliyuncs.com/smtDataManualFile/8586178171934400512-C1746.pdf?response-content-disposition=attachment%3B%20filename%3DC1746.pdf%3B%20filename%2A%3DUTF-8%27%27C1746.pdf&x-oss-date=20261114T004204Z&x-oss-expires=1800&x-oss-security-token=CAISgAN1q6Ft5B2yfSjIr5vQcs%2F8mox44KqvNhXktHNgR9x6lbfKiDz2IHhMdHJsAOodtv0%2FmmhT6PkclqRLcbhpcmfjV%2BZHzLB8qcxFg1w0557b16cNrbH4M4H6aXeirtuwDsz9SNTCALjPD3nPii50x5bjaDymRCbLGJaViJlhHLN1Ow6jdmhpCctxLAlvo9NgFxm3D%2Fu2NQPwiWf9FVdhvhEG6Vly8qOi2MaRmFy8yFTx0b0SvJ%2BjYMrmPctoN9JnSdC5mfdzau3a1TJ84gRD0a5wkaVA1zbDs5bfISEIuUzebreLqY03dV4mOvdqIcMe8qigz88fk%2FfIioH6xyxKOexoSCnFTOiiupCcQLPyao9jLu6iayqViY7QaIOTqQohZmkAMwVOasAsI3Ngh4zF97Qt0cVNkXO9gWfLI8DtuMleWqpjTv8uLJSgc5lCkRRYwGs1287ugXlSQzo890KPDAEovaKCnZ2ZSfh7Y4sNknI6i%2Bfc2Se2MIkILVQHdKKWD5sagAGefKHqKplcbHo6TW3CZEWPTVaPqmbrYQUF0Tr%2FUSQ3oAMMafrX3N4qn0kt57OHJ%2B4CQqpGT0ZYZ5AxNBBWsvBWg%2BNEK2C%2Br%2B00IlUu89da7D2oGuwiRjqP5%2FRJvkg1rmuM%2FfZEJtZ1vaauH2zkk8xAL5CZUptmXvmsX0z8P2V01SAA&x-oss-signature-version=OSS4-HMAC-SHA256&x-oss-credential=STS.NXe9uHwSYWhD43UPs5KSVzraj%2F20261114%2Feu-central-1%2Foss%2Faliyun_v4_request&x-oss-signature=2347c14cf1c27cbc7cf07545b638e69d53ac03c97279b6b4f6d4037c75dcaea6"
 			(at 179.07 114.3 0)
 			(hide yes)
 			(show_name no)
@@ -5004,6 +5070,28 @@
 			)
 		)
 		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 179.07 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C1746"
+			(at 179.07 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
 			(at 179.07 114.3 0)
 			(hide yes)
 			(show_name no)
@@ -5073,7 +5161,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://jlc-prod-smt.oss-eu-central-1.aliyuncs.com/smtDataManualFile/8586178171934400512-C1746.pdf?response-content-disposition=attachment%3B%20filename%3DC1746.pdf%3B%20filename%2A%3DUTF-8%27%27C1746.pdf&x-oss-date=20261114T004204Z&x-oss-expires=1800&x-oss-security-token=CAISgAN1q6Ft5B2yfSjIr5vQcs%2F8mox44KqvNhXktHNgR9x6lbfKiDz2IHhMdHJsAOodtv0%2FmmhT6PkclqRLcbhpcmfjV%2BZHzLB8qcxFg1w0557b16cNrbH4M4H6aXeirtuwDsz9SNTCALjPD3nPii50x5bjaDymRCbLGJaViJlhHLN1Ow6jdmhpCctxLAlvo9NgFxm3D%2Fu2NQPwiWf9FVdhvhEG6Vly8qOi2MaRmFy8yFTx0b0SvJ%2BjYMrmPctoN9JnSdC5mfdzau3a1TJ84gRD0a5wkaVA1zbDs5bfISEIuUzebreLqY03dV4mOvdqIcMe8qigz88fk%2FfIioH6xyxKOexoSCnFTOiiupCcQLPyao9jLu6iayqViY7QaIOTqQohZmkAMwVOasAsI3Ngh4zF97Qt0cVNkXO9gWfLI8DtuMleWqpjTv8uLJSgc5lCkRRYwGs1287ugXlSQzo890KPDAEovaKCnZ2ZSfh7Y4sNknI6i%2Bfc2Se2MIkILVQHdKKWD5sagAGefKHqKplcbHo6TW3CZEWPTVaPqmbrYQUF0Tr%2FUSQ3oAMMafrX3N4qn0kt57OHJ%2B4CQqpGT0ZYZ5AxNBBWsvBWg%2BNEK2C%2Br%2B00IlUu89da7D2oGuwiRjqP5%2FRJvkg1rmuM%2FfZEJtZ1vaauH2zkk8xAL5CZUptmXvmsX0z8P2V01SAA&x-oss-signature-version=OSS4-HMAC-SHA256&x-oss-credential=STS.NXe9uHwSYWhD43UPs5KSVzraj%2F20261114%2Feu-central-1%2Foss%2Faliyun_v4_request&x-oss-signature=2347c14cf1c27cbc7cf07545b638e69d53ac03c97279b6b4f6d4037c75dcaea6"
 			(at 96.52 44.45 0)
 			(hide yes)
 			(show_name no)
@@ -5096,6 +5184,28 @@
 			)
 		)
 		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 96.52 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C1746"
+			(at 96.52 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
 			(at 96.52 44.45 0)
 			(hide yes)
 			(show_name no)
@@ -5473,7 +5583,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://jlc-prod-smt.oss-eu-central-1.aliyuncs.com/smtDataManualFile/8586177280415059968-C1591.pdf?response-content-disposition=attachment%3B%20filename%3DC1591.pdf%3B%20filename%2A%3DUTF-8%27%27C1591.pdf&x-oss-date=20261114T003126Z&x-oss-expires=1800&x-oss-security-token=CAISgAN1q6Ft5B2yfSjIr5vQcs%2F8mox44KqvNhXktHNgR9x6lbfKiDz2IHhMdHJsAOodtv0%2FmmhT6PkclqRLcbhpcmfjV%2BZHzLB8qcxFg1w0557b16cNrbH4M4H6aXeirtuwDsz9SNTCALjPD3nPii50x5bjaDymRCbLGJaViJlhHLN1Ow6jdmhpCctxLAlvo9NgFxm3D%2Fu2NQPwiWf9FVdhvhEG6Vly8qOi2MaRmFy8yFTx0b0SvJ%2BjYMrmPctoN9JnSdC5mfdzau3a1TJ84gRD0a5wkaVA1zbDs5bfISEIuUzebreLqY03dV4mOvdqIcMe8qigz88fk%2FfIioH6xyxKOexoSCnFTOiiupCcQLPyao9jLu6iayqViY7QaIOTqQohZmkAMwVOasAsI3Ngh4zF97Qt0cVNkXO9gWfLI8DtuMleWqpjTv8uLJSgc5lCkRRYwGs1287ugXlSQzo890KPDAEovaKCnZ2ZSfh7Y4sNknI6i%2Bfc2Se2MIkILVQHdKKWD5sagAGefKHqKplcbHo6TW3CZEWPTVaPqmbrYQUF0Tr%2FUSQ3oAMMafrX3N4qn0kt57OHJ%2B4CQqpGT0ZYZ5AxNBBWsvBWg%2BNEK2C%2Br%2B00IlUu89da7D2oGuwiRjqP5%2FRJvkg1rmuM%2FfZEJtZ1vaauH2zkk8xAL5CZUptmXvmsX0z8P2V01SAA&x-oss-signature-version=OSS4-HMAC-SHA256&x-oss-credential=STS.NXe9uHwSYWhD43UPs5KSVzraj%2F20261114%2Feu-central-1%2Foss%2Faliyun_v4_request&x-oss-signature=a9cdd02897b65ad2846c9d254b4e41c3c41d87a2cc764abdd84dab2a92129e72"
 			(at 168.91 121.92 0)
 			(hide yes)
 			(show_name no)
@@ -5496,6 +5606,28 @@
 			)
 		)
 		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 168.91 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C1591"
+			(at 168.91 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
 			(at 168.91 121.92 0)
 			(hide yes)
 			(show_name no)
@@ -5798,7 +5930,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://jlc-prod-smt.oss-eu-central-1.aliyuncs.com/smtDataManualFile/8579706158411464704-C4190.pdf?response-content-disposition=attachment%3B%20filename%3DC4190.pdf%3B%20filename%2A%3DUTF-8%27%27C4190.pdf&x-oss-date=20261114T005252Z&x-oss-expires=1800&x-oss-security-token=CAISgAN1q6Ft5B2yfSjIr5nCG%2Bj2rLx7wKWdQ2vavkQZfNZFmo3siTz2IHhMdHJsAOodtv0%2FmmhT6PkclqRLcbhpcmfjV%2BZHzLB8qZEF2l00557b16cNrbH4M4H6aXeirtuwDsz9SNTCALjPD3nPii50x5bjaDymRCbLGJaViJlhHLN1Ow6jdmhpCctxLAlvo9NgFxm3D%2Fu2NQPwiWf9FVdhvhEG6Vly8qOi2MaRmFy8yFTx0b0SvJ%2BjYMrmPctoN9JnSdC5mfdzau3a1TJ84gRD0a5wkaVA1zbDs5bfISEIuUzebreLqY03dV4mOvdqIcMe8qigz88fk%2FfIioH6xyxKOexoSCnFTOiiupCcQLPyao9jLu6iayqViY7QaIOTqQohZmkAMwVOasAsI3Ngh4zF97Qt0cVNkXO9gWfLI8DtuMleWgoozuseLJSgc5lCkRRYwGs1287ugXlSQzo890KPDAEovaKCnZ2ZSfh7Y4sNknI6i%2Bfc2Se2MIkIjddkMqKWD5sagAGNBHtmGfUnamga%2FgCpTlMNz6c6M%2Bb1rxu%2FM1ABv345hnAmuy%2F5J%2FCwQSbqjrO7ZJPkwLw6pd21ERVJTeBY743UDw27gSUEO196HbWosV60lXGkD4U81mgFv7TZ%2FtLWMVKhHDnqeRvFsDpGzZTfvYYQy5GF2DpdJuR96qFCXSUTCCAA&x-oss-signature-version=OSS4-HMAC-SHA256&x-oss-credential=STS.NZwPRBAcZwgvAMkZDLpYiuHGk%2F20261114%2Feu-central-1%2Foss%2Faliyun_v4_request&x-oss-signature=396a9804b11422b1805aa5c5c849ee8a6835724ccf86d9afb80f0f71105ca826"
 			(at 44.45 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -5821,6 +5953,28 @@
 			)
 		)
 		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 44.45 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C4190"
+			(at 44.45 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "UNI-ROYAL(Uniroyal Elec)"
 			(at 44.45 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -5967,7 +6121,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://jlc-prod-smt.oss-eu-central-1.aliyuncs.com/smtDataManualFile/8579706158411464704-C4190.pdf?response-content-disposition=attachment%3B%20filename%3DC4190.pdf%3B%20filename%2A%3DUTF-8%27%27C4190.pdf&x-oss-date=20261114T005252Z&x-oss-expires=1800&x-oss-security-token=CAISgAN1q6Ft5B2yfSjIr5nCG%2Bj2rLx7wKWdQ2vavkQZfNZFmo3siTz2IHhMdHJsAOodtv0%2FmmhT6PkclqRLcbhpcmfjV%2BZHzLB8qZEF2l00557b16cNrbH4M4H6aXeirtuwDsz9SNTCALjPD3nPii50x5bjaDymRCbLGJaViJlhHLN1Ow6jdmhpCctxLAlvo9NgFxm3D%2Fu2NQPwiWf9FVdhvhEG6Vly8qOi2MaRmFy8yFTx0b0SvJ%2BjYMrmPctoN9JnSdC5mfdzau3a1TJ84gRD0a5wkaVA1zbDs5bfISEIuUzebreLqY03dV4mOvdqIcMe8qigz88fk%2FfIioH6xyxKOexoSCnFTOiiupCcQLPyao9jLu6iayqViY7QaIOTqQohZmkAMwVOasAsI3Ngh4zF97Qt0cVNkXO9gWfLI8DtuMleWgoozuseLJSgc5lCkRRYwGs1287ugXlSQzo890KPDAEovaKCnZ2ZSfh7Y4sNknI6i%2Bfc2Se2MIkIjddkMqKWD5sagAGNBHtmGfUnamga%2FgCpTlMNz6c6M%2Bb1rxu%2FM1ABv345hnAmuy%2F5J%2FCwQSbqjrO7ZJPkwLw6pd21ERVJTeBY743UDw27gSUEO196HbWosV60lXGkD4U81mgFv7TZ%2FtLWMVKhHDnqeRvFsDpGzZTfvYYQy5GF2DpdJuR96qFCXSUTCCAA&x-oss-signature-version=OSS4-HMAC-SHA256&x-oss-credential=STS.NZwPRBAcZwgvAMkZDLpYiuHGk%2F20261114%2Feu-central-1%2Foss%2Faliyun_v4_request&x-oss-signature=396a9804b11422b1805aa5c5c849ee8a6835724ccf86d9afb80f0f71105ca826"
 			(at 53.34 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -5990,6 +6144,28 @@
 			)
 		)
 		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 53.34 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C4190"
+			(at 53.34 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "UNI-ROYAL(Uniroyal Elec)"
 			(at 53.34 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -6059,7 +6235,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://jlc-prod-smt.oss-eu-central-1.aliyuncs.com/smtDataManualFile/8588882090821214208-C25600.pdf?response-content-disposition=attachment%3B%20filename%3DC25600.pdf%3B%20filename%2A%3DUTF-8%27%27C25600.pdf&x-oss-date=20261114T010406Z&x-oss-expires=1800&x-oss-security-token=CAISgAN1q6Ft5B2yfSjIr5nCG%2Bj2rLx7wKWdQ2vavkQZfNZFmo3siTz2IHhMdHJsAOodtv0%2FmmhT6PkclqRLcbhpcmfjV%2BZHzLB8qZEF2l00557b16cNrbH4M4H6aXeirtuwDsz9SNTCALjPD3nPii50x5bjaDymRCbLGJaViJlhHLN1Ow6jdmhpCctxLAlvo9NgFxm3D%2Fu2NQPwiWf9FVdhvhEG6Vly8qOi2MaRmFy8yFTx0b0SvJ%2BjYMrmPctoN9JnSdC5mfdzau3a1TJ84gRD0a5wkaVA1zbDs5bfISEIuUzebreLqY03dV4mOvdqIcMe8qigz88fk%2FfIioH6xyxKOexoSCnFTOiiupCcQLPyao9jLu6iayqViY7QaIOTqQohZmkAMwVOasAsI3Ngh4zF97Qt0cVNkXO9gWfLI8DtuMleWgoozuseLJSgc5lCkRRYwGs1287ugXlSQzo890KPDAEovaKCnZ2ZSfh7Y4sNknI6i%2Bfc2Se2MIkIjddkMqKWD5sagAGNBHtmGfUnamga%2FgCpTlMNz6c6M%2Bb1rxu%2FM1ABv345hnAmuy%2F5J%2FCwQSbqjrO7ZJPkwLw6pd21ERVJTeBY743UDw27gSUEO196HbWosV60lXGkD4U81mgFv7TZ%2FtLWMVKhHDnqeRvFsDpGzZTfvYYQy5GF2DpdJuR96qFCXSUTCCAA&x-oss-signature-version=OSS4-HMAC-SHA256&x-oss-credential=STS.NZwPRBAcZwgvAMkZDLpYiuHGk%2F20261114%2Feu-central-1%2Foss%2Faliyun_v4_request&x-oss-signature=c0fc15fed24616278f7cc83a8f66cf36724a3007b44c9e553446e1569094ad7c"
 			(at 62.23 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -6082,6 +6258,28 @@
 			)
 		)
 		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 62.23 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C25600"
+			(at 62.23 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "UNI-ROYAL(Uniroyal Elec)"
 			(at 62.23 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -6228,7 +6426,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://jlc-prod-smt.oss-eu-central-1.aliyuncs.com/smtDataManualFile/8586177280415059968-C1591.pdf?response-content-disposition=attachment%3B%20filename%3DC1591.pdf%3B%20filename%2A%3DUTF-8%27%27C1591.pdf&x-oss-date=20261114T003126Z&x-oss-expires=1800&x-oss-security-token=CAISgAN1q6Ft5B2yfSjIr5vQcs%2F8mox44KqvNhXktHNgR9x6lbfKiDz2IHhMdHJsAOodtv0%2FmmhT6PkclqRLcbhpcmfjV%2BZHzLB8qcxFg1w0557b16cNrbH4M4H6aXeirtuwDsz9SNTCALjPD3nPii50x5bjaDymRCbLGJaViJlhHLN1Ow6jdmhpCctxLAlvo9NgFxm3D%2Fu2NQPwiWf9FVdhvhEG6Vly8qOi2MaRmFy8yFTx0b0SvJ%2BjYMrmPctoN9JnSdC5mfdzau3a1TJ84gRD0a5wkaVA1zbDs5bfISEIuUzebreLqY03dV4mOvdqIcMe8qigz88fk%2FfIioH6xyxKOexoSCnFTOiiupCcQLPyao9jLu6iayqViY7QaIOTqQohZmkAMwVOasAsI3Ngh4zF97Qt0cVNkXO9gWfLI8DtuMleWqpjTv8uLJSgc5lCkRRYwGs1287ugXlSQzo890KPDAEovaKCnZ2ZSfh7Y4sNknI6i%2Bfc2Se2MIkILVQHdKKWD5sagAGefKHqKplcbHo6TW3CZEWPTVaPqmbrYQUF0Tr%2FUSQ3oAMMafrX3N4qn0kt57OHJ%2B4CQqpGT0ZYZ5AxNBBWsvBWg%2BNEK2C%2Br%2B00IlUu89da7D2oGuwiRjqP5%2FRJvkg1rmuM%2FfZEJtZ1vaauH2zkk8xAL5CZUptmXvmsX0z8P2V01SAA&x-oss-signature-version=OSS4-HMAC-SHA256&x-oss-credential=STS.NXe9uHwSYWhD43UPs5KSVzraj%2F20261114%2Feu-central-1%2Foss%2Faliyun_v4_request&x-oss-signature=a9cdd02897b65ad2846c9d254b4e41c3c41d87a2cc764abdd84dab2a92129e72"
 			(at 43.18 44.45 0)
 			(hide yes)
 			(show_name no)
@@ -6251,6 +6449,28 @@
 			)
 		)
 		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 43.18 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C1591"
+			(at 43.18 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
 			(at 43.18 44.45 0)
 			(hide yes)
 			(show_name no)
@@ -6320,7 +6540,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://jlc-prod-smt.oss-eu-central-1.aliyuncs.com/smtDataManualFile/8586177280415059968-C1591.pdf?response-content-disposition=attachment%3B%20filename%3DC1591.pdf%3B%20filename%2A%3DUTF-8%27%27C1591.pdf&x-oss-date=20261114T003126Z&x-oss-expires=1800&x-oss-security-token=CAISgAN1q6Ft5B2yfSjIr5vQcs%2F8mox44KqvNhXktHNgR9x6lbfKiDz2IHhMdHJsAOodtv0%2FmmhT6PkclqRLcbhpcmfjV%2BZHzLB8qcxFg1w0557b16cNrbH4M4H6aXeirtuwDsz9SNTCALjPD3nPii50x5bjaDymRCbLGJaViJlhHLN1Ow6jdmhpCctxLAlvo9NgFxm3D%2Fu2NQPwiWf9FVdhvhEG6Vly8qOi2MaRmFy8yFTx0b0SvJ%2BjYMrmPctoN9JnSdC5mfdzau3a1TJ84gRD0a5wkaVA1zbDs5bfISEIuUzebreLqY03dV4mOvdqIcMe8qigz88fk%2FfIioH6xyxKOexoSCnFTOiiupCcQLPyao9jLu6iayqViY7QaIOTqQohZmkAMwVOasAsI3Ngh4zF97Qt0cVNkXO9gWfLI8DtuMleWqpjTv8uLJSgc5lCkRRYwGs1287ugXlSQzo890KPDAEovaKCnZ2ZSfh7Y4sNknI6i%2Bfc2Se2MIkILVQHdKKWD5sagAGefKHqKplcbHo6TW3CZEWPTVaPqmbrYQUF0Tr%2FUSQ3oAMMafrX3N4qn0kt57OHJ%2B4CQqpGT0ZYZ5AxNBBWsvBWg%2BNEK2C%2Br%2B00IlUu89da7D2oGuwiRjqP5%2FRJvkg1rmuM%2FfZEJtZ1vaauH2zkk8xAL5CZUptmXvmsX0z8P2V01SAA&x-oss-signature-version=OSS4-HMAC-SHA256&x-oss-credential=STS.NXe9uHwSYWhD43UPs5KSVzraj%2F20261114%2Feu-central-1%2Foss%2Faliyun_v4_request&x-oss-signature=a9cdd02897b65ad2846c9d254b4e41c3c41d87a2cc764abdd84dab2a92129e72"
 			(at 256.54 31.75 0)
 			(hide yes)
 			(show_name no)
@@ -6343,6 +6563,28 @@
 			)
 		)
 		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 256.54 31.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C1591"
+			(at 256.54 31.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
 			(at 256.54 31.75 0)
 			(hide yes)
 			(show_name no)
@@ -6567,7 +6809,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://jlc-prod-smt.oss-eu-central-1.aliyuncs.com/smtDataManualFile/8588882090821214208-C25600.pdf?response-content-disposition=attachment%3B%20filename%3DC25600.pdf%3B%20filename%2A%3DUTF-8%27%27C25600.pdf&x-oss-date=20261114T010406Z&x-oss-expires=1800&x-oss-security-token=CAISgAN1q6Ft5B2yfSjIr5nCG%2Bj2rLx7wKWdQ2vavkQZfNZFmo3siTz2IHhMdHJsAOodtv0%2FmmhT6PkclqRLcbhpcmfjV%2BZHzLB8qZEF2l00557b16cNrbH4M4H6aXeirtuwDsz9SNTCALjPD3nPii50x5bjaDymRCbLGJaViJlhHLN1Ow6jdmhpCctxLAlvo9NgFxm3D%2Fu2NQPwiWf9FVdhvhEG6Vly8qOi2MaRmFy8yFTx0b0SvJ%2BjYMrmPctoN9JnSdC5mfdzau3a1TJ84gRD0a5wkaVA1zbDs5bfISEIuUzebreLqY03dV4mOvdqIcMe8qigz88fk%2FfIioH6xyxKOexoSCnFTOiiupCcQLPyao9jLu6iayqViY7QaIOTqQohZmkAMwVOasAsI3Ngh4zF97Qt0cVNkXO9gWfLI8DtuMleWgoozuseLJSgc5lCkRRYwGs1287ugXlSQzo890KPDAEovaKCnZ2ZSfh7Y4sNknI6i%2Bfc2Se2MIkIjddkMqKWD5sagAGNBHtmGfUnamga%2FgCpTlMNz6c6M%2Bb1rxu%2FM1ABv345hnAmuy%2F5J%2FCwQSbqjrO7ZJPkwLw6pd21ERVJTeBY743UDw27gSUEO196HbWosV60lXGkD4U81mgFv7TZ%2FtLWMVKhHDnqeRvFsDpGzZTfvYYQy5GF2DpdJuR96qFCXSUTCCAA&x-oss-signature-version=OSS4-HMAC-SHA256&x-oss-credential=STS.NZwPRBAcZwgvAMkZDLpYiuHGk%2F20261114%2Feu-central-1%2Foss%2Faliyun_v4_request&x-oss-signature=c0fc15fed24616278f7cc83a8f66cf36724a3007b44c9e553446e1569094ad7c"
 			(at 153.67 134.62 0)
 			(hide yes)
 			(show_name no)
@@ -6590,6 +6832,28 @@
 			)
 		)
 		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 153.67 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C25600"
+			(at 153.67 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "UNI-ROYAL(Uniroyal Elec)"
 			(at 153.67 134.62 0)
 			(hide yes)
 			(show_name no)
@@ -6673,6 +6937,28 @@
 			)
 		)
 		(property "Description" ""
+			(at 80.01 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C7386355"
+			(at 80.01 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "STMicroelectronics"
 			(at 80.01 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -6865,7 +7151,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "NXS0108PWJ"
+		(property "Datasheet" "https://jlc-prod-smt.oss-eu-central-1.aliyuncs.com/smtDataManualFile/8590908255990329344-C4364113.pdf?response-content-disposition=attachment%3B%20filename%3DC4364113.pdf%3B%20filename%2A%3DUTF-8%27%27C4364113.pdf&x-oss-date=20261113T235914Z&x-oss-expires=1800&x-oss-security-token=CAISgAN1q6Ft5B2yfSjIr5vQcs%2F8mox44KqvNhXktHNgR9x6lbfKiDz2IHhMdHJsAOodtv0%2FmmhT6PkclqRLcbhpcmfjV%2BZHzLB8qcxFg1w0557b16cNrbH4M4H6aXeirtuwDsz9SNTCALjPD3nPii50x5bjaDymRCbLGJaViJlhHLN1Ow6jdmhpCctxLAlvo9NgFxm3D%2Fu2NQPwiWf9FVdhvhEG6Vly8qOi2MaRmFy8yFTx0b0SvJ%2BjYMrmPctoN9JnSdC5mfdzau3a1TJ84gRD0a5wkaVA1zbDs5bfISEIuUzebreLqY03dV4mOvdqIcMe8qigz88fk%2FfIioH6xyxKOexoSCnFTOiiupCcQLPyao9jLu6iayqViY7QaIOTqQohZmkAMwVOasAsI3Ngh4zF97Qt0cVNkXO9gWfLI8DtuMleWqpjTv8uLJSgc5lCkRRYwGs1287ugXlSQzo890KPDAEovaKCnZ2ZSfh7Y4sNknI6i%2Bfc2Se2MIkILVQHdKKWD5sagAGefKHqKplcbHo6TW3CZEWPTVaPqmbrYQUF0Tr%2FUSQ3oAMMafrX3N4qn0kt57OHJ%2B4CQqpGT0ZYZ5AxNBBWsvBWg%2BNEK2C%2Br%2B00IlUu89da7D2oGuwiRjqP5%2FRJvkg1rmuM%2FfZEJtZ1vaauH2zkk8xAL5CZUptmXvmsX0z8P2V01SAA&x-oss-signature-version=OSS4-HMAC-SHA256&x-oss-credential=STS.NXe9uHwSYWhD43UPs5KSVzraj%2F20261113%2Feu-central-1%2Foss%2Faliyun_v4_request&x-oss-signature=f70e2cb331008e6bbee7e94fe7a93ad91f2773bc866c873084b96f613a215df3"
 			(at 187.96 34.29 0)
 			(hide yes)
 			(show_name no)
@@ -6878,6 +7164,28 @@
 			)
 		)
 		(property "Description" ""
+			(at 187.96 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C4364113"
+			(at 187.96 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Nexperia"
 			(at 187.96 34.29 0)
 			(hide yes)
 			(show_name no)
@@ -7153,7 +7461,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://jlc-prod-smt.oss-eu-central-1.aliyuncs.com/smtDataManualFile/8586177280415059968-C1591.pdf?response-content-disposition=attachment%3B%20filename%3DC1591.pdf%3B%20filename%2A%3DUTF-8%27%27C1591.pdf&x-oss-date=20261114T003126Z&x-oss-expires=1800&x-oss-security-token=CAISgAN1q6Ft5B2yfSjIr5vQcs%2F8mox44KqvNhXktHNgR9x6lbfKiDz2IHhMdHJsAOodtv0%2FmmhT6PkclqRLcbhpcmfjV%2BZHzLB8qcxFg1w0557b16cNrbH4M4H6aXeirtuwDsz9SNTCALjPD3nPii50x5bjaDymRCbLGJaViJlhHLN1Ow6jdmhpCctxLAlvo9NgFxm3D%2Fu2NQPwiWf9FVdhvhEG6Vly8qOi2MaRmFy8yFTx0b0SvJ%2BjYMrmPctoN9JnSdC5mfdzau3a1TJ84gRD0a5wkaVA1zbDs5bfISEIuUzebreLqY03dV4mOvdqIcMe8qigz88fk%2FfIioH6xyxKOexoSCnFTOiiupCcQLPyao9jLu6iayqViY7QaIOTqQohZmkAMwVOasAsI3Ngh4zF97Qt0cVNkXO9gWfLI8DtuMleWqpjTv8uLJSgc5lCkRRYwGs1287ugXlSQzo890KPDAEovaKCnZ2ZSfh7Y4sNknI6i%2Bfc2Se2MIkILVQHdKKWD5sagAGefKHqKplcbHo6TW3CZEWPTVaPqmbrYQUF0Tr%2FUSQ3oAMMafrX3N4qn0kt57OHJ%2B4CQqpGT0ZYZ5AxNBBWsvBWg%2BNEK2C%2Br%2B00IlUu89da7D2oGuwiRjqP5%2FRJvkg1rmuM%2FfZEJtZ1vaauH2zkk8xAL5CZUptmXvmsX0z8P2V01SAA&x-oss-signature-version=OSS4-HMAC-SHA256&x-oss-credential=STS.NXe9uHwSYWhD43UPs5KSVzraj%2F20261114%2Feu-central-1%2Foss%2Faliyun_v4_request&x-oss-signature=a9cdd02897b65ad2846c9d254b4e41c3c41d87a2cc764abdd84dab2a92129e72"
 			(at 31.75 104.14 0)
 			(hide yes)
 			(show_name no)
@@ -7177,6 +7485,28 @@
 		)
 		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
 			(at 31.75 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C1591"
+			(at 31.75 104.14 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 31.75 104.14 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7322,7 +7652,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://jlc-prod-smt.oss-eu-central-1.aliyuncs.com/smtDataManualFile/8586177280415059968-C1591.pdf?response-content-disposition=attachment%3B%20filename%3DC1591.pdf%3B%20filename%2A%3DUTF-8%27%27C1591.pdf&x-oss-date=20261114T003126Z&x-oss-expires=1800&x-oss-security-token=CAISgAN1q6Ft5B2yfSjIr5vQcs%2F8mox44KqvNhXktHNgR9x6lbfKiDz2IHhMdHJsAOodtv0%2FmmhT6PkclqRLcbhpcmfjV%2BZHzLB8qcxFg1w0557b16cNrbH4M4H6aXeirtuwDsz9SNTCALjPD3nPii50x5bjaDymRCbLGJaViJlhHLN1Ow6jdmhpCctxLAlvo9NgFxm3D%2Fu2NQPwiWf9FVdhvhEG6Vly8qOi2MaRmFy8yFTx0b0SvJ%2BjYMrmPctoN9JnSdC5mfdzau3a1TJ84gRD0a5wkaVA1zbDs5bfISEIuUzebreLqY03dV4mOvdqIcMe8qigz88fk%2FfIioH6xyxKOexoSCnFTOiiupCcQLPyao9jLu6iayqViY7QaIOTqQohZmkAMwVOasAsI3Ngh4zF97Qt0cVNkXO9gWfLI8DtuMleWqpjTv8uLJSgc5lCkRRYwGs1287ugXlSQzo890KPDAEovaKCnZ2ZSfh7Y4sNknI6i%2Bfc2Se2MIkILVQHdKKWD5sagAGefKHqKplcbHo6TW3CZEWPTVaPqmbrYQUF0Tr%2FUSQ3oAMMafrX3N4qn0kt57OHJ%2B4CQqpGT0ZYZ5AxNBBWsvBWg%2BNEK2C%2Br%2B00IlUu89da7D2oGuwiRjqP5%2FRJvkg1rmuM%2FfZEJtZ1vaauH2zkk8xAL5CZUptmXvmsX0z8P2V01SAA&x-oss-signature-version=OSS4-HMAC-SHA256&x-oss-credential=STS.NXe9uHwSYWhD43UPs5KSVzraj%2F20261114%2Feu-central-1%2Foss%2Faliyun_v4_request&x-oss-signature=a9cdd02897b65ad2846c9d254b4e41c3c41d87a2cc764abdd84dab2a92129e72"
 			(at 171.45 41.91 0)
 			(hide yes)
 			(show_name no)
@@ -7345,6 +7675,28 @@
 			)
 		)
 		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 171.45 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C1591"
+			(at 171.45 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
 			(at 171.45 41.91 0)
 			(hide yes)
 			(show_name no)
@@ -7491,7 +7843,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://jlc-prod-smt.oss-eu-central-1.aliyuncs.com/smtDataManualFile/8588882090821214208-C25600.pdf?response-content-disposition=attachment%3B%20filename%3DC25600.pdf%3B%20filename%2A%3DUTF-8%27%27C25600.pdf&x-oss-date=20261114T010406Z&x-oss-expires=1800&x-oss-security-token=CAISgAN1q6Ft5B2yfSjIr5nCG%2Bj2rLx7wKWdQ2vavkQZfNZFmo3siTz2IHhMdHJsAOodtv0%2FmmhT6PkclqRLcbhpcmfjV%2BZHzLB8qZEF2l00557b16cNrbH4M4H6aXeirtuwDsz9SNTCALjPD3nPii50x5bjaDymRCbLGJaViJlhHLN1Ow6jdmhpCctxLAlvo9NgFxm3D%2Fu2NQPwiWf9FVdhvhEG6Vly8qOi2MaRmFy8yFTx0b0SvJ%2BjYMrmPctoN9JnSdC5mfdzau3a1TJ84gRD0a5wkaVA1zbDs5bfISEIuUzebreLqY03dV4mOvdqIcMe8qigz88fk%2FfIioH6xyxKOexoSCnFTOiiupCcQLPyao9jLu6iayqViY7QaIOTqQohZmkAMwVOasAsI3Ngh4zF97Qt0cVNkXO9gWfLI8DtuMleWgoozuseLJSgc5lCkRRYwGs1287ugXlSQzo890KPDAEovaKCnZ2ZSfh7Y4sNknI6i%2Bfc2Se2MIkIjddkMqKWD5sagAGNBHtmGfUnamga%2FgCpTlMNz6c6M%2Bb1rxu%2FM1ABv345hnAmuy%2F5J%2FCwQSbqjrO7ZJPkwLw6pd21ERVJTeBY743UDw27gSUEO196HbWosV60lXGkD4U81mgFv7TZ%2FtLWMVKhHDnqeRvFsDpGzZTfvYYQy5GF2DpdJuR96qFCXSUTCCAA&x-oss-signature-version=OSS4-HMAC-SHA256&x-oss-credential=STS.NZwPRBAcZwgvAMkZDLpYiuHGk%2F20261114%2Feu-central-1%2Foss%2Faliyun_v4_request&x-oss-signature=c0fc15fed24616278f7cc83a8f66cf36724a3007b44c9e553446e1569094ad7c"
 			(at 162.56 134.62 0)
 			(hide yes)
 			(show_name no)
@@ -7514,6 +7866,28 @@
 			)
 		)
 		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 162.56 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C25600"
+			(at 162.56 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "UNI-ROYAL(Uniroyal Elec)"
 			(at 162.56 134.62 0)
 			(hide yes)
 			(show_name no)
@@ -7826,7 +8200,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://jlc-prod-smt.oss-eu-central-1.aliyuncs.com/smtDataManualFile/8586178147351990272-C1592.pdf?response-content-disposition=attachment%3B%20filename%3DC1592.pdf%3B%20filename%2A%3DUTF-8%27%27C1592.pdf&x-oss-date=20261114T003302Z&x-oss-expires=1800&x-oss-security-token=CAISgAN1q6Ft5B2yfSjIr5vQcs%2F8mox44KqvNhXktHNgR9x6lbfKiDz2IHhMdHJsAOodtv0%2FmmhT6PkclqRLcbhpcmfjV%2BZHzLB8qcxFg1w0557b16cNrbH4M4H6aXeirtuwDsz9SNTCALjPD3nPii50x5bjaDymRCbLGJaViJlhHLN1Ow6jdmhpCctxLAlvo9NgFxm3D%2Fu2NQPwiWf9FVdhvhEG6Vly8qOi2MaRmFy8yFTx0b0SvJ%2BjYMrmPctoN9JnSdC5mfdzau3a1TJ84gRD0a5wkaVA1zbDs5bfISEIuUzebreLqY03dV4mOvdqIcMe8qigz88fk%2FfIioH6xyxKOexoSCnFTOiiupCcQLPyao9jLu6iayqViY7QaIOTqQohZmkAMwVOasAsI3Ngh4zF97Qt0cVNkXO9gWfLI8DtuMleWqpjTv8uLJSgc5lCkRRYwGs1287ugXlSQzo890KPDAEovaKCnZ2ZSfh7Y4sNknI6i%2Bfc2Se2MIkILVQHdKKWD5sagAGefKHqKplcbHo6TW3CZEWPTVaPqmbrYQUF0Tr%2FUSQ3oAMMafrX3N4qn0kt57OHJ%2B4CQqpGT0ZYZ5AxNBBWsvBWg%2BNEK2C%2Br%2B00IlUu89da7D2oGuwiRjqP5%2FRJvkg1rmuM%2FfZEJtZ1vaauH2zkk8xAL5CZUptmXvmsX0z8P2V01SAA&x-oss-signature-version=OSS4-HMAC-SHA256&x-oss-credential=STS.NXe9uHwSYWhD43UPs5KSVzraj%2F20261114%2Feu-central-1%2Foss%2Faliyun_v4_request&x-oss-signature=e05c972d56ec322af24d3007c210cf193088dd8bec852bf505c305a653c1c58e"
 			(at 29.21 44.45 0)
 			(hide yes)
 			(show_name no)
@@ -7849,6 +8223,28 @@
 			)
 		)
 		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 29.21 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C1592"
+			(at 29.21 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
 			(at 29.21 44.45 0)
 			(hide yes)
 			(show_name no)
@@ -7918,7 +8314,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://jlc-prod-smt.oss-eu-central-1.aliyuncs.com/smtDataManualFile/8588882090821214208-C25600.pdf?response-content-disposition=attachment%3B%20filename%3DC25600.pdf%3B%20filename%2A%3DUTF-8%27%27C25600.pdf&x-oss-date=20261114T010406Z&x-oss-expires=1800&x-oss-security-token=CAISgAN1q6Ft5B2yfSjIr5nCG%2Bj2rLx7wKWdQ2vavkQZfNZFmo3siTz2IHhMdHJsAOodtv0%2FmmhT6PkclqRLcbhpcmfjV%2BZHzLB8qZEF2l00557b16cNrbH4M4H6aXeirtuwDsz9SNTCALjPD3nPii50x5bjaDymRCbLGJaViJlhHLN1Ow6jdmhpCctxLAlvo9NgFxm3D%2Fu2NQPwiWf9FVdhvhEG6Vly8qOi2MaRmFy8yFTx0b0SvJ%2BjYMrmPctoN9JnSdC5mfdzau3a1TJ84gRD0a5wkaVA1zbDs5bfISEIuUzebreLqY03dV4mOvdqIcMe8qigz88fk%2FfIioH6xyxKOexoSCnFTOiiupCcQLPyao9jLu6iayqViY7QaIOTqQohZmkAMwVOasAsI3Ngh4zF97Qt0cVNkXO9gWfLI8DtuMleWgoozuseLJSgc5lCkRRYwGs1287ugXlSQzo890KPDAEovaKCnZ2ZSfh7Y4sNknI6i%2Bfc2Se2MIkIjddkMqKWD5sagAGNBHtmGfUnamga%2FgCpTlMNz6c6M%2Bb1rxu%2FM1ABv345hnAmuy%2F5J%2FCwQSbqjrO7ZJPkwLw6pd21ERVJTeBY743UDw27gSUEO196HbWosV60lXGkD4U81mgFv7TZ%2FtLWMVKhHDnqeRvFsDpGzZTfvYYQy5GF2DpdJuR96qFCXSUTCCAA&x-oss-signature-version=OSS4-HMAC-SHA256&x-oss-credential=STS.NZwPRBAcZwgvAMkZDLpYiuHGk%2F20261114%2Feu-central-1%2Foss%2Faliyun_v4_request&x-oss-signature=c0fc15fed24616278f7cc83a8f66cf36724a3007b44c9e553446e1569094ad7c"
 			(at 71.12 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -7941,6 +8337,28 @@
 			)
 		)
 		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 71.12 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C25600"
+			(at 71.12 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "UNI-ROYAL(Uniroyal Elec)"
 			(at 71.12 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -8010,7 +8428,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://jlc-prod-smt.oss-eu-central-1.aliyuncs.com/smtDataManualFile/8586177280415059968-C1591.pdf?response-content-disposition=attachment%3B%20filename%3DC1591.pdf%3B%20filename%2A%3DUTF-8%27%27C1591.pdf&x-oss-date=20261114T003126Z&x-oss-expires=1800&x-oss-security-token=CAISgAN1q6Ft5B2yfSjIr5vQcs%2F8mox44KqvNhXktHNgR9x6lbfKiDz2IHhMdHJsAOodtv0%2FmmhT6PkclqRLcbhpcmfjV%2BZHzLB8qcxFg1w0557b16cNrbH4M4H6aXeirtuwDsz9SNTCALjPD3nPii50x5bjaDymRCbLGJaViJlhHLN1Ow6jdmhpCctxLAlvo9NgFxm3D%2Fu2NQPwiWf9FVdhvhEG6Vly8qOi2MaRmFy8yFTx0b0SvJ%2BjYMrmPctoN9JnSdC5mfdzau3a1TJ84gRD0a5wkaVA1zbDs5bfISEIuUzebreLqY03dV4mOvdqIcMe8qigz88fk%2FfIioH6xyxKOexoSCnFTOiiupCcQLPyao9jLu6iayqViY7QaIOTqQohZmkAMwVOasAsI3Ngh4zF97Qt0cVNkXO9gWfLI8DtuMleWqpjTv8uLJSgc5lCkRRYwGs1287ugXlSQzo890KPDAEovaKCnZ2ZSfh7Y4sNknI6i%2Bfc2Se2MIkILVQHdKKWD5sagAGefKHqKplcbHo6TW3CZEWPTVaPqmbrYQUF0Tr%2FUSQ3oAMMafrX3N4qn0kt57OHJ%2B4CQqpGT0ZYZ5AxNBBWsvBWg%2BNEK2C%2Br%2B00IlUu89da7D2oGuwiRjqP5%2FRJvkg1rmuM%2FfZEJtZ1vaauH2zkk8xAL5CZUptmXvmsX0z8P2V01SAA&x-oss-signature-version=OSS4-HMAC-SHA256&x-oss-credential=STS.NXe9uHwSYWhD43UPs5KSVzraj%2F20261114%2Feu-central-1%2Foss%2Faliyun_v4_request&x-oss-signature=a9cdd02897b65ad2846c9d254b4e41c3c41d87a2cc764abdd84dab2a92129e72"
 			(at 81.28 44.45 0)
 			(hide yes)
 			(show_name no)
@@ -8033,6 +8451,28 @@
 			)
 		)
 		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 81.28 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C1591"
+			(at 81.28 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
 			(at 81.28 44.45 0)
 			(hide yes)
 			(show_name no)
@@ -8412,6 +8852,28 @@
 			)
 		)
 		(property "KiLib_Generator" "package/gullwing"
+			(at 66.04 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C176944"
+			(at 66.04 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Diodes Incorporated"
 			(at 66.04 40.64 0)
 			(hide yes)
 			(show_name no)

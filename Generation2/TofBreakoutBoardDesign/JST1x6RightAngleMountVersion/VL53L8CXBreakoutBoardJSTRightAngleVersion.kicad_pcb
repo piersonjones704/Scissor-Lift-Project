@@ -89,6 +89,7 @@
 		)
 		(capping no)
 		(filling no)
+		(aux_axis_origin 187.07 81.21)
 		(pcbplotparams
 			(layerselection 0x00000000_00000000_55555555_5755f5ff)
 			(plot_on_all_layers_selection 0x00000000_00000000_00000000_00000000)
@@ -121,9 +122,9 @@
 			(subtractmaskfromsilk no)
 			(outputformat 1)
 			(mirror no)
-			(drillshape 1)
+			(drillshape 0)
 			(scaleselection 1)
-			(outputdirectory "")
+			(outputdirectory "GerberFiles/")
 		)
 	)
 	(footprint "NXS0108:NXS0108"
@@ -155,7 +156,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "NXS0108PWJ"
+		(property "Datasheet" "https://jlc-prod-smt.oss-eu-central-1.aliyuncs.com/smtDataManualFile/8590908255990329344-C4364113.pdf?response-content-disposition=attachment%3B%20filename%3DC4364113.pdf%3B%20filename%2A%3DUTF-8%27%27C4364113.pdf&x-oss-date=20261113T235914Z&x-oss-expires=1800&x-oss-security-token=CAISgAN1q6Ft5B2yfSjIr5vQcs%2F8mox44KqvNhXktHNgR9x6lbfKiDz2IHhMdHJsAOodtv0%2FmmhT6PkclqRLcbhpcmfjV%2BZHzLB8qcxFg1w0557b16cNrbH4M4H6aXeirtuwDsz9SNTCALjPD3nPii50x5bjaDymRCbLGJaViJlhHLN1Ow6jdmhpCctxLAlvo9NgFxm3D%2Fu2NQPwiWf9FVdhvhEG6Vly8qOi2MaRmFy8yFTx0b0SvJ%2BjYMrmPctoN9JnSdC5mfdzau3a1TJ84gRD0a5wkaVA1zbDs5bfISEIuUzebreLqY03dV4mOvdqIcMe8qigz88fk%2FfIioH6xyxKOexoSCnFTOiiupCcQLPyao9jLu6iayqViY7QaIOTqQohZmkAMwVOasAsI3Ngh4zF97Qt0cVNkXO9gWfLI8DtuMleWqpjTv8uLJSgc5lCkRRYwGs1287ugXlSQzo890KPDAEovaKCnZ2ZSfh7Y4sNknI6i%2Bfc2Se2MIkILVQHdKKWD5sagAGefKHqKplcbHo6TW3CZEWPTVaPqmbrYQUF0Tr%2FUSQ3oAMMafrX3N4qn0kt57OHJ%2B4CQqpGT0ZYZ5AxNBBWsvBWg%2BNEK2C%2Br%2B00IlUu89da7D2oGuwiRjqP5%2FRJvkg1rmuM%2FfZEJtZ1vaauH2zkk8xAL5CZUptmXvmsX0z8P2V01SAA&x-oss-signature-version=OSS4-HMAC-SHA256&x-oss-credential=STS.NXe9uHwSYWhD43UPs5KSVzraj%2F20261113%2Feu-central-1%2Foss%2Faliyun_v4_request&x-oss-signature=f70e2cb331008e6bbee7e94fe7a93ad91f2773bc866c873084b96f613a215df3"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -177,10 +178,44 @@
 				)
 			)
 		)
+		(property "LCSC Part" "C4364113"
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "5b353a18-0450-4165-a74d-5928cb04f23e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "Nexperia"
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "a2acbb08-e1b2-4e09-a55d-5eb36f395c6a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "TSSOP20_SOT360-1_NEX TSSOP20_SOT360-1_NEX-M TSSOP20_SOT360-1_NEX-L NXS0108")
 		(path "/a5c3c9f0-406c-458a-9cf1-369b96ba059c")
 		(sheetname "/")
-		(sheetfile "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion.kicad_sch")
+		(sheetfile "VL53L8CXBreakoutBoardJSTRightAngleVersion.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2" "3" "4" "5" "6" "7" "8" "9" "10" "20" "19" "18" "17" "16"
+					"15" "14" "13" "12" "11"
+				)
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -1477,7 +1512,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://jlc-prod-smt.oss-eu-central-1.aliyuncs.com/smtDataManualFile/8586178147351990272-C1592.pdf?response-content-disposition=attachment%3B%20filename%3DC1592.pdf%3B%20filename%2A%3DUTF-8%27%27C1592.pdf&x-oss-date=20261114T003302Z&x-oss-expires=1800&x-oss-security-token=CAISgAN1q6Ft5B2yfSjIr5vQcs%2F8mox44KqvNhXktHNgR9x6lbfKiDz2IHhMdHJsAOodtv0%2FmmhT6PkclqRLcbhpcmfjV%2BZHzLB8qcxFg1w0557b16cNrbH4M4H6aXeirtuwDsz9SNTCALjPD3nPii50x5bjaDymRCbLGJaViJlhHLN1Ow6jdmhpCctxLAlvo9NgFxm3D%2Fu2NQPwiWf9FVdhvhEG6Vly8qOi2MaRmFy8yFTx0b0SvJ%2BjYMrmPctoN9JnSdC5mfdzau3a1TJ84gRD0a5wkaVA1zbDs5bfISEIuUzebreLqY03dV4mOvdqIcMe8qigz88fk%2FfIioH6xyxKOexoSCnFTOiiupCcQLPyao9jLu6iayqViY7QaIOTqQohZmkAMwVOasAsI3Ngh4zF97Qt0cVNkXO9gWfLI8DtuMleWqpjTv8uLJSgc5lCkRRYwGs1287ugXlSQzo890KPDAEovaKCnZ2ZSfh7Y4sNknI6i%2Bfc2Se2MIkILVQHdKKWD5sagAGefKHqKplcbHo6TW3CZEWPTVaPqmbrYQUF0Tr%2FUSQ3oAMMafrX3N4qn0kt57OHJ%2B4CQqpGT0ZYZ5AxNBBWsvBWg%2BNEK2C%2Br%2B00IlUu89da7D2oGuwiRjqP5%2FRJvkg1rmuM%2FfZEJtZ1vaauH2zkk8xAL5CZUptmXvmsX0z8P2V01SAA&x-oss-signature-version=OSS4-HMAC-SHA256&x-oss-credential=STS.NXe9uHwSYWhD43UPs5KSVzraj%2F20261114%2Feu-central-1%2Foss%2Faliyun_v4_request&x-oss-signature=e05c972d56ec322af24d3007c210cf193088dd8bec852bf505c305a653c1c58e"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -1511,10 +1546,42 @@
 				)
 			)
 		)
+		(property "LCSC Part" "C1592"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "b6376ca9-ee39-47f8-a0f7-ee365181d601")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "66157bf1-5642-4194-8094-c71842972f26")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/dca17be3-a2ca-4d0f-8d77-ce560e7b7d2b")
 		(sheetname "/")
-		(sheetfile "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion.kicad_sch")
+		(sheetfile "VL53L8CXBreakoutBoardJSTRightAngleVersion.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -1664,10 +1731,42 @@
 				)
 			)
 		)
+		(property "LCSC Part" "C176944"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "54bd1ffe-b016-40b2-a9f2-6613a6b08a1b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "Diodes Incorporated"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "5cce27ae-6b61-4b27-82ec-5d69e1d42474")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "SOT?23?5*")
 		(path "/fea01a9b-da48-4e05-aba8-b9f037478d57")
 		(sheetname "/")
-		(sheetfile "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion.kicad_sch")
+		(sheetfile "VL53L8CXBreakoutBoardJSTRightAngleVersion.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "3" "2" "4" "5")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -2065,8 +2164,14 @@
 		(property ki_fp_filters "MountingHole*")
 		(path "/d4ea80d7-d4c8-4bd9-81bb-f250e2a2e9f8")
 		(sheetname "/")
-		(sheetfile "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion.kicad_sch")
-		(attr exclude_from_pos_files exclude_from_bom)
+		(sheetfile "VL53L8CXBreakoutBoardJSTRightAngleVersion.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins)
+			)
+		)
+		(attr exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
@@ -2138,7 +2243,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://jlc-prod-smt.oss-eu-central-1.aliyuncs.com/smtDataManualFile/8586177280415059968-C1591.pdf?response-content-disposition=attachment%3B%20filename%3DC1591.pdf%3B%20filename%2A%3DUTF-8%27%27C1591.pdf&x-oss-date=20261114T003126Z&x-oss-expires=1800&x-oss-security-token=CAISgAN1q6Ft5B2yfSjIr5vQcs%2F8mox44KqvNhXktHNgR9x6lbfKiDz2IHhMdHJsAOodtv0%2FmmhT6PkclqRLcbhpcmfjV%2BZHzLB8qcxFg1w0557b16cNrbH4M4H6aXeirtuwDsz9SNTCALjPD3nPii50x5bjaDymRCbLGJaViJlhHLN1Ow6jdmhpCctxLAlvo9NgFxm3D%2Fu2NQPwiWf9FVdhvhEG6Vly8qOi2MaRmFy8yFTx0b0SvJ%2BjYMrmPctoN9JnSdC5mfdzau3a1TJ84gRD0a5wkaVA1zbDs5bfISEIuUzebreLqY03dV4mOvdqIcMe8qigz88fk%2FfIioH6xyxKOexoSCnFTOiiupCcQLPyao9jLu6iayqViY7QaIOTqQohZmkAMwVOasAsI3Ngh4zF97Qt0cVNkXO9gWfLI8DtuMleWqpjTv8uLJSgc5lCkRRYwGs1287ugXlSQzo890KPDAEovaKCnZ2ZSfh7Y4sNknI6i%2Bfc2Se2MIkILVQHdKKWD5sagAGefKHqKplcbHo6TW3CZEWPTVaPqmbrYQUF0Tr%2FUSQ3oAMMafrX3N4qn0kt57OHJ%2B4CQqpGT0ZYZ5AxNBBWsvBWg%2BNEK2C%2Br%2B00IlUu89da7D2oGuwiRjqP5%2FRJvkg1rmuM%2FfZEJtZ1vaauH2zkk8xAL5CZUptmXvmsX0z8P2V01SAA&x-oss-signature-version=OSS4-HMAC-SHA256&x-oss-credential=STS.NXe9uHwSYWhD43UPs5KSVzraj%2F20261114%2Feu-central-1%2Foss%2Faliyun_v4_request&x-oss-signature=a9cdd02897b65ad2846c9d254b4e41c3c41d87a2cc764abdd84dab2a92129e72"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -2172,10 +2277,42 @@
 				)
 			)
 		)
+		(property "LCSC Part" "C1591"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "1aede3c8-74d3-484c-a84b-c2aa0469c399")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "f04b8fee-8741-4dcb-8d20-b964b436c96c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/8bd2a10a-6a50-44a9-a460-425aa06b2687")
 		(sheetname "/")
-		(sheetfile "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion.kicad_sch")
+		(sheetfile "VL53L8CXBreakoutBoardJSTRightAngleVersion.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -2290,7 +2427,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://jlc-prod-smt.oss-eu-central-1.aliyuncs.com/smtDataManualFile/8586177280415059968-C1591.pdf?response-content-disposition=attachment%3B%20filename%3DC1591.pdf%3B%20filename%2A%3DUTF-8%27%27C1591.pdf&x-oss-date=20261114T003126Z&x-oss-expires=1800&x-oss-security-token=CAISgAN1q6Ft5B2yfSjIr5vQcs%2F8mox44KqvNhXktHNgR9x6lbfKiDz2IHhMdHJsAOodtv0%2FmmhT6PkclqRLcbhpcmfjV%2BZHzLB8qcxFg1w0557b16cNrbH4M4H6aXeirtuwDsz9SNTCALjPD3nPii50x5bjaDymRCbLGJaViJlhHLN1Ow6jdmhpCctxLAlvo9NgFxm3D%2Fu2NQPwiWf9FVdhvhEG6Vly8qOi2MaRmFy8yFTx0b0SvJ%2BjYMrmPctoN9JnSdC5mfdzau3a1TJ84gRD0a5wkaVA1zbDs5bfISEIuUzebreLqY03dV4mOvdqIcMe8qigz88fk%2FfIioH6xyxKOexoSCnFTOiiupCcQLPyao9jLu6iayqViY7QaIOTqQohZmkAMwVOasAsI3Ngh4zF97Qt0cVNkXO9gWfLI8DtuMleWqpjTv8uLJSgc5lCkRRYwGs1287ugXlSQzo890KPDAEovaKCnZ2ZSfh7Y4sNknI6i%2Bfc2Se2MIkILVQHdKKWD5sagAGefKHqKplcbHo6TW3CZEWPTVaPqmbrYQUF0Tr%2FUSQ3oAMMafrX3N4qn0kt57OHJ%2B4CQqpGT0ZYZ5AxNBBWsvBWg%2BNEK2C%2Br%2B00IlUu89da7D2oGuwiRjqP5%2FRJvkg1rmuM%2FfZEJtZ1vaauH2zkk8xAL5CZUptmXvmsX0z8P2V01SAA&x-oss-signature-version=OSS4-HMAC-SHA256&x-oss-credential=STS.NXe9uHwSYWhD43UPs5KSVzraj%2F20261114%2Feu-central-1%2Foss%2Faliyun_v4_request&x-oss-signature=a9cdd02897b65ad2846c9d254b4e41c3c41d87a2cc764abdd84dab2a92129e72"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -2324,10 +2461,42 @@
 				)
 			)
 		)
+		(property "LCSC Part" "C1591"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "37b9c607-a180-48eb-b144-998c7014a889")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d2fb4df6-9b6e-40ce-975c-bf826b17ae34")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/828099f1-7c7a-4f7e-9a45-346894b27585")
 		(sheetname "/")
-		(sheetfile "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion.kicad_sch")
+		(sheetfile "VL53L8CXBreakoutBoardJSTRightAngleVersion.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -2442,7 +2611,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://jlc-prod-smt.oss-eu-central-1.aliyuncs.com/smtDataManualFile/8588882090821214208-C25600.pdf?response-content-disposition=attachment%3B%20filename%3DC25600.pdf%3B%20filename%2A%3DUTF-8%27%27C25600.pdf&x-oss-date=20261114T010406Z&x-oss-expires=1800&x-oss-security-token=CAISgAN1q6Ft5B2yfSjIr5nCG%2Bj2rLx7wKWdQ2vavkQZfNZFmo3siTz2IHhMdHJsAOodtv0%2FmmhT6PkclqRLcbhpcmfjV%2BZHzLB8qZEF2l00557b16cNrbH4M4H6aXeirtuwDsz9SNTCALjPD3nPii50x5bjaDymRCbLGJaViJlhHLN1Ow6jdmhpCctxLAlvo9NgFxm3D%2Fu2NQPwiWf9FVdhvhEG6Vly8qOi2MaRmFy8yFTx0b0SvJ%2BjYMrmPctoN9JnSdC5mfdzau3a1TJ84gRD0a5wkaVA1zbDs5bfISEIuUzebreLqY03dV4mOvdqIcMe8qigz88fk%2FfIioH6xyxKOexoSCnFTOiiupCcQLPyao9jLu6iayqViY7QaIOTqQohZmkAMwVOasAsI3Ngh4zF97Qt0cVNkXO9gWfLI8DtuMleWgoozuseLJSgc5lCkRRYwGs1287ugXlSQzo890KPDAEovaKCnZ2ZSfh7Y4sNknI6i%2Bfc2Se2MIkIjddkMqKWD5sagAGNBHtmGfUnamga%2FgCpTlMNz6c6M%2Bb1rxu%2FM1ABv345hnAmuy%2F5J%2FCwQSbqjrO7ZJPkwLw6pd21ERVJTeBY743UDw27gSUEO196HbWosV60lXGkD4U81mgFv7TZ%2FtLWMVKhHDnqeRvFsDpGzZTfvYYQy5GF2DpdJuR96qFCXSUTCCAA&x-oss-signature-version=OSS4-HMAC-SHA256&x-oss-credential=STS.NZwPRBAcZwgvAMkZDLpYiuHGk%2F20261114%2Feu-central-1%2Foss%2Faliyun_v4_request&x-oss-signature=c0fc15fed24616278f7cc83a8f66cf36724a3007b44c9e553446e1569094ad7c"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -2476,10 +2645,42 @@
 				)
 			)
 		)
+		(property "LCSC Part" "C25600"
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "5f936126-f974-4651-ba9c-4ff1bdc214a2")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "UNI-ROYAL(Uniroyal Elec)"
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "bb9784f6-17bf-4a34-874d-5e5d09fa7a9a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/2db047cf-b7cf-42e9-b120-db00781a0ea2")
 		(sheetname "/")
-		(sheetfile "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion.kicad_sch")
+		(sheetfile "VL53L8CXBreakoutBoardJSTRightAngleVersion.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -2594,7 +2795,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://jlc-prod-smt.oss-eu-central-1.aliyuncs.com/smtDataManualFile/8586178171934400512-C1746.pdf?response-content-disposition=attachment%3B%20filename%3DC1746.pdf%3B%20filename%2A%3DUTF-8%27%27C1746.pdf&x-oss-date=20261114T004204Z&x-oss-expires=1800&x-oss-security-token=CAISgAN1q6Ft5B2yfSjIr5vQcs%2F8mox44KqvNhXktHNgR9x6lbfKiDz2IHhMdHJsAOodtv0%2FmmhT6PkclqRLcbhpcmfjV%2BZHzLB8qcxFg1w0557b16cNrbH4M4H6aXeirtuwDsz9SNTCALjPD3nPii50x5bjaDymRCbLGJaViJlhHLN1Ow6jdmhpCctxLAlvo9NgFxm3D%2Fu2NQPwiWf9FVdhvhEG6Vly8qOi2MaRmFy8yFTx0b0SvJ%2BjYMrmPctoN9JnSdC5mfdzau3a1TJ84gRD0a5wkaVA1zbDs5bfISEIuUzebreLqY03dV4mOvdqIcMe8qigz88fk%2FfIioH6xyxKOexoSCnFTOiiupCcQLPyao9jLu6iayqViY7QaIOTqQohZmkAMwVOasAsI3Ngh4zF97Qt0cVNkXO9gWfLI8DtuMleWqpjTv8uLJSgc5lCkRRYwGs1287ugXlSQzo890KPDAEovaKCnZ2ZSfh7Y4sNknI6i%2Bfc2Se2MIkILVQHdKKWD5sagAGefKHqKplcbHo6TW3CZEWPTVaPqmbrYQUF0Tr%2FUSQ3oAMMafrX3N4qn0kt57OHJ%2B4CQqpGT0ZYZ5AxNBBWsvBWg%2BNEK2C%2Br%2B00IlUu89da7D2oGuwiRjqP5%2FRJvkg1rmuM%2FfZEJtZ1vaauH2zkk8xAL5CZUptmXvmsX0z8P2V01SAA&x-oss-signature-version=OSS4-HMAC-SHA256&x-oss-credential=STS.NXe9uHwSYWhD43UPs5KSVzraj%2F20261114%2Feu-central-1%2Foss%2Faliyun_v4_request&x-oss-signature=2347c14cf1c27cbc7cf07545b638e69d53ac03c97279b6b4f6d4037c75dcaea6"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -2628,10 +2829,42 @@
 				)
 			)
 		)
+		(property "LCSC Part" "C1746"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "14e1d64a-5e4d-4ac5-a4df-f445bba65c62")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "5128cc53-5f8b-4665-9d90-218ffd76cace")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/4922756d-f7ab-4efc-a752-a8295cbca749")
 		(sheetname "/")
-		(sheetfile "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion.kicad_sch")
+		(sheetfile "VL53L8CXBreakoutBoardJSTRightAngleVersion.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -2746,7 +2979,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://jlc-prod-smt.oss-eu-central-1.aliyuncs.com/smtDataManualFile/8588882090821214208-C25600.pdf?response-content-disposition=attachment%3B%20filename%3DC25600.pdf%3B%20filename%2A%3DUTF-8%27%27C25600.pdf&x-oss-date=20261114T010406Z&x-oss-expires=1800&x-oss-security-token=CAISgAN1q6Ft5B2yfSjIr5nCG%2Bj2rLx7wKWdQ2vavkQZfNZFmo3siTz2IHhMdHJsAOodtv0%2FmmhT6PkclqRLcbhpcmfjV%2BZHzLB8qZEF2l00557b16cNrbH4M4H6aXeirtuwDsz9SNTCALjPD3nPii50x5bjaDymRCbLGJaViJlhHLN1Ow6jdmhpCctxLAlvo9NgFxm3D%2Fu2NQPwiWf9FVdhvhEG6Vly8qOi2MaRmFy8yFTx0b0SvJ%2BjYMrmPctoN9JnSdC5mfdzau3a1TJ84gRD0a5wkaVA1zbDs5bfISEIuUzebreLqY03dV4mOvdqIcMe8qigz88fk%2FfIioH6xyxKOexoSCnFTOiiupCcQLPyao9jLu6iayqViY7QaIOTqQohZmkAMwVOasAsI3Ngh4zF97Qt0cVNkXO9gWfLI8DtuMleWgoozuseLJSgc5lCkRRYwGs1287ugXlSQzo890KPDAEovaKCnZ2ZSfh7Y4sNknI6i%2Bfc2Se2MIkIjddkMqKWD5sagAGNBHtmGfUnamga%2FgCpTlMNz6c6M%2Bb1rxu%2FM1ABv345hnAmuy%2F5J%2FCwQSbqjrO7ZJPkwLw6pd21ERVJTeBY743UDw27gSUEO196HbWosV60lXGkD4U81mgFv7TZ%2FtLWMVKhHDnqeRvFsDpGzZTfvYYQy5GF2DpdJuR96qFCXSUTCCAA&x-oss-signature-version=OSS4-HMAC-SHA256&x-oss-credential=STS.NZwPRBAcZwgvAMkZDLpYiuHGk%2F20261114%2Feu-central-1%2Foss%2Faliyun_v4_request&x-oss-signature=c0fc15fed24616278f7cc83a8f66cf36724a3007b44c9e553446e1569094ad7c"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -2780,10 +3013,42 @@
 				)
 			)
 		)
+		(property "LCSC Part" "C25600"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "6fb036aa-cfe0-426f-814e-d363f1cb9baa")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "UNI-ROYAL(Uniroyal Elec)"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "39f29d9c-63b8-45b1-a18a-870fcd7b7b9f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/7334e326-7987-4f5d-afb5-e7de1093ef5b")
 		(sheetname "/")
-		(sheetfile "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion.kicad_sch")
+		(sheetfile "VL53L8CXBreakoutBoardJSTRightAngleVersion.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -2898,7 +3163,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://jlc-prod-smt.oss-eu-central-1.aliyuncs.com/smtDataManualFile/8586177280415059968-C1591.pdf?response-content-disposition=attachment%3B%20filename%3DC1591.pdf%3B%20filename%2A%3DUTF-8%27%27C1591.pdf&x-oss-date=20261114T003126Z&x-oss-expires=1800&x-oss-security-token=CAISgAN1q6Ft5B2yfSjIr5vQcs%2F8mox44KqvNhXktHNgR9x6lbfKiDz2IHhMdHJsAOodtv0%2FmmhT6PkclqRLcbhpcmfjV%2BZHzLB8qcxFg1w0557b16cNrbH4M4H6aXeirtuwDsz9SNTCALjPD3nPii50x5bjaDymRCbLGJaViJlhHLN1Ow6jdmhpCctxLAlvo9NgFxm3D%2Fu2NQPwiWf9FVdhvhEG6Vly8qOi2MaRmFy8yFTx0b0SvJ%2BjYMrmPctoN9JnSdC5mfdzau3a1TJ84gRD0a5wkaVA1zbDs5bfISEIuUzebreLqY03dV4mOvdqIcMe8qigz88fk%2FfIioH6xyxKOexoSCnFTOiiupCcQLPyao9jLu6iayqViY7QaIOTqQohZmkAMwVOasAsI3Ngh4zF97Qt0cVNkXO9gWfLI8DtuMleWqpjTv8uLJSgc5lCkRRYwGs1287ugXlSQzo890KPDAEovaKCnZ2ZSfh7Y4sNknI6i%2Bfc2Se2MIkILVQHdKKWD5sagAGefKHqKplcbHo6TW3CZEWPTVaPqmbrYQUF0Tr%2FUSQ3oAMMafrX3N4qn0kt57OHJ%2B4CQqpGT0ZYZ5AxNBBWsvBWg%2BNEK2C%2Br%2B00IlUu89da7D2oGuwiRjqP5%2FRJvkg1rmuM%2FfZEJtZ1vaauH2zkk8xAL5CZUptmXvmsX0z8P2V01SAA&x-oss-signature-version=OSS4-HMAC-SHA256&x-oss-credential=STS.NXe9uHwSYWhD43UPs5KSVzraj%2F20261114%2Feu-central-1%2Foss%2Faliyun_v4_request&x-oss-signature=a9cdd02897b65ad2846c9d254b4e41c3c41d87a2cc764abdd84dab2a92129e72"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -2932,10 +3197,42 @@
 				)
 			)
 		)
+		(property "LCSC Part" "C1591"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "0988a540-6706-4d2b-a130-47e0add5de1d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "0a983976-0592-4c21-a6ff-981c99121f65")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/bd2b04bd-4bdf-47c7-9362-1da964ed7e26")
 		(sheetname "/")
-		(sheetfile "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion.kicad_sch")
+		(sheetfile "VL53L8CXBreakoutBoardJSTRightAngleVersion.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -3050,7 +3347,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://jlc-prod-smt.oss-eu-central-1.aliyuncs.com/smtDataManualFile/8586177280415059968-C1591.pdf?response-content-disposition=attachment%3B%20filename%3DC1591.pdf%3B%20filename%2A%3DUTF-8%27%27C1591.pdf&x-oss-date=20261114T003126Z&x-oss-expires=1800&x-oss-security-token=CAISgAN1q6Ft5B2yfSjIr5vQcs%2F8mox44KqvNhXktHNgR9x6lbfKiDz2IHhMdHJsAOodtv0%2FmmhT6PkclqRLcbhpcmfjV%2BZHzLB8qcxFg1w0557b16cNrbH4M4H6aXeirtuwDsz9SNTCALjPD3nPii50x5bjaDymRCbLGJaViJlhHLN1Ow6jdmhpCctxLAlvo9NgFxm3D%2Fu2NQPwiWf9FVdhvhEG6Vly8qOi2MaRmFy8yFTx0b0SvJ%2BjYMrmPctoN9JnSdC5mfdzau3a1TJ84gRD0a5wkaVA1zbDs5bfISEIuUzebreLqY03dV4mOvdqIcMe8qigz88fk%2FfIioH6xyxKOexoSCnFTOiiupCcQLPyao9jLu6iayqViY7QaIOTqQohZmkAMwVOasAsI3Ngh4zF97Qt0cVNkXO9gWfLI8DtuMleWqpjTv8uLJSgc5lCkRRYwGs1287ugXlSQzo890KPDAEovaKCnZ2ZSfh7Y4sNknI6i%2Bfc2Se2MIkILVQHdKKWD5sagAGefKHqKplcbHo6TW3CZEWPTVaPqmbrYQUF0Tr%2FUSQ3oAMMafrX3N4qn0kt57OHJ%2B4CQqpGT0ZYZ5AxNBBWsvBWg%2BNEK2C%2Br%2B00IlUu89da7D2oGuwiRjqP5%2FRJvkg1rmuM%2FfZEJtZ1vaauH2zkk8xAL5CZUptmXvmsX0z8P2V01SAA&x-oss-signature-version=OSS4-HMAC-SHA256&x-oss-credential=STS.NXe9uHwSYWhD43UPs5KSVzraj%2F20261114%2Feu-central-1%2Foss%2Faliyun_v4_request&x-oss-signature=a9cdd02897b65ad2846c9d254b4e41c3c41d87a2cc764abdd84dab2a92129e72"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -3084,10 +3381,42 @@
 				)
 			)
 		)
+		(property "LCSC Part" "C1591"
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e33d213e-50fa-48db-ad18-9b4155c2e407")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e055076f-89af-4de7-a8c1-5bb27bf4a276")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/dfd345de-38ac-4025-b70e-eaa1a8967f0b")
 		(sheetname "/")
-		(sheetfile "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion.kicad_sch")
+		(sheetfile "VL53L8CXBreakoutBoardJSTRightAngleVersion.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -3202,7 +3531,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://jlc-prod-smt.oss-eu-central-1.aliyuncs.com/smtDataManualFile/8579706158411464704-C4190.pdf?response-content-disposition=attachment%3B%20filename%3DC4190.pdf%3B%20filename%2A%3DUTF-8%27%27C4190.pdf&x-oss-date=20261114T005252Z&x-oss-expires=1800&x-oss-security-token=CAISgAN1q6Ft5B2yfSjIr5nCG%2Bj2rLx7wKWdQ2vavkQZfNZFmo3siTz2IHhMdHJsAOodtv0%2FmmhT6PkclqRLcbhpcmfjV%2BZHzLB8qZEF2l00557b16cNrbH4M4H6aXeirtuwDsz9SNTCALjPD3nPii50x5bjaDymRCbLGJaViJlhHLN1Ow6jdmhpCctxLAlvo9NgFxm3D%2Fu2NQPwiWf9FVdhvhEG6Vly8qOi2MaRmFy8yFTx0b0SvJ%2BjYMrmPctoN9JnSdC5mfdzau3a1TJ84gRD0a5wkaVA1zbDs5bfISEIuUzebreLqY03dV4mOvdqIcMe8qigz88fk%2FfIioH6xyxKOexoSCnFTOiiupCcQLPyao9jLu6iayqViY7QaIOTqQohZmkAMwVOasAsI3Ngh4zF97Qt0cVNkXO9gWfLI8DtuMleWgoozuseLJSgc5lCkRRYwGs1287ugXlSQzo890KPDAEovaKCnZ2ZSfh7Y4sNknI6i%2Bfc2Se2MIkIjddkMqKWD5sagAGNBHtmGfUnamga%2FgCpTlMNz6c6M%2Bb1rxu%2FM1ABv345hnAmuy%2F5J%2FCwQSbqjrO7ZJPkwLw6pd21ERVJTeBY743UDw27gSUEO196HbWosV60lXGkD4U81mgFv7TZ%2FtLWMVKhHDnqeRvFsDpGzZTfvYYQy5GF2DpdJuR96qFCXSUTCCAA&x-oss-signature-version=OSS4-HMAC-SHA256&x-oss-credential=STS.NZwPRBAcZwgvAMkZDLpYiuHGk%2F20261114%2Feu-central-1%2Foss%2Faliyun_v4_request&x-oss-signature=396a9804b11422b1805aa5c5c849ee8a6835724ccf86d9afb80f0f71105ca826"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -3236,10 +3565,42 @@
 				)
 			)
 		)
+		(property "LCSC Part" "C4190"
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "5c76ed03-2a68-46bd-b1d0-94121bea5101")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "UNI-ROYAL(Uniroyal Elec)"
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "b5074cd8-15bd-4f15-af96-e6055457c619")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/6e4947d6-ffe7-4903-8d88-78a19b160c8f")
 		(sheetname "/")
-		(sheetfile "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion.kicad_sch")
+		(sheetfile "VL53L8CXBreakoutBoardJSTRightAngleVersion.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -3355,7 +3716,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://jlc-prod-smt.oss-eu-central-1.aliyuncs.com/smtDataManualFile/8586177280415059968-C1591.pdf?response-content-disposition=attachment%3B%20filename%3DC1591.pdf%3B%20filename%2A%3DUTF-8%27%27C1591.pdf&x-oss-date=20261114T003126Z&x-oss-expires=1800&x-oss-security-token=CAISgAN1q6Ft5B2yfSjIr5vQcs%2F8mox44KqvNhXktHNgR9x6lbfKiDz2IHhMdHJsAOodtv0%2FmmhT6PkclqRLcbhpcmfjV%2BZHzLB8qcxFg1w0557b16cNrbH4M4H6aXeirtuwDsz9SNTCALjPD3nPii50x5bjaDymRCbLGJaViJlhHLN1Ow6jdmhpCctxLAlvo9NgFxm3D%2Fu2NQPwiWf9FVdhvhEG6Vly8qOi2MaRmFy8yFTx0b0SvJ%2BjYMrmPctoN9JnSdC5mfdzau3a1TJ84gRD0a5wkaVA1zbDs5bfISEIuUzebreLqY03dV4mOvdqIcMe8qigz88fk%2FfIioH6xyxKOexoSCnFTOiiupCcQLPyao9jLu6iayqViY7QaIOTqQohZmkAMwVOasAsI3Ngh4zF97Qt0cVNkXO9gWfLI8DtuMleWqpjTv8uLJSgc5lCkRRYwGs1287ugXlSQzo890KPDAEovaKCnZ2ZSfh7Y4sNknI6i%2Bfc2Se2MIkILVQHdKKWD5sagAGefKHqKplcbHo6TW3CZEWPTVaPqmbrYQUF0Tr%2FUSQ3oAMMafrX3N4qn0kt57OHJ%2B4CQqpGT0ZYZ5AxNBBWsvBWg%2BNEK2C%2Br%2B00IlUu89da7D2oGuwiRjqP5%2FRJvkg1rmuM%2FfZEJtZ1vaauH2zkk8xAL5CZUptmXvmsX0z8P2V01SAA&x-oss-signature-version=OSS4-HMAC-SHA256&x-oss-credential=STS.NXe9uHwSYWhD43UPs5KSVzraj%2F20261114%2Feu-central-1%2Foss%2Faliyun_v4_request&x-oss-signature=a9cdd02897b65ad2846c9d254b4e41c3c41d87a2cc764abdd84dab2a92129e72"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -3389,10 +3750,42 @@
 				)
 			)
 		)
+		(property "LCSC Part" "C1591"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e9005da2-891b-4569-943e-f701dfc73345")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ce30a1cb-a73b-4ab9-b08d-5ad5922d93cf")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/50b4d6c6-f3ae-4312-9455-24888446203d")
 		(sheetname "/")
-		(sheetfile "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion.kicad_sch")
+		(sheetfile "VL53L8CXBreakoutBoardJSTRightAngleVersion.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -3569,7 +3962,13 @@
 		)
 		(path "/e08bc62a-d0f4-4ca3-8b3c-89be3f1a6a1a")
 		(sheetname "/")
-		(sheetfile "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion.kicad_sch")
+		(sheetfile "VL53L8CXBreakoutBoardJSTRightAngleVersion.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2" "3" "4" "5" "6" "8" "7")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -3888,8 +4287,14 @@
 		(property ki_fp_filters "MountingHole*")
 		(path "/25b7a1fa-ee17-4870-b1f5-90ab806c466c")
 		(sheetname "/")
-		(sheetfile "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion.kicad_sch")
-		(attr exclude_from_pos_files exclude_from_bom)
+		(sheetfile "VL53L8CXBreakoutBoardJSTRightAngleVersion.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins)
+			)
+		)
+		(attr exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
@@ -3985,10 +4390,44 @@
 				)
 			)
 		)
+		(property "LCSC Part" "C7386355"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d72d6839-4725-4702-b345-7673e0b11664")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "STMicroelectronics"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "99a0cc25-a381-40db-95a3-49c61340fe85")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "VL53L8CX")
 		(path "/a0748ce4-cde5-41ca-945a-e9fc0f8ce121")
 		(sheetname "/")
-		(sheetfile "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion.kicad_sch")
+		(sheetfile "VL53L8CXBreakoutBoardJSTRightAngleVersion.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "A1" "A2" "A3" "A4" "A5" "A6" "A7" "B1" "C7" "C6" "C5" "C4" "C3"
+					"C2" "C1" "B7" "B4"
+				)
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -4364,7 +4803,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://jlc-prod-smt.oss-eu-central-1.aliyuncs.com/smtDataManualFile/8588882090821214208-C25600.pdf?response-content-disposition=attachment%3B%20filename%3DC25600.pdf%3B%20filename%2A%3DUTF-8%27%27C25600.pdf&x-oss-date=20261114T010406Z&x-oss-expires=1800&x-oss-security-token=CAISgAN1q6Ft5B2yfSjIr5nCG%2Bj2rLx7wKWdQ2vavkQZfNZFmo3siTz2IHhMdHJsAOodtv0%2FmmhT6PkclqRLcbhpcmfjV%2BZHzLB8qZEF2l00557b16cNrbH4M4H6aXeirtuwDsz9SNTCALjPD3nPii50x5bjaDymRCbLGJaViJlhHLN1Ow6jdmhpCctxLAlvo9NgFxm3D%2Fu2NQPwiWf9FVdhvhEG6Vly8qOi2MaRmFy8yFTx0b0SvJ%2BjYMrmPctoN9JnSdC5mfdzau3a1TJ84gRD0a5wkaVA1zbDs5bfISEIuUzebreLqY03dV4mOvdqIcMe8qigz88fk%2FfIioH6xyxKOexoSCnFTOiiupCcQLPyao9jLu6iayqViY7QaIOTqQohZmkAMwVOasAsI3Ngh4zF97Qt0cVNkXO9gWfLI8DtuMleWgoozuseLJSgc5lCkRRYwGs1287ugXlSQzo890KPDAEovaKCnZ2ZSfh7Y4sNknI6i%2Bfc2Se2MIkIjddkMqKWD5sagAGNBHtmGfUnamga%2FgCpTlMNz6c6M%2Bb1rxu%2FM1ABv345hnAmuy%2F5J%2FCwQSbqjrO7ZJPkwLw6pd21ERVJTeBY743UDw27gSUEO196HbWosV60lXGkD4U81mgFv7TZ%2FtLWMVKhHDnqeRvFsDpGzZTfvYYQy5GF2DpdJuR96qFCXSUTCCAA&x-oss-signature-version=OSS4-HMAC-SHA256&x-oss-credential=STS.NZwPRBAcZwgvAMkZDLpYiuHGk%2F20261114%2Feu-central-1%2Foss%2Faliyun_v4_request&x-oss-signature=c0fc15fed24616278f7cc83a8f66cf36724a3007b44c9e553446e1569094ad7c"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -4398,10 +4837,42 @@
 				)
 			)
 		)
+		(property "LCSC Part" "C25600"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "05d978a6-ffda-4592-b25d-59973f855a12")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "UNI-ROYAL(Uniroyal Elec)"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "b09fcd03-906b-4de0-866a-19e00b2c3e94")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/908b610a-69a4-482a-83f8-45694a9f7287")
 		(sheetname "/")
-		(sheetfile "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion.kicad_sch")
+		(sheetfile "VL53L8CXBreakoutBoardJSTRightAngleVersion.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -4517,7 +4988,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://jlc-prod-smt.oss-eu-central-1.aliyuncs.com/smtDataManualFile/8588882090821214208-C25600.pdf?response-content-disposition=attachment%3B%20filename%3DC25600.pdf%3B%20filename%2A%3DUTF-8%27%27C25600.pdf&x-oss-date=20261114T010406Z&x-oss-expires=1800&x-oss-security-token=CAISgAN1q6Ft5B2yfSjIr5nCG%2Bj2rLx7wKWdQ2vavkQZfNZFmo3siTz2IHhMdHJsAOodtv0%2FmmhT6PkclqRLcbhpcmfjV%2BZHzLB8qZEF2l00557b16cNrbH4M4H6aXeirtuwDsz9SNTCALjPD3nPii50x5bjaDymRCbLGJaViJlhHLN1Ow6jdmhpCctxLAlvo9NgFxm3D%2Fu2NQPwiWf9FVdhvhEG6Vly8qOi2MaRmFy8yFTx0b0SvJ%2BjYMrmPctoN9JnSdC5mfdzau3a1TJ84gRD0a5wkaVA1zbDs5bfISEIuUzebreLqY03dV4mOvdqIcMe8qigz88fk%2FfIioH6xyxKOexoSCnFTOiiupCcQLPyao9jLu6iayqViY7QaIOTqQohZmkAMwVOasAsI3Ngh4zF97Qt0cVNkXO9gWfLI8DtuMleWgoozuseLJSgc5lCkRRYwGs1287ugXlSQzo890KPDAEovaKCnZ2ZSfh7Y4sNknI6i%2Bfc2Se2MIkIjddkMqKWD5sagAGNBHtmGfUnamga%2FgCpTlMNz6c6M%2Bb1rxu%2FM1ABv345hnAmuy%2F5J%2FCwQSbqjrO7ZJPkwLw6pd21ERVJTeBY743UDw27gSUEO196HbWosV60lXGkD4U81mgFv7TZ%2FtLWMVKhHDnqeRvFsDpGzZTfvYYQy5GF2DpdJuR96qFCXSUTCCAA&x-oss-signature-version=OSS4-HMAC-SHA256&x-oss-credential=STS.NZwPRBAcZwgvAMkZDLpYiuHGk%2F20261114%2Feu-central-1%2Foss%2Faliyun_v4_request&x-oss-signature=c0fc15fed24616278f7cc83a8f66cf36724a3007b44c9e553446e1569094ad7c"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -4551,10 +5022,42 @@
 				)
 			)
 		)
+		(property "LCSC Part" "C25600"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "f3eff41c-d157-4827-a7c5-18abd8aef384")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "UNI-ROYAL(Uniroyal Elec)"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "94641190-6687-457c-a636-fe04b7b9ed30")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/cdd4f4c7-0e32-488f-91c2-7291bb6aadeb")
 		(sheetname "/")
-		(sheetfile "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion.kicad_sch")
+		(sheetfile "VL53L8CXBreakoutBoardJSTRightAngleVersion.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -4669,7 +5172,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://jlc-prod-smt.oss-eu-central-1.aliyuncs.com/smtDataManualFile/8586178171934400512-C1746.pdf?response-content-disposition=attachment%3B%20filename%3DC1746.pdf%3B%20filename%2A%3DUTF-8%27%27C1746.pdf&x-oss-date=20261114T004204Z&x-oss-expires=1800&x-oss-security-token=CAISgAN1q6Ft5B2yfSjIr5vQcs%2F8mox44KqvNhXktHNgR9x6lbfKiDz2IHhMdHJsAOodtv0%2FmmhT6PkclqRLcbhpcmfjV%2BZHzLB8qcxFg1w0557b16cNrbH4M4H6aXeirtuwDsz9SNTCALjPD3nPii50x5bjaDymRCbLGJaViJlhHLN1Ow6jdmhpCctxLAlvo9NgFxm3D%2Fu2NQPwiWf9FVdhvhEG6Vly8qOi2MaRmFy8yFTx0b0SvJ%2BjYMrmPctoN9JnSdC5mfdzau3a1TJ84gRD0a5wkaVA1zbDs5bfISEIuUzebreLqY03dV4mOvdqIcMe8qigz88fk%2FfIioH6xyxKOexoSCnFTOiiupCcQLPyao9jLu6iayqViY7QaIOTqQohZmkAMwVOasAsI3Ngh4zF97Qt0cVNkXO9gWfLI8DtuMleWqpjTv8uLJSgc5lCkRRYwGs1287ugXlSQzo890KPDAEovaKCnZ2ZSfh7Y4sNknI6i%2Bfc2Se2MIkILVQHdKKWD5sagAGefKHqKplcbHo6TW3CZEWPTVaPqmbrYQUF0Tr%2FUSQ3oAMMafrX3N4qn0kt57OHJ%2B4CQqpGT0ZYZ5AxNBBWsvBWg%2BNEK2C%2Br%2B00IlUu89da7D2oGuwiRjqP5%2FRJvkg1rmuM%2FfZEJtZ1vaauH2zkk8xAL5CZUptmXvmsX0z8P2V01SAA&x-oss-signature-version=OSS4-HMAC-SHA256&x-oss-credential=STS.NXe9uHwSYWhD43UPs5KSVzraj%2F20261114%2Feu-central-1%2Foss%2Faliyun_v4_request&x-oss-signature=2347c14cf1c27cbc7cf07545b638e69d53ac03c97279b6b4f6d4037c75dcaea6"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -4703,10 +5206,42 @@
 				)
 			)
 		)
+		(property "LCSC Part" "C1746"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "9b494e62-0f81-4b20-becf-db86d8b6e797")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ce83dd8a-b19b-4fc7-9ebf-d17facb5b1de")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/474ddc18-2e15-4e90-995f-e60299bc502e")
 		(sheetname "/")
-		(sheetfile "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion.kicad_sch")
+		(sheetfile "VL53L8CXBreakoutBoardJSTRightAngleVersion.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -4821,7 +5356,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://jlc-prod-smt.oss-eu-central-1.aliyuncs.com/smtDataManualFile/8588882000246165504-C15401.pdf?response-content-disposition=attachment%3B%20filename%3DC15401.pdf%3B%20filename%2A%3DUTF-8%27%27C15401.pdf&x-oss-date=20261114T010213Z&x-oss-expires=1800&x-oss-security-token=CAISgAN1q6Ft5B2yfSjIr5nCG%2Bj2rLx7wKWdQ2vavkQZfNZFmo3siTz2IHhMdHJsAOodtv0%2FmmhT6PkclqRLcbhpcmfjV%2BZHzLB8qZEF2l00557b16cNrbH4M4H6aXeirtuwDsz9SNTCALjPD3nPii50x5bjaDymRCbLGJaViJlhHLN1Ow6jdmhpCctxLAlvo9NgFxm3D%2Fu2NQPwiWf9FVdhvhEG6Vly8qOi2MaRmFy8yFTx0b0SvJ%2BjYMrmPctoN9JnSdC5mfdzau3a1TJ84gRD0a5wkaVA1zbDs5bfISEIuUzebreLqY03dV4mOvdqIcMe8qigz88fk%2FfIioH6xyxKOexoSCnFTOiiupCcQLPyao9jLu6iayqViY7QaIOTqQohZmkAMwVOasAsI3Ngh4zF97Qt0cVNkXO9gWfLI8DtuMleWgoozuseLJSgc5lCkRRYwGs1287ugXlSQzo890KPDAEovaKCnZ2ZSfh7Y4sNknI6i%2Bfc2Se2MIkIjddkMqKWD5sagAGNBHtmGfUnamga%2FgCpTlMNz6c6M%2Bb1rxu%2FM1ABv345hnAmuy%2F5J%2FCwQSbqjrO7ZJPkwLw6pd21ERVJTeBY743UDw27gSUEO196HbWosV60lXGkD4U81mgFv7TZ%2FtLWMVKhHDnqeRvFsDpGzZTfvYYQy5GF2DpdJuR96qFCXSUTCCAA&x-oss-signature-version=OSS4-HMAC-SHA256&x-oss-credential=STS.NZwPRBAcZwgvAMkZDLpYiuHGk%2F20261114%2Feu-central-1%2Foss%2Faliyun_v4_request&x-oss-signature=1551fe478276b53b5b6eb20bec3f35de2ae8c09ab5d9ec6ed62339e5e790ed04"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -4855,10 +5390,42 @@
 				)
 			)
 		)
+		(property "LCSC Part" "C15401"
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "cf2b3fa2-8b5f-4722-8ea3-7d078ac9ee2a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "UNI-ROYAL(Uniroyal Elec)"
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "30cdd828-3d0a-460a-ab5b-ed735e78385a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/3a7a919c-fccf-4dce-8405-aa9d4f775a04")
 		(sheetname "/")
-		(sheetfile "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion.kicad_sch")
+		(sheetfile "VL53L8CXBreakoutBoardJSTRightAngleVersion.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -4973,7 +5540,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://jlc-prod-smt.oss-eu-central-1.aliyuncs.com/smtDataManualFile/8579706853607202816-C15850.pdf?response-content-disposition=attachment%3B%20filename%3DC15850.pdf%3B%20filename%2A%3DUTF-8%27%27C15850.pdf&x-oss-date=20261114T004425Z&x-oss-expires=1800&x-oss-security-token=CAISgAN1q6Ft5B2yfSjIr5vQcs%2F8mox44KqvNhXktHNgR9x6lbfKiDz2IHhMdHJsAOodtv0%2FmmhT6PkclqRLcbhpcmfjV%2BZHzLB8qcxFg1w0557b16cNrbH4M4H6aXeirtuwDsz9SNTCALjPD3nPii50x5bjaDymRCbLGJaViJlhHLN1Ow6jdmhpCctxLAlvo9NgFxm3D%2Fu2NQPwiWf9FVdhvhEG6Vly8qOi2MaRmFy8yFTx0b0SvJ%2BjYMrmPctoN9JnSdC5mfdzau3a1TJ84gRD0a5wkaVA1zbDs5bfISEIuUzebreLqY03dV4mOvdqIcMe8qigz88fk%2FfIioH6xyxKOexoSCnFTOiiupCcQLPyao9jLu6iayqViY7QaIOTqQohZmkAMwVOasAsI3Ngh4zF97Qt0cVNkXO9gWfLI8DtuMleWqpjTv8uLJSgc5lCkRRYwGs1287ugXlSQzo890KPDAEovaKCnZ2ZSfh7Y4sNknI6i%2Bfc2Se2MIkILVQHdKKWD5sagAGefKHqKplcbHo6TW3CZEWPTVaPqmbrYQUF0Tr%2FUSQ3oAMMafrX3N4qn0kt57OHJ%2B4CQqpGT0ZYZ5AxNBBWsvBWg%2BNEK2C%2Br%2B00IlUu89da7D2oGuwiRjqP5%2FRJvkg1rmuM%2FfZEJtZ1vaauH2zkk8xAL5CZUptmXvmsX0z8P2V01SAA&x-oss-signature-version=OSS4-HMAC-SHA256&x-oss-credential=STS.NXe9uHwSYWhD43UPs5KSVzraj%2F20261114%2Feu-central-1%2Foss%2Faliyun_v4_request&x-oss-signature=1a59b0992a108a1fccea03f2351b92fd87e79986056a200f46da459207853bd9"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -5007,10 +5574,42 @@
 				)
 			)
 		)
+		(property "LCSC Part" "C15850"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d896c025-21a4-4ea7-9e1c-15539ebe630a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "fcacc740-9d16-434a-8d43-44e4f000fa3a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/12187552-bb64-41dc-906f-532f9095d48b")
 		(sheetname "/")
-		(sheetfile "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion.kicad_sch")
+		(sheetfile "VL53L8CXBreakoutBoardJSTRightAngleVersion.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -5126,7 +5725,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://jlc-prod-smt.oss-eu-central-1.aliyuncs.com/smtDataManualFile/8586177280415059968-C1591.pdf?response-content-disposition=attachment%3B%20filename%3DC1591.pdf%3B%20filename%2A%3DUTF-8%27%27C1591.pdf&x-oss-date=20261114T003126Z&x-oss-expires=1800&x-oss-security-token=CAISgAN1q6Ft5B2yfSjIr5vQcs%2F8mox44KqvNhXktHNgR9x6lbfKiDz2IHhMdHJsAOodtv0%2FmmhT6PkclqRLcbhpcmfjV%2BZHzLB8qcxFg1w0557b16cNrbH4M4H6aXeirtuwDsz9SNTCALjPD3nPii50x5bjaDymRCbLGJaViJlhHLN1Ow6jdmhpCctxLAlvo9NgFxm3D%2Fu2NQPwiWf9FVdhvhEG6Vly8qOi2MaRmFy8yFTx0b0SvJ%2BjYMrmPctoN9JnSdC5mfdzau3a1TJ84gRD0a5wkaVA1zbDs5bfISEIuUzebreLqY03dV4mOvdqIcMe8qigz88fk%2FfIioH6xyxKOexoSCnFTOiiupCcQLPyao9jLu6iayqViY7QaIOTqQohZmkAMwVOasAsI3Ngh4zF97Qt0cVNkXO9gWfLI8DtuMleWqpjTv8uLJSgc5lCkRRYwGs1287ugXlSQzo890KPDAEovaKCnZ2ZSfh7Y4sNknI6i%2Bfc2Se2MIkILVQHdKKWD5sagAGefKHqKplcbHo6TW3CZEWPTVaPqmbrYQUF0Tr%2FUSQ3oAMMafrX3N4qn0kt57OHJ%2B4CQqpGT0ZYZ5AxNBBWsvBWg%2BNEK2C%2Br%2B00IlUu89da7D2oGuwiRjqP5%2FRJvkg1rmuM%2FfZEJtZ1vaauH2zkk8xAL5CZUptmXvmsX0z8P2V01SAA&x-oss-signature-version=OSS4-HMAC-SHA256&x-oss-credential=STS.NXe9uHwSYWhD43UPs5KSVzraj%2F20261114%2Feu-central-1%2Foss%2Faliyun_v4_request&x-oss-signature=a9cdd02897b65ad2846c9d254b4e41c3c41d87a2cc764abdd84dab2a92129e72"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -5160,10 +5759,42 @@
 				)
 			)
 		)
+		(property "LCSC Part" "C1591"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "779723ae-6c5b-4523-9c47-c0f7ba03f2c8")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "9bfc6232-4e65-4833-a940-39e1948830dc")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/cc35000c-6d67-4535-ad6f-0eac0cb74c62")
 		(sheetname "/")
-		(sheetfile "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion.kicad_sch")
+		(sheetfile "VL53L8CXBreakoutBoardJSTRightAngleVersion.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -5278,7 +5909,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://jlc-prod-smt.oss-eu-central-1.aliyuncs.com/smtDataManualFile/8579706158411464704-C4190.pdf?response-content-disposition=attachment%3B%20filename%3DC4190.pdf%3B%20filename%2A%3DUTF-8%27%27C4190.pdf&x-oss-date=20261114T005252Z&x-oss-expires=1800&x-oss-security-token=CAISgAN1q6Ft5B2yfSjIr5nCG%2Bj2rLx7wKWdQ2vavkQZfNZFmo3siTz2IHhMdHJsAOodtv0%2FmmhT6PkclqRLcbhpcmfjV%2BZHzLB8qZEF2l00557b16cNrbH4M4H6aXeirtuwDsz9SNTCALjPD3nPii50x5bjaDymRCbLGJaViJlhHLN1Ow6jdmhpCctxLAlvo9NgFxm3D%2Fu2NQPwiWf9FVdhvhEG6Vly8qOi2MaRmFy8yFTx0b0SvJ%2BjYMrmPctoN9JnSdC5mfdzau3a1TJ84gRD0a5wkaVA1zbDs5bfISEIuUzebreLqY03dV4mOvdqIcMe8qigz88fk%2FfIioH6xyxKOexoSCnFTOiiupCcQLPyao9jLu6iayqViY7QaIOTqQohZmkAMwVOasAsI3Ngh4zF97Qt0cVNkXO9gWfLI8DtuMleWgoozuseLJSgc5lCkRRYwGs1287ugXlSQzo890KPDAEovaKCnZ2ZSfh7Y4sNknI6i%2Bfc2Se2MIkIjddkMqKWD5sagAGNBHtmGfUnamga%2FgCpTlMNz6c6M%2Bb1rxu%2FM1ABv345hnAmuy%2F5J%2FCwQSbqjrO7ZJPkwLw6pd21ERVJTeBY743UDw27gSUEO196HbWosV60lXGkD4U81mgFv7TZ%2FtLWMVKhHDnqeRvFsDpGzZTfvYYQy5GF2DpdJuR96qFCXSUTCCAA&x-oss-signature-version=OSS4-HMAC-SHA256&x-oss-credential=STS.NZwPRBAcZwgvAMkZDLpYiuHGk%2F20261114%2Feu-central-1%2Foss%2Faliyun_v4_request&x-oss-signature=396a9804b11422b1805aa5c5c849ee8a6835724ccf86d9afb80f0f71105ca826"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -5312,10 +5943,42 @@
 				)
 			)
 		)
+		(property "LCSC Part" "C4190"
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "5d75cccd-dcc8-4beb-9f95-d798705f3439")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "UNI-ROYAL(Uniroyal Elec)"
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "23a06d01-3b93-4fa6-bb1c-e852a2c34556")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/5f5ceee3-2d32-4463-b54c-82bbae1fb97b")
 		(sheetname "/")
-		(sheetfile "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion.kicad_sch")
+		(sheetfile "VL53L8CXBreakoutBoardJSTRightAngleVersion.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -5430,7 +6093,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://jlc-prod-smt.oss-eu-central-1.aliyuncs.com/smtDataManualFile/8588882090821214208-C25600.pdf?response-content-disposition=attachment%3B%20filename%3DC25600.pdf%3B%20filename%2A%3DUTF-8%27%27C25600.pdf&x-oss-date=20261114T010406Z&x-oss-expires=1800&x-oss-security-token=CAISgAN1q6Ft5B2yfSjIr5nCG%2Bj2rLx7wKWdQ2vavkQZfNZFmo3siTz2IHhMdHJsAOodtv0%2FmmhT6PkclqRLcbhpcmfjV%2BZHzLB8qZEF2l00557b16cNrbH4M4H6aXeirtuwDsz9SNTCALjPD3nPii50x5bjaDymRCbLGJaViJlhHLN1Ow6jdmhpCctxLAlvo9NgFxm3D%2Fu2NQPwiWf9FVdhvhEG6Vly8qOi2MaRmFy8yFTx0b0SvJ%2BjYMrmPctoN9JnSdC5mfdzau3a1TJ84gRD0a5wkaVA1zbDs5bfISEIuUzebreLqY03dV4mOvdqIcMe8qigz88fk%2FfIioH6xyxKOexoSCnFTOiiupCcQLPyao9jLu6iayqViY7QaIOTqQohZmkAMwVOasAsI3Ngh4zF97Qt0cVNkXO9gWfLI8DtuMleWgoozuseLJSgc5lCkRRYwGs1287ugXlSQzo890KPDAEovaKCnZ2ZSfh7Y4sNknI6i%2Bfc2Se2MIkIjddkMqKWD5sagAGNBHtmGfUnamga%2FgCpTlMNz6c6M%2Bb1rxu%2FM1ABv345hnAmuy%2F5J%2FCwQSbqjrO7ZJPkwLw6pd21ERVJTeBY743UDw27gSUEO196HbWosV60lXGkD4U81mgFv7TZ%2FtLWMVKhHDnqeRvFsDpGzZTfvYYQy5GF2DpdJuR96qFCXSUTCCAA&x-oss-signature-version=OSS4-HMAC-SHA256&x-oss-credential=STS.NZwPRBAcZwgvAMkZDLpYiuHGk%2F20261114%2Feu-central-1%2Foss%2Faliyun_v4_request&x-oss-signature=c0fc15fed24616278f7cc83a8f66cf36724a3007b44c9e553446e1569094ad7c"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -5464,10 +6127,42 @@
 				)
 			)
 		)
+		(property "LCSC Part" "C25600"
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "cbbf0cf8-d13e-43f7-ae6f-25d6d01ce4a1")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "UNI-ROYAL(Uniroyal Elec)"
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ba1d3347-f6b5-40bf-b5bc-eff7e1dae684")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/def2b31b-f81e-4da9-8aad-94e8dd161df3")
 		(sheetname "/")
-		(sheetfile "VL53L8CXBreakoutBoardSchematicJSTRightAngleVersion.kicad_sch")
+		(sheetfile "VL53L8CXBreakoutBoardJSTRightAngleVersion.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
