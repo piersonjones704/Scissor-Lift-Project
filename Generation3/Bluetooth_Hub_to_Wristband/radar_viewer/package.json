@@ -1,0 +1,5 @@
+{
+  "name": "radar-viewer",
+  "private": true,
+  "scripts": { "test": "node --test" }
+}
