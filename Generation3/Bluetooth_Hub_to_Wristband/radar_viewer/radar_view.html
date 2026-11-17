@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Radar Scope</title>
+<style>
+  :root { --bg:#06110b; --fg:#9fe8b4; --dim:#2a5a3c; --warm:#ff8a4c; --cool:#4cb8ff; --static:#7a8a80; --person:#ffe14c; }
+  * { box-sizing: border-box; }
+  body { margin:0; height:100vh; display:flex; background:var(--bg); color:var(--fg); font:13px ui-monospace, Menlo, monospace; }
+  #main { flex:1; min-width:0; position:relative; }
+  canvas { width:100%; height:100%; display:block; }
+  #side { width:300px; padding:12px; border-left:1px solid var(--dim); overflow:auto; }
+  button { background:transparent; color:var(--fg); border:1px solid var(--dim); padding:5px 9px; margin:0 4px 6px 0; font:inherit; cursor:pointer; }
+  button:hover:not(:disabled) { border-color:var(--fg); }
+  input { background:var(--bg); color:var(--fg); border:1px solid var(--dim); font:inherit; padding:3px; }
+  select { background:var(--bg); color:var(--fg); border:1px solid var(--dim); font:inherit; padding:3px; }
+  button:disabled { opacity:.4; cursor:default; }
+  #status { margin:8px 0; min-height:2.6em; color:var(--warm); }
+  table { width:100%; border-collapse:collapse; margin-top:8px; }
+  th, td { text-align:left; padding:3px 4px; border-bottom:1px solid var(--dim); }
+  .note { margin-top:14px; color:var(--dim); line-height:1.4; }
+  .legend span { display:inline-block; width:10px; height:10px; margin:0 4px 0 8px; vertical-align:middle; }
+</style>
+</head>
+<body>
+<div id="main"><canvas id="cv"></canvas></div>
+<div id="side">
+  <div>
+    <button id="btnConnect">Connect</button>
+    <button id="btnDisconnect" disabled>Disconnect</button><br>
+    <button id="btnReplay">Replay file…</button>
+    <button id="btnRecord">Record</button>
+    <button id="btnSave" disabled>Save .jsonl</button>
+    <br><button id="btnView">View: Scope</button>
+    <label>Z offset <input id="zoff" type="number" step="0.05" value="0" style="width:62px"> m</label><br>
+    <label>Tilt <input id="tilt" type="number" step="1" value="35" style="width:52px">°</label>
+    <label>Alert <input id="alertft" type="number" step="0.1" min="0" value="1" style="width:52px"> ft</label><br>
+    <label>ToF1 yaw <input id="t1yaw" type="number" step="1" value="0" style="width:52px">° pitch <input id="t1pitch" type="number" step="1" value="0" style="width:52px">°</label><br>
+    <label>ToF2 yaw <input id="t2yaw" type="number" step="1" value="0" style="width:52px">° pitch <input id="t2pitch" type="number" step="1" value="0" style="width:52px">°</label><br>
+    <label>Range <select id="range"><option value="2" selected>2 m</option><option value="5">5 m</option><option value="10">10 m</option></select></label>
+    <input id="file" type="file" accept=".jsonl,.txt" hidden>
+  </div>
+  <div id="status">Idle.</div>
+  <div id="alertline" style="min-height:1.3em;font-weight:bold">Alert: –</div>
+  <div id="tofline1">ToF1: no data</div>
+  <div id="tofline2">ToF2: no data</div>
+  <div>fps <b id="fps">0</b> · points <b id="npts">0</b></div>
+  <div class="legend"><span style="background:var(--warm)"></span>approaching<span style="background:var(--cool)"></span>receding<span style="background:var(--static)"></span>static<span style="background:#3cdce6"></span>ToF</div>
+  <table>
+    <thead><tr><th>ID</th><th>Label</th><th>Range</th><th>Speed</th><th>Z</th><th>Δ5s</th></tr></thead>
+    <tbody id="tracks"></tbody>
+  </table>
+  <div class="note">Sparse point cloud (3 antennas): coarse angle, nearby people may merge into one track. "Person" is a motion/size heuristic, not a classifier. Close Arduino Serial Monitor before connecting.</div>
+</div>
+
+<script src="radar_core.js"></script>
+<script>
+const { RadarEngine, LineSplitter, parseLine, DEFAULTS, alertPoints, tofToPoints, tofNearest } = RadarCore;
+const TRAIL_S = 2.0, FOV = 70 * Math.PI / 180;
+let MAX_R = 2;
+let view = 'scope';
+const cam = { yaw: 0.5, pitch: 0.45, zoom: 1 };
+const camReset = () => { cam.yaw = 0.5; cam.pitch = 0.45; cam.zoom = 1; };
+
+const cv = document.getElementById('cv'), ctx = cv.getContext('2d');
+const $ = (id) => document.getElementById(id);
+const engine = new RadarEngine({ maxRange: 2 });
+let state = { points: [], tracks: [], staticCells: [] };
+let trail = [];
+let source = null;            // 'live' | 'replay' | null
+let live = null;              // { port, reader }
+let replay = null;            // { frames, i, t0, dur }
+let recording = false, recorded = [];
+let fpsCount = 0, fpsT = performance.now(), ptsLast = 0;
+
+const setStatus = (s) => { $('status').textContent = s; };
+const nowS = () => performance.now() / 1000;
+const clockT = () => (source === 'replay' && replay ? (performance.now() - replay.t0) / 1000 : nowS());
+
+const newTof = () => ({ points: [], t: -Infinity, rate: 0, nearest: null, stamps: [] });
+let tof = { 1: newTof(), 2: newTof() };
+const tofCfg = { 1: { yaw: 0, pitch: 0 }, 2: { yaw: 0, pitch: 0 } };
+let tofTrail = [];
+let zOff = 0, tiltDeg = 35, alertM = 0.3048;
+let alertNow = { t: -Infinity, pts: [], nearest: null };
+function ingest(frame, t) {
+  frame.t = t;
+  const shown = zOff ? { f: frame.f, p: frame.p.map((q) => Object.assign({}, q, { z: q.z + zOff })) } : frame;
+  state = engine.update(shown, t);
+  for (const p of state.points) trail.push({ x: p.x, y: p.y, v: p.v, cls: p.cls, t });
+  ptsLast = frame.p.length;
+  const al = alertPoints(state.points, tiltDeg, alertM);
+  if (al.alerting.length) alertNow = { t, pts: al.alerting, nearest: al.nearest };
+  fpsCount++;
+  if (recording) recorded.push(frame);
+}
+
+function ingestTof(msg, t) {
+  const cfg = tofCfg[msg.sensor], s = tof[msg.sensor];
+  s.points = tofToPoints(msg.d, cfg.yaw, cfg.pitch);
+  s.nearest = tofNearest(s.points);
+  s.t = t;
+  s.stamps.push(t);
+  while (s.stamps.length && t - s.stamps[0] > 1) s.stamps.shift();
+  s.rate = s.stamps.length > 1 ? Math.round((s.stamps.length - 1) / (t - s.stamps[0])) : 0;
+  for (const p of s.points) tofTrail.push({ x: p.x, y: p.y, z: p.z, t, sensor: msg.sensor });
+  if (recording) recorded.push({ kind: 'tof', sensor: msg.sensor, t, d: msg.d });
+}
+
+function dispatch(msg, t) { if (msg.kind === 'tof') ingestTof(msg, t); else ingest(msg, t); }
+
+function resetView() { tof = { 1: newTof(), 2: newTof() }; tofTrail = []; alertNow = { t: -Infinity, pts: [], nearest: null }; engine.reset(); trail = []; state = { points: [], tracks: [], staticCells: [] }; }
+
+// ---------- Live serial ----------
+async function connect() {
+  if (!('serial' in navigator)) { setStatus('Web Serial needs Chrome or Edge.'); return; }
+  let port;
+  try {
+    port = await navigator.serial.requestPort();
+    await port.open({ baudRate: 115200 });
+  } catch (e) { setStatus('Connect cancelled/failed: ' + e.message); return; }
+  await stopSource();
+  resetView();
+  source = 'live';
+  $('btnConnect').disabled = true; $('btnDisconnect').disabled = false;
+  setStatus('Connected. Waiting for frames…');
+  const dec = new TextDecoderStream();
+  port.readable.pipeTo(dec.writable).catch(() => {});
+  const reader = dec.readable.getReader();
+  live = { port, reader };
+  const split = new LineSplitter();
+  try {
+    for (;;) {
+      const { value, done } = await reader.read();
+      if (done) break;
+      for (const line of split.push(value)) {
+        const m = parseLine(line);
+        if (m) dispatch(m, nowS());
+      }
+    }
+  } catch (e) {
+    setStatus('Serial lost: ' + e.message);
+  }
+  if (live && live.port === port) await stopSource();
+}
+
+async function stopSource() {
+  if (live) {
+    const { port, reader } = live;
+    live = null;
+    try { await reader.cancel(); } catch (e) {}
+    await new Promise((r) => setTimeout(r, 50));
+    try { await port.close(); } catch (e) {}
+  }
+  replay = null; source = null;
+  $('btnConnect').disabled = false; $('btnDisconnect').disabled = true;
+}
+
+// ---------- Replay ----------
+function startReplay(text, name) {
+  const frames = [];
+  for (const line of text.split('\n')) { const m = parseLine(line); if (m) frames.push(m); }
+  if (!frames.length) { setStatus('No frames found in ' + name); return; }
+  // radar frames without t are timed by frame counter (10 Hz); ToF lines without t take the previous entry's time
+  const firstRadar = frames.find((m) => m.kind === 'radar');
+  const base = frames[0].t !== undefined ? frames[0].t : 0;
+  let prev = 0;
+  for (const m of frames) {
+    if (m.t !== undefined) m.t -= base;
+    else if (m.kind === 'radar') m.t = (m.f - firstRadar.f) * 0.1;
+    else m.t = prev;
+    prev = m.t;
+  }
+  stopSource().then(() => {
+    resetView();
+    source = 'replay';
+    replay = { frames, i: 0, t0: performance.now(), dur: frames[frames.length - 1].t };
+    setStatus('Replaying ' + name + ' (' + frames.length + ' frames, looping)');
+  });
+}
+
+function tickReplay() {
+  if (source !== 'replay' || !replay) return;
+  const el = (performance.now() - replay.t0) / 1000;
+  while (replay.i < replay.frames.length && replay.frames[replay.i].t <= el) {
+    const f = replay.frames[replay.i++];
+    if (f.kind === 'tof') ingestTof(f, f.t); else ingest({ kind: 'radar', f: f.f, p: f.p }, f.t);
+  }
+  if (replay.i >= replay.frames.length && el > replay.dur + 1) {
+    resetView(); replay.i = 0; replay.t0 = performance.now();
+  }
+}
+
+// ---------- Record ----------
+function toggleRecord() {
+  recording = !recording;
+  if (recording) { recorded = []; setStatus('Recording…'); }
+  else setStatus('Recorded ' + recorded.length + ' frames. Click Save.');
+  $('btnRecord').textContent = recording ? 'Stop' : 'Record';
+  $('btnSave').disabled = recording || !recorded.length;
+}
+function saveRecording() {
+  if (!recorded.length) return;
+  const t0 = recorded[0].t;
+  const rt = (t) => Math.round((t - t0) * 1000) / 1000;
+  const body = recorded.map((f) => JSON.stringify(f.kind === 'tof'
+    ? { tof: f.sensor, t: rt(f.t), d: f.d }
+    : { f: f.f, t: rt(f.t), p: f.p.map((q) => [q.x, q.y, q.z, q.v, q.snr]) })).join('\n') + '\n';
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([body], { type: 'application/x-ndjson' }));
+  a.download = 'radar-' + new Date().toISOString().replace(/[:.]/g, '-') + '.jsonl';
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+
+// ---------- Rendering ----------
+function resize() {
+  const r = cv.getBoundingClientRect(), d = window.devicePixelRatio || 1;
+  const w = Math.round(r.width * d), h = Math.round(r.height * d);
+  if (cv.width !== w || cv.height !== h) { cv.width = w; cv.height = h; }
+  return { w, h, d };
+}
+
+function ringStep() { return MAX_R <= 2 ? 0.5 : MAX_R <= 5 ? 1 : 2; }
+
+function drawScope(w, h, d, t) {
+  const margin = 30 * d;
+  const scale = Math.max(1, Math.min((w / 2 - margin) / (MAX_R * Math.sin(FOV)), (h - 2 * margin) / MAX_R));
+  const cx = w / 2, cy = h - margin;
+  const X = (x) => cx + x * scale, Y = (y) => cy - y * scale;
+
+  ctx.fillStyle = '#06110b'; ctx.fillRect(0, 0, w, h);
+  ctx.lineWidth = 1 * d; ctx.strokeStyle = '#1d3d2b'; ctx.fillStyle = '#2a5a3c';
+  ctx.font = (11 * d) + 'px ui-monospace, Menlo, monospace';
+  for (let r = ringStep(); r <= MAX_R + 1e-9; r += ringStep()) {
+    ctx.beginPath(); ctx.arc(cx, cy, r * scale, -Math.PI / 2 - FOV, -Math.PI / 2 + FOV); ctx.stroke();
+    ctx.fillText(r + ' m', cx + 4 * d, cy - r * scale - 3 * d);
+  }
+  for (let a = -70; a <= 70; a += 20) {
+    const rad = a * Math.PI / 180;
+    ctx.beginPath(); ctx.moveTo(cx, cy);
+    ctx.lineTo(cx + Math.sin(rad) * MAX_R * scale, cy - Math.cos(rad) * MAX_R * scale); ctx.stroke();
+  }
+  ctx.strokeStyle = '#2a5a3c';
+  for (const a of [-70, 70]) {
+    const rad = a * Math.PI / 180;
+    ctx.beginPath(); ctx.moveTo(cx, cy);
+    ctx.lineTo(cx + Math.sin(rad) * MAX_R * scale, cy - Math.cos(rad) * MAX_R * scale); ctx.stroke();
+  }
+
+  // ToF coverage wedges (45 deg each, at the sensor yaw) and zone points
+  for (const n of [1, 2]) {
+    const a0 = -Math.PI / 2 + (tofCfg[n].yaw - 22.5) * Math.PI / 180, a1 = -Math.PI / 2 + (tofCfg[n].yaw + 22.5) * Math.PI / 180;
+    ctx.fillStyle = 'rgba(60,220,230,0.07)';
+    ctx.beginPath(); ctx.moveTo(cx, cy); ctx.arc(cx, cy, MAX_R * scale, a0, a1); ctx.closePath(); ctx.fill();
+  }
+  for (const p of tofTrail) {
+    if (Math.hypot(p.x, p.y) > MAX_R) continue;
+    ctx.fillStyle = 'rgba(60,220,230,' + Math.max(0, 1 - (t - p.t) / TRAIL_S) * 0.8 + ')';
+    ctx.beginPath(); ctx.arc(X(p.x), Y(p.y), 2 * d, 0, 6.283); ctx.fill();
+  }
+
+  // static map
+  const cs = DEFAULTS.cellSize * scale;
+  for (const c of state.staticCells) {
+    ctx.fillStyle = 'rgba(122,138,128,' + Math.min(0.65, 0.12 + c.w / 40) + ')';
+    ctx.fillRect(X(c.x) - cs / 2, Y(c.y) - cs / 2, cs, cs);
+  }
+
+  // fading trail; approaching (v<0) warm, receding cool, static grey
+  for (const p of trail) {
+    const a = Math.max(0, 1 - (t - p.t) / TRAIL_S);
+    ctx.fillStyle = p.cls === 'static' ? 'rgba(122,138,128,' + (a * 0.6) + ')'
+      : p.v < 0 ? 'rgba(255,138,76,' + a + ')' : 'rgba(76,184,255,' + a + ')';
+    ctx.beginPath(); ctx.arc(X(p.x), Y(p.y), 3 * d, 0, 6.283); ctx.fill();
+  }
+
+  // tracks
+  ctx.lineWidth = 2 * d;
+  for (const tr of state.tracks) {
+    const person = tr.label !== 'object';
+    ctx.strokeStyle = person ? '#ffe14c' : '#9fe8b4';
+    ctx.setLineDash(tr.label === 'person (still)' ? [4 * d, 4 * d] : []);
+    ctx.beginPath(); ctx.arc(X(tr.x), Y(tr.y), 14 * d, 0, 6.283); ctx.stroke();
+    ctx.setLineDash([]);
+    ctx.fillStyle = ctx.strokeStyle;
+    ctx.fillText('#' + tr.id + ' ' + tr.label, X(tr.x) + 18 * d, Y(tr.y) + 4 * d);
+  }
+
+}
+
+// ---------- 3D view (x right, y forward, z up; z=0 is the sensor) ----------
+function drawBg(w, h) { ctx.fillStyle = '#06110b'; ctx.fillRect(0, 0, w, h); }
+
+function draw3D(w, h, d, t) {
+  const R = MAX_R, zmin = -R / 2, zmax = R / 2;
+  const D = 2.5 * R, unit = Math.min(w, h) / (2.3 * R) * cam.zoom;
+  const cy_ = Math.cos(cam.yaw), sy_ = Math.sin(cam.yaw), cp = Math.cos(cam.pitch), sp = Math.sin(cam.pitch);
+  const P = (x, y, z) => {
+    const x0 = x, y0 = y - R / 2;
+    const xr = x0 * cy_ - y0 * sy_, yr = x0 * sy_ + y0 * cy_;
+    const depth = yr * cp - z * sp, up = yr * sp + z * cp;
+    const k = D * unit / (D + depth);
+    return [w / 2 + xr * k, h * 0.55 - up * k, k];
+  };
+  const line = (pts) => { ctx.beginPath(); pts.forEach((q, i) => { const s = P(q[0], q[1], q[2]); i ? ctx.lineTo(s[0], s[1]) : ctx.moveTo(s[0], s[1]); }); ctx.stroke(); };
+  ctx.font = (11 * d) + 'px ui-monospace, Menlo, monospace';
+  drawBg(w, h);
+
+  // floor fan (rings + radials) at z = zmin
+  ctx.lineWidth = 1 * d; ctx.strokeStyle = '#1d3d2b'; ctx.fillStyle = '#2a5a3c';
+  for (let r = ringStep(); r <= R + 1e-9; r += ringStep()) {
+    const arc = [];
+    for (let a = -70; a <= 70; a += 5) { const rad = a * Math.PI / 180; arc.push([Math.sin(rad) * r, Math.cos(rad) * r, zmin]); }
+    line(arc);
+    const lp = P(0, r, zmin); ctx.fillText(r + ' m', lp[0] + 4 * d, lp[1]);
+  }
+  for (let a = -70; a <= 70; a += 20) { const rad = a * Math.PI / 180; line([[0, 0, zmin], [Math.sin(rad) * R, Math.cos(rad) * R, zmin]]); }
+  // static cells on the floor
+  const hc = DEFAULTS.cellSize / 2;
+  for (const c of state.staticCells) {
+    const q = [P(c.x - hc, c.y - hc, zmin), P(c.x + hc, c.y - hc, zmin), P(c.x + hc, c.y + hc, zmin), P(c.x - hc, c.y + hc, zmin)];
+    ctx.fillStyle = 'rgba(122,138,128,' + Math.min(0.6, 0.12 + c.w / 40) + ')';
+    ctx.beginPath(); q.forEach((s, i) => i ? ctx.lineTo(s[0], s[1]) : ctx.moveTo(s[0], s[1])); ctx.fill();
+  }
+  // vertical axis at the sensor with ticks
+  ctx.strokeStyle = '#2a5a3c'; ctx.fillStyle = '#2a5a3c';
+  line([[0, 0, zmin], [0, 0, zmax]]);
+  const zs = R <= 2 ? 0.5 : 1;
+  for (let z = Math.ceil(zmin / zs) * zs; z <= zmax + 1e-9; z += zs) {
+    const q = P(0, 0, z); ctx.fillText((z > 0 ? '+' : '') + z.toFixed(1) + (z === 0 ? ' (sensor)' : ''), q[0] + 5 * d, q[1] + 3 * d);
+    line([[-0.03 * R, 0, z], [0.03 * R, 0, z]]);
+  }
+  // ToF zone points (cyan) with faint drop lines
+  for (const p of tofTrail) {
+    if (Math.hypot(p.x, p.y) > R) continue;
+    const a = Math.max(0, 1 - (t - p.t) / TRAIL_S), s = P(p.x, p.y, p.z), f = P(p.x, p.y, zmin);
+    ctx.strokeStyle = 'rgba(60,220,230,' + (a * 0.06) + ')'; ctx.lineWidth = 1 * d;
+    ctx.beginPath(); ctx.moveTo(s[0], s[1]); ctx.lineTo(f[0], f[1]); ctx.stroke();
+    ctx.fillStyle = 'rgba(60,220,230,' + (a * 0.8) + ')';
+    ctx.beginPath(); ctx.arc(s[0], s[1], 2 * d * Math.min(1.6, s[2] / unit), 0, 6.283); ctx.fill();
+  }
+  // points with drop lines
+  for (const p of trail) {
+    const a = Math.max(0, 1 - (t - p.t) / TRAIL_S);
+    const moving = p.cls === 'moving';
+    const col = moving ? '255,40,40' : '122,138,128', al = moving ? a : a * 0.25;
+    const s = P(p.x, p.y, p.z), f = P(p.x, p.y, zmin);
+    ctx.strokeStyle = 'rgba(' + col + ',' + (al * 0.18) + ')'; ctx.lineWidth = 1 * d;
+    ctx.beginPath(); ctx.moveTo(s[0], s[1]); ctx.lineTo(f[0], f[1]); ctx.stroke();
+    ctx.fillStyle = 'rgba(' + col + ',' + al + ')';
+    ctx.beginPath(); ctx.arc(s[0], s[1], 3 * d * Math.min(1.6, s[2] / unit), 0, 6.283); ctx.fill();
+  }
+  // alert: ring around offending points, banner
+  const alertOn = t - alertNow.t < 0.4;
+  if (alertOn) {
+    ctx.strokeStyle = '#ff2828'; ctx.lineWidth = 2 * d;
+    for (const p of alertNow.pts) { const s = P(p.x, p.y, p.z); ctx.beginPath(); ctx.arc(s[0], s[1], 9 * d, 0, 6.283); ctx.stroke(); }
+    ctx.fillStyle = '#ff2828'; ctx.font = (18 * d) + 'px ui-monospace, Menlo, monospace';
+    ctx.fillText('ALERT  nearest ' + (alertNow.nearest / 0.3048).toFixed(2) + ' ft from lift', 10 * d, 28 * d);
+    ctx.font = (11 * d) + 'px ui-monospace, Menlo, monospace';
+  }
+  // tracks
+  ctx.lineWidth = 2 * d;
+  for (const tr of state.tracks) {
+    const person = tr.label !== 'object';
+    ctx.strokeStyle = person ? '#ffe14c' : '#9fe8b4'; ctx.fillStyle = ctx.strokeStyle;
+    ctx.setLineDash(tr.label === 'person (still)' ? [4 * d, 4 * d] : []);
+    const s = P(tr.x, tr.y, tr.z), f = P(tr.x, tr.y, zmin);
+    ctx.beginPath(); ctx.moveTo(f[0], f[1]); ctx.lineTo(s[0], s[1]); ctx.stroke();
+    ctx.beginPath(); ctx.arc(s[0], s[1], 9 * d, 0, 6.283); ctx.stroke();
+    ctx.setLineDash([]);
+    ctx.fillText('#' + tr.id + ' ' + tr.label + ' z=' + tr.zMean.toFixed(2), s[0] + 13 * d, s[1] + 4 * d);
+  }
+  ctx.fillStyle = '#9fe8b4'; ctx.fillText('drag: rotate · wheel: zoom · double-click: reset', 10 * d, h - 10 * d);
+}
+
+// ---------- Side view (range vs height; lateral x collapsed) ----------
+function drawSide(w, h, d, t) {
+  const R = MAX_R, zmin = -R / 2, zmax = R / 2, m = 46 * d;
+  const sc = Math.max(1, Math.min((w - 2 * m) / R, (h - 2 * m) / R));
+  const X = (y) => m + y * sc, Y = (z) => h / 2 - z * sc;
+  drawBg(w, h);
+  ctx.font = (11 * d) + 'px ui-monospace, Menlo, monospace';
+  ctx.lineWidth = 1 * d;
+  const zs = R <= 2 ? 0.25 : R <= 5 ? 0.5 : 1;
+  for (let z = Math.ceil(zmin / zs) * zs; z <= zmax + 1e-9; z += zs) {
+    ctx.strokeStyle = Math.abs(z) < 1e-9 ? '#2f7a4c' : '#17301f';
+    ctx.beginPath(); ctx.moveTo(X(0), Y(z)); ctx.lineTo(X(R), Y(z)); ctx.stroke();
+    ctx.fillStyle = '#2a5a3c'; ctx.fillText((z > 0 ? '+' : '') + z.toFixed(2) + (Math.abs(z) < 1e-9 ? ' sensor' : ''), 4 * d, Y(z) + 4 * d);
+  }
+  for (let r = ringStep(); r <= R + 1e-9; r += ringStep()) {
+    ctx.strokeStyle = '#17301f';
+    ctx.beginPath(); ctx.moveTo(X(r), Y(zmin)); ctx.lineTo(X(r), Y(zmax)); ctx.stroke();
+    ctx.fillStyle = '#2a5a3c'; ctx.fillText(r + ' m', X(r) - 12 * d, Y(zmin) + 16 * d);
+  }
+  ctx.fillStyle = '#9fe8b4'; ctx.fillRect(X(0) - 3 * d, Y(0) - 3 * d, 6 * d, 6 * d);
+  for (const p of tofTrail) {
+    const rr = Math.hypot(p.x, p.y);
+    if (rr > R) continue;
+    ctx.fillStyle = 'rgba(60,220,230,' + Math.max(0, 1 - (t - p.t) / TRAIL_S) * 0.8 + ')';
+    ctx.beginPath(); ctx.arc(X(rr), Y(p.z), 2 * d, 0, 6.283); ctx.fill();
+  }
+  for (const c of state.staticCells) {
+    ctx.fillStyle = 'rgba(122,138,128,' + Math.min(0.6, 0.12 + c.w / 40) + ')';
+    ctx.fillRect(X(Math.hypot(c.x, c.y)) - 2 * d, Y(0) - 2 * d, 4 * d, 4 * d);
+  }
+  for (const p of trail) {
+    const a = Math.max(0, 1 - (t - p.t) / TRAIL_S);
+    ctx.fillStyle = p.cls === 'static' ? 'rgba(122,138,128,' + (a * 0.6) + ')'
+      : p.v < 0 ? 'rgba(255,138,76,' + a + ')' : 'rgba(76,184,255,' + a + ')';
+    ctx.beginPath(); ctx.arc(X(Math.hypot(p.x, p.y)), Y(p.z), 3 * d, 0, 6.283); ctx.fill();
+  }
+  ctx.lineWidth = 2 * d;
+  for (const tr of state.tracks) {
+    const person = tr.label !== 'object', rx = X(Math.hypot(tr.x, tr.y));
+    ctx.strokeStyle = person ? '#ffe14c' : '#9fe8b4'; ctx.fillStyle = ctx.strokeStyle;
+    ctx.setLineDash(tr.label === 'person (still)' ? [4 * d, 4 * d] : []);
+    ctx.beginPath(); ctx.moveTo(rx, Y(tr.zMin)); ctx.lineTo(rx, Y(tr.zMax)); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(rx - 6 * d, Y(tr.zMin)); ctx.lineTo(rx + 6 * d, Y(tr.zMin)); ctx.moveTo(rx - 6 * d, Y(tr.zMax)); ctx.lineTo(rx + 6 * d, Y(tr.zMax)); ctx.stroke();
+    ctx.beginPath(); ctx.arc(rx, Y(tr.zMean), 6 * d, 0, 6.283); ctx.stroke();
+    ctx.setLineDash([]);
+    ctx.fillText('#' + tr.id + ' z ' + tr.zMin.toFixed(2) + ' / ' + tr.zMean.toFixed(2) + ' / ' + tr.zMax.toFixed(2),
+      rx + 10 * d, Y(tr.zMax) - 4 * d);
+  }
+  ctx.fillStyle = '#9fe8b4'; ctx.fillText('side view: x = range from sensor, y = height. bars = z min/mean/max over last 5 s', 10 * d, 16 * d);
+}
+
+function draw() {
+  requestAnimationFrame(draw);   // first, so a drawing error cannot stop the loop
+  tickReplay();
+  const { w, h, d } = resize();
+  const t = clockT();
+  while (trail.length && t - trail[0].t > TRAIL_S) trail.shift();
+  while (tofTrail.length && t - tofTrail[0].t > TRAIL_S) tofTrail.shift();
+  if (view === 'scope') drawScope(w, h, d, t); else if (view === '3d') draw3D(w, h, d, t); else drawSide(w, h, d, t);
+
+  // panel
+  const now = performance.now();
+  if (now - fpsT >= 1000) { $('fps').textContent = (fpsCount * 1000 / (now - fpsT)).toFixed(1); fpsCount = 0; fpsT = now; }
+  $('npts').textContent = ptsLast;
+  for (const n of [1, 2]) {
+    const s = tof[n];
+    $('tofline' + n).textContent = t - s.t > 1 ? 'ToF' + n + ': no data'
+      : 'ToF' + n + ': ' + s.rate + ' Hz, nearest ' + (s.nearest === null ? '–' : s.nearest.toFixed(2) + ' m');
+  }
+  const alOn = t - alertNow.t < 0.4;
+  $('alertline').textContent = alOn ? 'ALERT – nearest ' + (alertNow.nearest / 0.3048).toFixed(2) + ' ft from lift' : 'Alert: –';
+  $('alertline').style.color = alOn ? '#ff2828' : '';
+  const rows = state.tracks.slice().sort((a, b) => Math.hypot(a.x, a.y) - Math.hypot(b.x, b.y));
+  $('tracks').innerHTML = rows.map((tr) =>
+    '<tr><td>#' + tr.id + '</td><td>' + tr.label + '</td><td>' + Math.hypot(tr.x, tr.y).toFixed(2) + ' m</td><td>' + tr.speed.toFixed(2) + ' m/s</td><td>' + tr.zMean.toFixed(2) + '</td><td>' + (tr.zMax - tr.zMin).toFixed(2) + '</td></tr>').join('');
+}
+
+// ---------- wiring ----------
+$('btnConnect').onclick = connect;
+$('btnDisconnect').onclick = () => { stopSource(); setStatus('Disconnected.'); };
+$('btnReplay').onclick = () => $('file').click();
+$('file').onchange = async (e) => {
+  const f = e.target.files[0];
+  if (f) startReplay(await f.text(), f.name);
+  e.target.value = '';
+};
+$('btnRecord').onclick = toggleRecord;
+const VIEWS = ['scope', '3d', 'side'], VIEW_NAMES = { scope: 'Scope', '3d': '3D', side: 'Side' };
+$('btnView').onclick = () => { view = VIEWS[(VIEWS.indexOf(view) + 1) % VIEWS.length]; $('btnView').textContent = 'View: ' + VIEW_NAMES[view]; };
+$('tilt').onchange = (e) => { const v = parseFloat(e.target.value); tiltDeg = Number.isFinite(v) ? v : 0; };
+$('alertft').onchange = (e) => { const v = parseFloat(e.target.value); alertM = (Number.isFinite(v) && v >= 0 ? v : 1) * 0.3048; };
+for (const n of [1, 2]) {
+  $('t' + n + 'yaw').onchange = (e) => { const v = parseFloat(e.target.value); tofCfg[n].yaw = Number.isFinite(v) ? v : 0; };
+  $('t' + n + 'pitch').onchange = (e) => { const v = parseFloat(e.target.value); tofCfg[n].pitch = Number.isFinite(v) ? v : 0; };
+}
+$('zoff').onchange = (e) => { const v = parseFloat(e.target.value); zOff = Number.isFinite(v) ? v : 0; };
+$('range').onchange = (e) => { MAX_R = +e.target.value; engine.cfg.maxRange = MAX_R; };
+let drag = null;
+cv.addEventListener('pointerdown', (e) => { drag = { x: e.clientX, y: e.clientY }; cv.setPointerCapture(e.pointerId); });
+cv.addEventListener('pointerup', () => { drag = null; });
+cv.addEventListener('pointermove', (e) => {
+  if (!drag || view !== '3d') return;
+  cam.yaw += (e.clientX - drag.x) * 0.01;
+  cam.pitch = Math.max(0, Math.min(Math.PI / 2, cam.pitch + (e.clientY - drag.y) * 0.01));
+  drag = { x: e.clientX, y: e.clientY };
+});
+cv.addEventListener('wheel', (e) => { if (view !== '3d') return; e.preventDefault(); cam.zoom = Math.max(0.3, Math.min(4, cam.zoom * Math.exp(-e.deltaY * 0.001))); }, { passive: false });
+cv.addEventListener('dblclick', camReset);
+$('btnSave').onclick = saveRecording;
+if (!('serial' in navigator)) { $('btnConnect').disabled = true; setStatus('Web Serial unavailable (use Chrome/Edge). Replay still works.'); }
+
+const demo = new URLSearchParams(location.search).get('demo');
+if (demo) fetch(demo).then((r) => r.text()).then((txt) => startReplay(txt, demo)).catch((e) => setStatus('Demo load failed: ' + e.message));
+
+requestAnimationFrame(draw);
+</script>
+</body>
+</html>
