@@ -40,8 +40,8 @@
         "other_text_upright": false,
         "pads": {
           "drill": 0.0,
-          "height": 4.4,
-          "width": 4.4
+          "height": 1.0,
+          "width": 1.0
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -673,7 +673,7 @@
         "uuid": "282357c6-caf8-4566-adbb-241b76a97139"
       }
     ],
-    "used_designators": "",
+    "used_designators": "SDA2,TP1-5,CORE1,GND1-2,SCLLV1,SDALV1,SCL2",
     "variants": []
   },
   "sheets": [

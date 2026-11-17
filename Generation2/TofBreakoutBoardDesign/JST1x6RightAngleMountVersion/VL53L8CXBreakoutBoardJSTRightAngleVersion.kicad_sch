@@ -12,6 +12,129 @@
 		(comment 1 "Created by Pierson Jones")
 	)
 	(lib_symbols
+		(symbol "Connector:TestPoint"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.762)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "TP"
+				(at 0 6.858 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TestPoint"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 5.08 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 5.08 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "test point"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "test point tp"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Pin* Test*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "TestPoint_0_1"
+				(circle
+					(center 0 3.302)
+					(radius 0.762)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "TestPoint_1_1"
+				(pin passive line
+					(at 0 0 90)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Device:C"
 			(pin_numbers
 				(hide yes)
@@ -2366,7 +2489,7 @@
 	)
 	(text "Mounting Holes"
 		(exclude_from_sim no)
-		(at 101.346 183.388 0)
+		(at 127 187.452 0)
 		(effects
 			(font
 				(face "Calibri")
@@ -2419,6 +2542,20 @@
 			)
 		)
 		(uuid "a5882726-e84d-4519-b466-3efa81bbd247")
+	)
+	(text "Test Pads"
+		(exclude_from_sim no)
+		(at 45.974 189.738 0)
+		(effects
+			(font
+				(face "Calibri")
+				(size 3.048 3.048)
+				(thickness 0.508)
+				(bold yes)
+				(color 11 6 255 1)
+			)
+		)
+		(uuid "accc104c-f45b-4faa-a708-a92de3cc73ed")
 	)
 	(text "1.8V LDO"
 		(exclude_from_sim no)
@@ -2672,7 +2809,7 @@
 	)
 	(bus
 		(pts
-			(xy 82.55 187.96) (xy 123.19 187.96)
+			(xy 111.76 189.23) (xy 152.4 189.23)
 		)
 		(stroke
 			(width 0.635)
@@ -2720,6 +2857,16 @@
 		)
 		(uuid "0a482c4f-68cd-4a32-a75c-424be9de1c12")
 	)
+	(bus
+		(pts
+			(xy 36.83 163.83) (xy 36.83 191.77)
+		)
+		(stroke
+			(width 0.635)
+			(type default)
+		)
+		(uuid "0a977084-65e0-4ef2-82a2-4ce06bbd3fbd")
+	)
 	(wire
 		(pts
 			(xy 256.54 26.67) (xy 256.54 27.94)
@@ -2762,7 +2909,7 @@
 	)
 	(bus
 		(pts
-			(xy 123.19 167.64) (xy 123.19 187.96)
+			(xy 152.4 168.91) (xy 152.4 189.23)
 		)
 		(stroke
 			(width 0.635)
@@ -2772,7 +2919,17 @@
 	)
 	(bus
 		(pts
-			(xy 82.55 167.64) (xy 123.19 167.64)
+			(xy 36.83 191.77) (xy 87.63 191.77)
+		)
+		(stroke
+			(width 0.635)
+			(type default)
+		)
+		(uuid "0d778199-df9a-482f-8d3e-8e13b9856244")
+	)
+	(bus
+		(pts
+			(xy 111.76 168.91) (xy 152.4 168.91)
 		)
 		(stroke
 			(width 0.635)
@@ -3292,7 +3449,7 @@
 	)
 	(bus
 		(pts
-			(xy 82.55 187.96) (xy 82.55 167.64)
+			(xy 111.76 189.23) (xy 111.76 168.91)
 		)
 		(stroke
 			(width 0.635)
@@ -3389,6 +3546,16 @@
 			(type default)
 		)
 		(uuid "7e0659ca-91d7-4387-a397-5403e6f38496")
+	)
+	(bus
+		(pts
+			(xy 87.63 191.77) (xy 87.63 163.83)
+		)
+		(stroke
+			(width 0.635)
+			(type default)
+		)
+		(uuid "7f7ba300-9d02-45f0-beac-5e2fa7719efb")
 	)
 	(wire
 		(pts
@@ -3609,6 +3776,16 @@
 			(type default)
 		)
 		(uuid "9a616bab-a668-4e80-ad27-0ea22878a4d8")
+	)
+	(bus
+		(pts
+			(xy 87.63 163.83) (xy 36.83 163.83)
+		)
+		(stroke
+			(width 0.635)
+			(type default)
+		)
+		(uuid "a011e4a2-a629-4244-ac26-f9ce7929d75d")
 	)
 	(bus
 		(pts
@@ -4270,6 +4447,26 @@
 		)
 		(uuid "08e01903-359f-499f-bf44-a5d1085d9c0e")
 	)
+	(label "SDALV"
+		(at 41.91 175.26 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "0af5cfc8-6009-4234-a027-42ca5ac49a8d")
+	)
+	(label "GND"
+		(at 41.91 184.15 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "0e0ff4c9-92fe-4cd9-8bba-b860ce2a96de")
+	)
 	(label "INTLV"
 		(at 187.96 41.91 180)
 		(effects
@@ -4290,6 +4487,16 @@
 		)
 		(uuid "1d7fb778-3cda-43b8-9a52-a637e230cf70")
 	)
+	(label "CORE{slash}IOVDD"
+		(at 60.96 175.26 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "3a07a017-7596-4b81-9e4c-a5b9a06b1b19")
+	)
 	(label "SCL"
 		(at 227.33 97.79 180)
 		(effects
@@ -4299,6 +4506,26 @@
 			(justify right bottom)
 		)
 		(uuid "45e007ee-c662-4884-8556-be35aa8c4780")
+	)
+	(label "SCL"
+		(at 57.15 184.15 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "48dd6578-ca14-4a5e-8a27-929144d9693d")
+	)
+	(label "SCLLV"
+		(at 50.8 175.26 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "4b287e1a-bf7d-47c0-b89f-20eb5b28a647")
 	)
 	(label "SCLLV"
 		(at 187.96 52.07 180)
@@ -4319,6 +4546,16 @@
 			(justify left bottom)
 		)
 		(uuid "5ca05658-17e8-4fce-a87d-752008a60e5c")
+	)
+	(label "INTLV"
+		(at 72.39 184.15 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5d42eea7-cad5-47c7-af53-c4e4496a05e9")
 	)
 	(label "SDA"
 		(at 219.71 104.14 0)
@@ -4390,6 +4627,16 @@
 		)
 		(uuid "b1c484b2-8cce-47c2-b1b1-40b96d918fb8")
 	)
+	(label "OE"
+		(at 80.01 184.15 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b4336e16-25a8-405a-a20e-a40566212434")
+	)
 	(label "LPn"
 		(at 238.76 44.45 0)
 		(effects
@@ -4399,6 +4646,16 @@
 			(justify left bottom)
 		)
 		(uuid "d28303dc-a5d3-4a93-8f87-817607b5071a")
+	)
+	(label "SDA"
+		(at 49.53 184.15 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "dfd625ea-bd7c-4863-93d7-cf748ab68308")
 	)
 	(label "INT"
 		(at 238.76 41.91 0)
@@ -4419,6 +4676,16 @@
 			(justify right bottom)
 		)
 		(uuid "f4b25ae8-fed7-44d4-a1c1-6dcbc17b3999")
+	)
+	(label "LPnLV"
+		(at 64.77 184.15 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ff55c68b-dd56-4a41-a376-f923d7a36f93")
 	)
 	(symbol
 		(lib_id "power:GNDREF")
@@ -4613,7 +4880,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole")
-		(at 105.41 173.99 0)
+		(at 134.62 175.26 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4624,7 +4891,7 @@
 		(fields_autoplaced yes)
 		(uuid "25b7a1fa-ee17-4870-b1f5-90ab806c466c")
 		(property "Reference" "H2"
-			(at 107.95 172.7199 0)
+			(at 137.16 173.9899 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4635,7 +4902,7 @@
 			)
 		)
 		(property "Value" "MountingHole"
-			(at 107.95 175.2599 0)
+			(at 137.16 176.5299 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4646,7 +4913,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2"
-			(at 105.41 173.99 0)
+			(at 134.62 175.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4657,7 +4924,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 105.41 173.99 0)
+			(at 134.62 175.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4668,7 +4935,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 105.41 173.99 0)
+			(at 134.62 175.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4679,7 +4946,7 @@
 			)
 		)
 		(property "KiLib_Generator" "mounting_hardware/mounting_hole"
-			(at 105.41 173.99 0)
+			(at 134.62 175.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5887,6 +6154,208 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 80.01 184.15 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "5cdb8e47-9929-4dac-8426-75b751dc77bc")
+		(property "Reference" "OE1"
+			(at 78.486 179.07 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 82.55 182.1179 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_1.0x1.0mm"
+			(at 85.09 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 85.09 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 80.01 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C9900119237"
+			(at 80.01 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "JLCPCB Assembly"
+			(at 80.01 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "163d6ecd-9e7e-44f0-add8-ac7c19d016f2")
+		)
+		(instances
+			(project "VL53L8CXBreakoutBoardJSTRightAngleVersion"
+				(path "/282357c6-caf8-4566-adbb-241b76a97139"
+					(reference "OE1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 72.39 184.15 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "5e00d194-1661-41e1-b95f-9dde96b61ee3")
+		(property "Reference" "INTLV1"
+			(at 70.866 179.07 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 74.93 182.1179 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_1.0x1.0mm"
+			(at 77.47 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 77.47 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 72.39 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C9900119237"
+			(at 72.39 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "JLCPCB Assembly"
+			(at 72.39 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0eda8086-3e86-4bed-8ed8-f916a4b41b58")
+		)
+		(instances
+			(project "VL53L8CXBreakoutBoardJSTRightAngleVersion"
+				(path "/282357c6-caf8-4566-adbb-241b76a97139"
+					(reference "INTLV1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 44.45 93.98 0)
 		(unit 1)
@@ -6186,6 +6655,107 @@
 			(project "VL53L8CXBreakoutBoardJSTRightAngleVersion"
 				(path "/282357c6-caf8-4566-adbb-241b76a97139"
 					(reference "R3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 49.53 184.15 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "6f25efcc-37e5-480a-b007-989fc3745c05")
+		(property "Reference" "SDA1"
+			(at 48.006 179.07 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 52.07 182.1179 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_1.0x1.0mm"
+			(at 54.61 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 54.61 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 49.53 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C9900119237"
+			(at 49.53 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "JLCPCB Assembly"
+			(at 49.53 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "af42a8ce-dd20-41ba-a4f9-0c95cdfc3067")
+		)
+		(instances
+			(project "VL53L8CXBreakoutBoardJSTRightAngleVersion"
+				(path "/282357c6-caf8-4566-adbb-241b76a97139"
+					(reference "SDA1")
 					(unit 1)
 				)
 			)
@@ -6611,6 +7181,107 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 64.77 184.15 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "8e05916c-00c4-4e20-8666-a7b3fab373ca")
+		(property "Reference" "LPnLV1"
+			(at 62.738 179.07 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 67.31 182.1179 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_1.0x1.0mm"
+			(at 69.85 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 69.85 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 64.77 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C9900119237"
+			(at 64.77 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "JLCPCB Assembly"
+			(at 64.77 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "02eeb0e6-fae5-4895-bd58-2a4b220dca50")
+		)
+		(instances
+			(project "VL53L8CXBreakoutBoardJSTRightAngleVersion"
+				(path "/282357c6-caf8-4566-adbb-241b76a97139"
+					(reference "LPnLV1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+3.3V")
 		(at 173.99 26.67 0)
 		(unit 1)
@@ -6874,6 +7545,208 @@
 			(project "VL53L8CXBreakoutBoardJSTRightAngleVersion"
 				(path "/282357c6-caf8-4566-adbb-241b76a97139"
 					(reference "R7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 60.96 175.26 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "95516d2e-00cf-486c-b413-0a60ed1d02a5")
+		(property "Reference" "CORE1"
+			(at 58.42 170.18 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 63.5 173.2279 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_1.0x1.0mm"
+			(at 66.04 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 66.04 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 60.96 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C9900119237"
+			(at 60.96 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "JLCPCB Assembly"
+			(at 60.96 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "4cec1969-979f-4ffa-aef5-ad6fe1541654")
+		)
+		(instances
+			(project "VL53L8CXBreakoutBoardJSTRightAngleVersion"
+				(path "/282357c6-caf8-4566-adbb-241b76a97139"
+					(reference "CORE1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 41.91 175.26 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "9abef05c-113a-4027-816c-27681c5b92cc")
+		(property "Reference" "SDALV1"
+			(at 38.862 170.18 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 44.45 173.2279 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_1.0x1.0mm"
+			(at 46.99 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 46.99 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 41.91 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C9900119237"
+			(at 41.91 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "JLCPCB Assembly"
+			(at 41.91 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "06d274f3-238c-46f3-be16-18dcd05fe2e5")
+		)
+		(instances
+			(project "VL53L8CXBreakoutBoardJSTRightAngleVersion"
+				(path "/282357c6-caf8-4566-adbb-241b76a97139"
+					(reference "SDALV1")
 					(unit 1)
 				)
 			)
@@ -7337,6 +8210,107 @@
 			(project "VL53L8CXBreakoutBoardJSTRightAngleVersion"
 				(path "/282357c6-caf8-4566-adbb-241b76a97139"
 					(reference "#PWR013")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 57.15 184.15 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "ae82a034-d673-417d-b91d-911f855cf04f")
+		(property "Reference" "SCL1"
+			(at 55.626 179.07 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 59.69 182.1179 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_1.0x1.0mm"
+			(at 62.23 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 62.23 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 57.15 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C9900119237"
+			(at 57.15 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "JLCPCB Assembly"
+			(at 57.15 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "813346f6-a3f9-4783-82a9-80b387ec18f1")
+		)
+		(instances
+			(project "VL53L8CXBreakoutBoardJSTRightAngleVersion"
+				(path "/282357c6-caf8-4566-adbb-241b76a97139"
+					(reference "SCL1")
 					(unit 1)
 				)
 			)
@@ -8071,7 +9045,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole")
-		(at 86.36 173.99 0)
+		(at 115.57 175.26 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8082,7 +9056,7 @@
 		(fields_autoplaced yes)
 		(uuid "d4ea80d7-d4c8-4bd9-81bb-f250e2a2e9f8")
 		(property "Reference" "H1"
-			(at 88.9 172.7199 0)
+			(at 118.11 173.9899 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8093,7 +9067,7 @@
 			)
 		)
 		(property "Value" "MountingHole"
-			(at 88.9 175.2599 0)
+			(at 118.11 176.5299 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8104,7 +9078,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2"
-			(at 86.36 173.99 0)
+			(at 115.57 175.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8115,7 +9089,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 86.36 173.99 0)
+			(at 115.57 175.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8126,7 +9100,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 86.36 173.99 0)
+			(at 115.57 175.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8137,7 +9111,7 @@
 			)
 		)
 		(property "KiLib_Generator" "mounting_hardware/mounting_hole"
-			(at 86.36 173.99 0)
+			(at 115.57 175.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8624,6 +9598,208 @@
 			(project "VL53L8CXBreakoutBoardJSTRightAngleVersion"
 				(path "/282357c6-caf8-4566-adbb-241b76a97139"
 					(reference "CN2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 50.8 175.26 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "e7726706-2ad0-4cfb-af55-49457f8040ed")
+		(property "Reference" "SCLLV1"
+			(at 48.006 170.18 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 53.34 173.2279 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_1.0x1.0mm"
+			(at 55.88 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 55.88 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 50.8 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C9900119237"
+			(at 50.8 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "JLCPCB Assembly"
+			(at 50.8 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f24df48d-cabb-4d32-b446-d7124c5154fc")
+		)
+		(instances
+			(project "VL53L8CXBreakoutBoardJSTRightAngleVersion"
+				(path "/282357c6-caf8-4566-adbb-241b76a97139"
+					(reference "SCLLV1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 41.91 184.15 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "f3d03681-64f7-4020-b763-c9ff0ec3dc73")
+		(property "Reference" "GND1"
+			(at 39.878 179.07 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 44.45 182.1179 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_1.0x1.0mm"
+			(at 46.99 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 46.99 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 41.91 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C9900119237"
+			(at 41.91 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "JLCPCB Assembly"
+			(at 41.91 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d8afd6ad-d882-462d-9533-6f03e0458471")
+		)
+		(instances
+			(project "VL53L8CXBreakoutBoardJSTRightAngleVersion"
+				(path "/282357c6-caf8-4566-adbb-241b76a97139"
+					(reference "GND1")
 					(unit 1)
 				)
 			)
